@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element nios_system_inst
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element nios_system_inst_AV_Config_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "17";
+         type = "int";
+      }
+   }
+   element nios_system_inst_Audio_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element nios_system_inst_Char_LCD_16x2_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element nios_system_inst_Expansion_JP5_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+   }
+   element nios_system_inst_Green_LEDs_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "14";
+         type = "int";
+      }
+   }
+   element nios_system_inst_HEX3_HEX0_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "20";
+         type = "int";
+      }
+   }
+   element nios_system_inst_HEX7_HEX4_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element nios_system_inst_PS2_Port_Dual_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "15";
+         type = "int";
+      }
+   }
+   element nios_system_inst_PS2_Port_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "18";
+         type = "int";
+      }
+   }
+   element nios_system_inst_Pushbuttons_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "19";
+         type = "int";
+      }
+   }
+   element nios_system_inst_Red_LEDs_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element nios_system_inst_SDRAM_wire_bfm
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element nios_system_inst_SRAM_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element nios_system_inst_Serial_Port_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element nios_system_inst_Slider_Switches_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "16";
+         type = "int";
+      }
+   }
+   element nios_system_inst_accelerometer_bfm
+   {
+      datum _sortIndex
+      {
+         value = "28";
+         type = "int";
+      }
+   }
+   element nios_system_inst_camera_config_bfm
+   {
+      datum _sortIndex
+      {
+         value = "25";
+         type = "int";
+      }
+   }
+   element nios_system_inst_camera_in_bfm
+   {
+      datum _sortIndex
+      {
+         value = "26";
+         type = "int";
+      }
+   }
+   element nios_system_inst_clk_27_clk_in_bfm
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element nios_system_inst_clk_clk_in_bfm
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element nios_system_inst_enet_mac_mdio_bfm
+   {
+      datum _sortIndex
+      {
+         value = "33";
+         type = "int";
+      }
+   }
+   element nios_system_inst_enet_mac_misc_bfm
+   {
+      datum _sortIndex
+      {
+         value = "34";
+         type = "int";
+      }
+   }
+   element nios_system_inst_enet_mac_rgmii_bfm
+   {
+      datum _sortIndex
+      {
+         value = "32";
+         type = "int";
+      }
+   }
+   element nios_system_inst_enet_mac_status_bfm
+   {
+      datum _sortIndex
+      {
+         value = "31";
+         type = "int";
+      }
+   }
+   element nios_system_inst_enet_pcs_mac_rx_bfm
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element nios_system_inst_enet_pcs_mac_tx_bfm
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element nios_system_inst_flash_bfm
+   {
+      datum _sortIndex
+      {
+         value = "23";
+         type = "int";
+      }
+   }
+   element nios_system_inst_irda_bfm
+   {
+      datum _sortIndex
+      {
+         value = "21";
+         type = "int";
+      }
+   }
+   element nios_system_inst_lcd_controller_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "27";
+         type = "int";
+      }
+   }
+   element nios_system_inst_merged_resets_in_reset_bfm
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element nios_system_inst_sdcard_bfm
+   {
+      datum _sortIndex
+      {
+         value = "22";
+         type = "int";
+      }
+   }
+   element nios_system_inst_usb_bfm
+   {
+      datum _sortIndex
+      {
+         value = "29";
+         type = "int";
+      }
+   }
+   element nios_system_inst_vga_controller_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "30";
+         type = "int";
+      }
+   }
+   element nios_system_inst_video_in_bfm
+   {
+      datum _sortIndex
+      {
+         value = "24";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="EP4CE115F29C7" />
+ <parameter name="deviceFamily" value="Cyclone IV E" />
+ <parameter name="deviceSpeedGrade" value="Unknown" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="1" />
+ <parameter name="timeStamp" value="1431750242690" />
+ <parameter name="useTestBenchNamingPattern" value="true" />
+ <instanceScript></instanceScript>
+ <module kind="nios_system" version="1.0" enabled="1" name="nios_system_inst">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_UNIQUE_ID" value="nios_system" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
+  <parameter name="AUTO_CLK_CLK_IN_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_CLK_CLK_IN_CLOCK_DOMAIN" value="2" />
+  <parameter name="AUTO_CLK_CLK_IN_RESET_DOMAIN" value="2" />
+  <parameter name="AUTO_CLK_27_CLK_IN_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_CLK_27_CLK_IN_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_27_CLK_IN_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_ENET_PCS_MAC_TX_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_ENET_PCS_MAC_TX_CLOCK_DOMAIN" value="4" />
+  <parameter name="AUTO_ENET_PCS_MAC_TX_RESET_DOMAIN" value="4" />
+  <parameter name="AUTO_ENET_PCS_MAC_RX_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_ENET_PCS_MAC_RX_CLOCK_DOMAIN" value="3" />
+  <parameter name="AUTO_ENET_PCS_MAC_RX_RESET_DOMAIN" value="3" />
+ </module>
+ <module
+   kind="altera_avalon_clock_source"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_clk_clk_in_bfm">
+  <parameter name="CLOCK_RATE" value="50000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   kind="altera_avalon_clock_source"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_clk_27_clk_in_bfm">
+  <parameter name="CLOCK_RATE" value="27000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   kind="altera_avalon_clock_source"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_enet_pcs_mac_tx_bfm">
+  <parameter name="CLOCK_RATE" value="50000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   kind="altera_avalon_clock_source"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_enet_pcs_mac_rx_bfm">
+  <parameter name="CLOCK_RATE" value="50000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   kind="altera_avalon_reset_source"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_merged_resets_in_reset_bfm">
+  <parameter name="ASSERT_HIGH_RESET" value="0" />
+  <parameter name="INITIAL_RESET_CYCLES" value="50" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_HEX7_HEX4_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="HEX4,HEX5,HEX6,HEX7" />
+  <parameter name="SIGNAL_WIDTHS" value="7,7,7,7" />
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_SRAM_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">DQ,ADDR,LB_N,UB_N,CE_N,OE_N,WE_N</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="16,20,1,1,1,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">bidir,input,input,input,input,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_Char_LCD_16x2_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">DATA,ON,BLON,EN,RS,RW</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="8,1,1,1,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">bidir,input,input,input,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_Serial_Port_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="RXD,TXD" />
+  <parameter name="SIGNAL_WIDTHS" value="1,1" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output,input" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_Audio_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">ADCDAT,ADCLRCK,BCLK,DACDAT,DACLRCK</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">output,output,output,input,output</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_Red_LEDs_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="18" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_SDRAM_wire_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">addr,ba,cas_n,cke,cs_n,dq,dqm,ras_n,we_n</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="13,2,1,1,1,32,4,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,bidir,input,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_Expansion_JP5_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="32" />
+  <parameter name="SIGNAL_DIRECTIONS" value="bidir" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_Green_LEDs_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="9" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_PS2_Port_Dual_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="CLK,DAT" />
+  <parameter name="SIGNAL_WIDTHS" value="1,1" />
+  <parameter name="SIGNAL_DIRECTIONS" value="bidir,bidir" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_Slider_Switches_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="18" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_AV_Config_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="SDAT,SCLK" />
+  <parameter name="SIGNAL_WIDTHS" value="1,1" />
+  <parameter name="SIGNAL_DIRECTIONS" value="bidir,input" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_PS2_Port_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="CLK,DAT" />
+  <parameter name="SIGNAL_WIDTHS" value="1,1" />
+  <parameter name="SIGNAL_DIRECTIONS" value="bidir,bidir" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_Pushbuttons_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="4" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_HEX3_HEX0_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="HEX0,HEX1,HEX2,HEX3" />
+  <parameter name="SIGNAL_WIDTHS" value="7,7,7,7" />
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_irda_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="TXD,RXD" />
+  <parameter name="SIGNAL_WIDTHS" value="1,1" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input,output" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_sdcard_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">b_SD_cmd,b_SD_dat,b_SD_dat3,o_SD_clock</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">bidir,bidir,bidir,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_flash_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">ADDR,CE_N,OE_N,WE_N,RST_N,DQ</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="23,1,1,1,1,8" />
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,bidir</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_video_in_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">TD_CLK27,TD_DATA,TD_HS,TD_VS,clk27_reset,TD_RESET,overflow_flag</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,8,1,1,1,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">output,output,output,output,output,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_camera_config_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">I2C_SDAT,I2C_SCLK,exposure</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,1,16" />
+  <parameter name="SIGNAL_DIRECTIONS" value="bidir,input,output" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_camera_in_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">PIXEL_CLK,LINE_VALID,FRAME_VALID,pixel_clk_reset,PIXEL_DATA</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1,1,12" />
+  <parameter name="SIGNAL_DIRECTIONS">output,output,output,output,output</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_lcd_controller_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">CLK,HS,VS,DATA_EN,R,G,B</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1,1,8,8,8" />
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_accelerometer_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">I2C_SDAT,I2C_SCLK,G_SENSOR_CS_N,G_SENSOR_INT</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">bidir,input,input,output</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_usb_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">INT1,DATA,RST_N,ADDR,CS_N,RD_N,WR_N,INT0</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,16,1,2,1,1,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">output,bidir,input,input,input,input,input,output</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_vga_controller_external_interface_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">CLK,HS,VS,BLANK,SYNC,R,G,B</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1,1,1,8,8,8" />
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,input,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_enet_mac_status_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">set_10,set_1000,eth_mode,ena_10</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">output,output,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_enet_mac_rgmii_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">rgmii_in,rgmii_out,rx_control,tx_control</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="4,4,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">output,input,output,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_enet_mac_mdio_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">mdc,mdio_in,mdio_out,mdio_oen</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">input,output,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_enet_mac_misc_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">xon_gen,xoff_gen,magic_wakeup,magic_sleep_n,ff_tx_crc_fwd,ff_tx_septy,tx_ff_uflow,ff_tx_a_full,ff_tx_a_empty,rx_err_stat,rx_frm_type,ff_rx_dsav,ff_rx_a_full,ff_rx_a_empty</parameter>
+  <parameter name="SIGNAL_WIDTHS">1,1,1,1,1,1,1,1,1,18,4,1,1,1</parameter>
+  <parameter name="SIGNAL_DIRECTIONS">output,output,input,output,output,input,input,input,input,input,input,input,input,input</parameter>
+ </module>
+ <connection
+   kind="clock"
+   version="13.0"
+   start="nios_system_inst_clk_clk_in_bfm.clk"
+   end="nios_system_inst.clk_clk_in" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="nios_system_inst_clk_27_clk_in_bfm.clk"
+   end="nios_system_inst.clk_27_clk_in" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="nios_system_inst_enet_pcs_mac_tx_bfm.clk"
+   end="nios_system_inst.enet_pcs_mac_tx" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="nios_system_inst_enet_pcs_mac_rx_bfm.clk"
+   end="nios_system_inst.enet_pcs_mac_rx" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="nios_system_inst_clk_clk_in_bfm.clk"
+   end="nios_system_inst_merged_resets_in_reset_bfm.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="nios_system_inst_merged_resets_in_reset_bfm.reset"
+   end="nios_system_inst.merged_resets_in_reset" />
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_HEX7_HEX4_external_interface_bfm.conduit"
+   end="nios_system_inst.HEX7_HEX4_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_SRAM_external_interface_bfm.conduit"
+   end="nios_system_inst.SRAM_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_Char_LCD_16x2_external_interface_bfm.conduit"
+   end="nios_system_inst.Char_LCD_16x2_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_Serial_Port_external_interface_bfm.conduit"
+   end="nios_system_inst.Serial_Port_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_Audio_external_interface_bfm.conduit"
+   end="nios_system_inst.Audio_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_Red_LEDs_external_interface_bfm.conduit"
+   end="nios_system_inst.Red_LEDs_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_SDRAM_wire_bfm.conduit"
+   end="nios_system_inst.SDRAM_wire">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_Expansion_JP5_external_interface_bfm.conduit"
+   end="nios_system_inst.Expansion_JP5_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_Green_LEDs_external_interface_bfm.conduit"
+   end="nios_system_inst.Green_LEDs_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_PS2_Port_Dual_external_interface_bfm.conduit"
+   end="nios_system_inst.PS2_Port_Dual_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_Slider_Switches_external_interface_bfm.conduit"
+   end="nios_system_inst.Slider_Switches_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_AV_Config_external_interface_bfm.conduit"
+   end="nios_system_inst.AV_Config_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_PS2_Port_external_interface_bfm.conduit"
+   end="nios_system_inst.PS2_Port_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_Pushbuttons_external_interface_bfm.conduit"
+   end="nios_system_inst.Pushbuttons_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_HEX3_HEX0_external_interface_bfm.conduit"
+   end="nios_system_inst.HEX3_HEX0_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_irda_bfm.conduit"
+   end="nios_system_inst.irda">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_sdcard_bfm.conduit"
+   end="nios_system_inst.sdcard">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_flash_bfm.conduit"
+   end="nios_system_inst.flash">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_video_in_bfm.conduit"
+   end="nios_system_inst.video_in">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_camera_config_bfm.conduit"
+   end="nios_system_inst.camera_config">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_camera_in_bfm.conduit"
+   end="nios_system_inst.camera_in">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_lcd_controller_external_interface_bfm.conduit"
+   end="nios_system_inst.lcd_controller_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_accelerometer_bfm.conduit"
+   end="nios_system_inst.accelerometer">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_usb_bfm.conduit"
+   end="nios_system_inst.usb">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_vga_controller_external_interface_bfm.conduit"
+   end="nios_system_inst.vga_controller_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_enet_mac_status_bfm.conduit"
+   end="nios_system_inst.enet_mac_status">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_enet_mac_rgmii_bfm.conduit"
+   end="nios_system_inst.enet_mac_rgmii">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_enet_mac_mdio_bfm.conduit"
+   end="nios_system_inst.enet_mac_mdio">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_enet_mac_misc_bfm.conduit"
+   end="nios_system_inst.enet_mac_misc">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>
