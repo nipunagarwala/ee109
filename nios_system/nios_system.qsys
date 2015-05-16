@@ -745,19 +745,6 @@
          type = "long";
       }
    }
-   element OnBoard_AV.avalon_av_config_slave
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268447744";
-         type = "long";
-      }
-   }
    element Camera_Config.avalon_av_config_slave
    {
       datum _lockedAddress
@@ -769,6 +756,19 @@
       {
          value = "268447856";
          type = "String";
+      }
+   }
+   element OnBoard_AV.avalon_av_config_slave
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268447744";
+         type = "long";
       }
    }
    element VGA_Char_Buffer.avalon_char_buffer_slave
@@ -839,6 +839,14 @@
          type = "String";
       }
    }
+   element LCD_DMA_Controller.avalon_dma_control_slave
+   {
+      datum baseAddress
+      {
+         value = "268447888";
+         type = "String";
+      }
+   }
    element Camera_DMA_Controller.avalon_dma_control_slave
    {
       datum _lockedAddress
@@ -849,14 +857,6 @@
       datum baseAddress
       {
          value = "268447872";
-         type = "String";
-      }
-   }
-   element LCD_DMA_Controller.avalon_dma_control_slave
-   {
-      datum baseAddress
-      {
-         value = "268447888";
          type = "String";
       }
    }
@@ -899,7 +899,7 @@
          type = "long";
       }
    }
-   element Pushbuttons.avalon_parallel_port_slave
+   element HEX3_HEX0.avalon_parallel_port_slave
    {
       datum _lockedAddress
       {
@@ -908,7 +908,46 @@
       }
       datum baseAddress
       {
-         value = "268435536";
+         value = "268435488";
+         type = "long";
+      }
+   }
+   element HEX7_HEX4.avalon_parallel_port_slave
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435504";
+         type = "long";
+      }
+   }
+   element Red_LEDs.avalon_parallel_port_slave
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435456";
+         type = "long";
+      }
+   }
+   element Expansion_JP5.avalon_parallel_port_slave
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435552";
          type = "long";
       }
    }
@@ -938,7 +977,7 @@
          type = "long";
       }
    }
-   element Red_LEDs.avalon_parallel_port_slave
+   element Pushbuttons.avalon_parallel_port_slave
    {
       datum _lockedAddress
       {
@@ -947,59 +986,7 @@
       }
       datum baseAddress
       {
-         value = "268435456";
-         type = "long";
-      }
-   }
-   element HEX7_HEX4.avalon_parallel_port_slave
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435504";
-         type = "long";
-      }
-   }
-   element Expansion_JP5.avalon_parallel_port_slave
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435552";
-         type = "long";
-      }
-   }
-   element HEX3_HEX0.avalon_parallel_port_slave
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435488";
-         type = "long";
-      }
-   }
-   element PS2_Port_Dual.avalon_ps2_slave
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435720";
+         value = "268435536";
          type = "long";
       }
    }
@@ -1013,6 +1000,19 @@
       datum baseAddress
       {
          value = "268435712";
+         type = "long";
+      }
+   }
+   element PS2_Port_Dual.avalon_ps2_slave
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435720";
          type = "long";
       }
    }
@@ -1118,19 +1118,19 @@
          type = "long";
       }
    }
-   element sgdma_tx.csr
-   {
-      datum baseAddress
-      {
-         value = "136324096";
-         type = "String";
-      }
-   }
    element sgdma_rx.csr
    {
       datum baseAddress
       {
          value = "136324160";
+         type = "String";
+      }
+   }
+   element sgdma_tx.csr
+   {
+      datum baseAddress
+      {
+         value = "136324096";
          type = "String";
       }
    }
@@ -1225,14 +1225,6 @@
          type = "boolean";
       }
    }
-   element packet_memory.s1
-   {
-      datum baseAddress
-      {
-         value = "136318976";
-         type = "String";
-      }
-   }
    element SDRAM.s1
    {
       datum _lockedAddress
@@ -1244,6 +1236,14 @@
       {
          value = "0";
          type = "long";
+      }
+   }
+   element packet_memory.s1
+   {
+      datum baseAddress
+      {
+         value = "136318976";
+         type = "String";
       }
    }
    element Interval_Timer.s1
@@ -1371,7 +1371,7 @@
  <parameter name="projectName" value="" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1431747628698" />
+ <parameter name="timeStamp" value="1431751623230" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface

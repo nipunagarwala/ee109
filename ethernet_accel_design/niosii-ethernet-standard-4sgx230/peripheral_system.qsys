@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element $${FILENAME}
+   {
+   }
+   element button_pio
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element clk
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element high_res_timer
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element jtag_uart
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element led_pio
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element performance_counter
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element peripheral_bridge
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element sys_clk_timer
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="EP4SGX230KF40C2" />
+ <parameter name="deviceFamily" value="Stratix IV" />
+ <parameter name="deviceSpeedGrade" value="2" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="0" />
+ <parameter name="projectName">niosii_ethernet_standard_4SGX230.qpf</parameter>
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="1" />
+ <parameter name="timeStamp" value="1346929133948" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface
+   name="peripheral_subsys_reset_in"
+   internal="clk.clk_in_reset"
+   type="reset"
+   dir="end" />
+ <interface
+   name="led_pio_external_connection"
+   internal="led_pio.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="button_pio_external_connection"
+   internal="button_pio.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="peripheral_subsys_clk_in"
+   internal="clk.clk_in"
+   type="clock"
+   dir="end" />
+ <interface
+   name="peripheral_bridge_s0"
+   internal="peripheral_bridge.s0"
+   type="avalon"
+   dir="end" />
+ <interface
+   name="sys_clk_timer_irq"
+   internal="sys_clk_timer.irq"
+   type="interrupt"
+   dir="end" />
+ <interface
+   name="high_res_timer_irq"
+   internal="high_res_timer.irq"
+   type="interrupt"
+   dir="end" />
+ <interface
+   name="jtag_uart_irq"
+   internal="jtag_uart.irq"
+   type="interrupt"
+   dir="end" />
+ <interface
+   name="button_pio_irq"
+   internal="button_pio.irq"
+   type="interrupt"
+   dir="end" />
+ <module kind="clock_source" version="12.0" enabled="1" name="clk">
+  <parameter name="clockFrequency" value="100000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   kind="altera_avalon_timer"
+   version="12.0"
+   enabled="1"
+   name="sys_clk_timer">
+  <parameter name="alwaysRun" value="false" />
+  <parameter name="counterSize" value="32" />
+  <parameter name="fixedPeriod" value="false" />
+  <parameter name="period" value="10.0" />
+  <parameter name="periodUnits" value="MSEC" />
+  <parameter name="resetOutput" value="false" />
+  <parameter name="snapshot" value="true" />
+  <parameter name="systemFrequency" value="100000000" />
+  <parameter name="timeoutPulseOutput" value="false" />
+  <parameter name="timerPreset" value="FULL_FEATURED" />
+ </module>
+ <module
+   kind="altera_avalon_timer"
+   version="12.0"
+   enabled="1"
+   name="high_res_timer">
+  <parameter name="alwaysRun" value="false" />
+  <parameter name="counterSize" value="32" />
+  <parameter name="fixedPeriod" value="false" />
+  <parameter name="period" value="10.0" />
+  <parameter name="periodUnits" value="USEC" />
+  <parameter name="resetOutput" value="false" />
+  <parameter name="snapshot" value="true" />
+  <parameter name="systemFrequency" value="100000000" />
+  <parameter name="timeoutPulseOutput" value="false" />
+  <parameter name="timerPreset" value="FULL_FEATURED" />
+ </module>
+ <module
+   kind="altera_avalon_performance_counter"
+   version="12.0"
+   enabled="1"
+   name="performance_counter">
+  <parameter name="numberOfSections" value="3" />
+ </module>
+ <module
+   kind="altera_avalon_jtag_uart"
+   version="12.0"
+   enabled="1"
+   name="jtag_uart">
+  <parameter name="allowMultipleConnections" value="false" />
+  <parameter name="avalonSpec" value="2.0" />
+  <parameter name="hubInstanceID" value="0" />
+  <parameter name="readBufferDepth" value="64" />
+  <parameter name="readIRQThreshold" value="8" />
+  <parameter name="simInputCharacterStream" value="" />
+  <parameter name="simInteractiveOptions">INTERACTIVE_ASCII_OUTPUT</parameter>
+  <parameter name="useRegistersForReadBuffer" value="true" />
+  <parameter name="useRegistersForWriteBuffer" value="true" />
+  <parameter name="useRelativePathForSimFile" value="false" />
+  <parameter name="writeBufferDepth" value="64" />
+  <parameter name="writeIRQThreshold" value="8" />
+ </module>
+ <module kind="altera_avalon_pio" version="12.0" enabled="1" name="button_pio">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="true" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="true" />
+  <parameter name="irqType" value="EDGE" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="true" />
+  <parameter name="simDrivenValue" value="3" />
+  <parameter name="width" value="2" />
+ </module>
+ <module kind="altera_avalon_pio" version="12.0" enabled="1" name="led_pio">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="2" />
+ </module>
+ <module
+   kind="altera_avalon_mm_bridge"
+   version="12.0"
+   enabled="1"
+   name="peripheral_bridge">
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="SYMBOL_WIDTH" value="8" />
+  <parameter name="ADDRESS_WIDTH" value="8" />
+  <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
+  <parameter name="MAX_BURST_SIZE" value="1" />
+  <parameter name="MAX_PENDING_RESPONSES" value="4" />
+  <parameter name="LINEWRAPBURSTS" value="0" />
+  <parameter name="PIPELINE_COMMAND" value="1" />
+  <parameter name="PIPELINE_RESPONSE" value="1" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="100000000" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Stratix IV" />
+ </module>
+ <connection
+   kind="avalon"
+   version="12.0"
+   start="peripheral_bridge.m0"
+   end="sys_clk_timer.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0040" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="12.0"
+   start="peripheral_bridge.m0"
+   end="high_res_timer.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0060" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="12.0"
+   start="peripheral_bridge.m0"
+   end="performance_counter.control_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="12.0"
+   start="peripheral_bridge.m0"
+   end="jtag_uart.avalon_jtag_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00a8" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="12.0"
+   start="peripheral_bridge.m0"
+   end="button_pio.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0080" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="12.0"
+   start="peripheral_bridge.m0"
+   end="led_pio.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0090" />
+ </connection>
+ <connection
+   kind="clock"
+   version="12.0"
+   start="clk.clk"
+   end="peripheral_bridge.clk" />
+ <connection kind="clock" version="12.0" start="clk.clk" end="sys_clk_timer.clk" />
+ <connection kind="clock" version="12.0" start="clk.clk" end="high_res_timer.clk" />
+ <connection kind="clock" version="12.0" start="clk.clk" end="jtag_uart.clk" />
+ <connection kind="clock" version="12.0" start="clk.clk" end="button_pio.clk" />
+ <connection kind="clock" version="12.0" start="clk.clk" end="led_pio.clk" />
+ <connection
+   kind="clock"
+   version="12.0"
+   start="clk.clk"
+   end="performance_counter.clk" />
+ <connection
+   kind="reset"
+   version="12.0"
+   start="clk.clk_reset"
+   end="button_pio.reset" />
+ <connection
+   kind="reset"
+   version="12.0"
+   start="clk.clk_reset"
+   end="high_res_timer.reset" />
+ <connection
+   kind="reset"
+   version="12.0"
+   start="clk.clk_reset"
+   end="jtag_uart.reset" />
+ <connection kind="reset" version="12.0" start="clk.clk_reset" end="led_pio.reset" />
+ <connection
+   kind="reset"
+   version="12.0"
+   start="clk.clk_reset"
+   end="performance_counter.reset" />
+ <connection
+   kind="reset"
+   version="12.0"
+   start="clk.clk_reset"
+   end="peripheral_bridge.reset" />
+ <connection
+   kind="reset"
+   version="12.0"
+   start="clk.clk_reset"
+   end="sys_clk_timer.reset" />
+</system>
