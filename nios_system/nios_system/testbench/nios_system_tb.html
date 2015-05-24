@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2015.05.15.21:27:40</td>
+    <td class="l">2015.05.23.01:40:14</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -187,12 +187,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <a href="#module_nios_system_inst_enet"><b>nios_system_inst_enet</b>
      </a> altera_eth_tse 13.0
      <br/>&#160;&#160;
-     <a href="#module_nios_system_inst_sgdma_rx"><b>nios_system_inst_sgdma_rx</b>
-     </a> altera_avalon_sgdma 13.0.1.99.2
-     <br/>&#160;&#160;
-     <a href="#module_nios_system_inst_sgdma_tx"><b>nios_system_inst_sgdma_tx</b>
-     </a> altera_avalon_sgdma 13.0.1.99.2
-     <br/>&#160;&#160;
      <a href="#module_nios_system_inst_descriptor_memory"><b>nios_system_inst_descriptor_memory</b>
      </a> altera_avalon_onchip_memory2 13.0.1.99.2
      <br/>&#160;&#160;
@@ -203,7 +197,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </a> altera_up_avalon_video_dma_controller 13.0
      <br/>&#160;&#160;
      <a href="#module_nios_system_inst_VGA_DMA_Controller"><b>nios_system_inst_VGA_DMA_Controller</b>
-     </a> altera_up_avalon_video_dma_controller 13.0</span>
+     </a> altera_up_avalon_video_dma_controller 13.0
+     <br/>&#160;&#160;
+     <a href="#module_nios_system_inst_VideoConferencing_DMA_0"><b>nios_system_inst_VideoConferencing_DMA_0</b>
+     </a> VideoConferencing_DMA 1.0</span>
    </div>
   </div>
   <div style="width:100% ;  height:10px"> </div>
@@ -223,14 +220,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <a href="#module_nios_system_inst_Camera_DMA_Controller"><b>nios_system_inst_Camera_DMA_Controller</b>
      </a>
     </td>
-    <td class="mastermodule" colspan="3">
-     <a href="#module_nios_system_inst_sgdma_rx"><b>nios_system_inst_sgdma_rx</b>
-     </a>
-    </td>
-    <td class="mastermodule" colspan="3">
-     <a href="#module_nios_system_inst_sgdma_tx"><b>nios_system_inst_sgdma_tx</b>
-     </a>
-    </td>
     <td class="mastermodule" colspan="1">
      <a href="#module_nios_system_inst_LCD_DMA_Controller"><b>nios_system_inst_LCD_DMA_Controller</b>
      </a>
@@ -239,20 +228,19 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <a href="#module_nios_system_inst_VGA_DMA_Controller"><b>nios_system_inst_VGA_DMA_Controller</b>
      </a>
     </td>
+    <td class="mastermodule" colspan="1">
+     <a href="#module_nios_system_inst_VideoConferencing_DMA_0"><b>nios_system_inst_VideoConferencing_DMA_0</b>
+     </a>
+    </td>
    </tr>
    <tr>
     <td class="masterl">&#160;data_master</td>
     <td class="masterr">&#160;instruction_master</td>
     <td class="masterlr">&#160;avalon_dma_master</td>
     <td class="masterlr">&#160;avalon_dma_master</td>
-    <td class="masterl">&#160;descriptor_read</td>
-    <td class="masterm">&#160;descriptor_write</td>
-    <td class="masterr">&#160;m_write</td>
-    <td class="masterl">&#160;descriptor_read</td>
-    <td class="masterm">&#160;descriptor_write</td>
-    <td class="masterr">&#160;m_read</td>
     <td class="masterlr">&#160;avalon_dma_master</td>
     <td class="masterlr">&#160;avalon_dma_master</td>
+    <td class="masterlr">&#160;avalon_master</td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
@@ -266,20 +254,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_jtag_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10001000</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -299,20 +277,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10002000</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -332,21 +300,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>00000000</td>
     <td class="addr"><span style="color:#989898">0x</span>00000000</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -365,20 +323,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_parallel_port_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10000000</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -398,20 +346,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_parallel_port_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10000010</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -431,20 +369,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_parallel_port_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10000020</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -464,20 +392,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_parallel_port_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10000030</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -497,20 +415,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_parallel_port_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10000040</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -530,20 +438,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_parallel_port_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10000050</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -563,20 +461,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_parallel_port_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10000060</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -596,20 +484,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_rs232_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10001010</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -629,20 +507,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_av_config_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10003000</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -662,20 +530,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_audio_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10003040</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -695,20 +553,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_lcd_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10003050</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -728,20 +576,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_ps2_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10000100</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -761,11 +599,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_sram_slave&#160;</td>
@@ -773,12 +606,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="addr"><span style="color:#989898">0x</span>08000000</td>
     <td class="addr"><span style="color:#989898">0x</span>08000000</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
+    <td class="addr"><span style="color:#989898">0x</span>08000000</td>
     <td class="addr"><span style="color:#989898">0x</span>08000000</td>
     <td class="addr"><span style="color:#989898">0x</span>08000000</td>
    </tr>
@@ -787,11 +615,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <a href="#module_nios_system_inst_VGA_Char_Buffer"><b>nios_system_inst_VGA_Char_Buffer</b>
      </a>
     </td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -809,20 +632,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slavem">avalon_char_buffer_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>09000000</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -842,20 +655,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_ps2_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10000108</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -875,21 +678,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">jtag_debug_module&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>0a000000</td>
     <td class="addr"><span style="color:#989898">0x</span>0a000000</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -908,20 +701,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">control_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10002020</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -941,11 +724,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slavem">flash_data&#160;</td>
@@ -956,20 +734,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slavem">flash_erase_control&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>0bff0000</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -989,20 +757,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_sdcard_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>0b000000</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -1022,20 +780,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_irda_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10001020</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -1055,20 +803,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_av_config_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10003070</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -1088,20 +826,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_dma_control_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10003060</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -1121,20 +849,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_dma_control_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10003080</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -1154,20 +872,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_accelerometer_spi_mode_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10004020</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -1187,20 +895,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_usb_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10000110</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -1220,11 +918,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slavem">avalon_char_control_slave&#160;</td>
@@ -1235,20 +928,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slavem">avalon_char_buffer_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>09002000</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -1268,86 +951,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">control_port&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>08202000</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-   </tr>
-   <tr>
-    <td class="slavemodule">&#160;
-     <a href="#module_nios_system_inst_sgdma_rx"><b>nios_system_inst_sgdma_rx</b>
-     </a>
-    </td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-   </tr>
-   <tr>
-    <td class="slaveb">csr&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>08202440</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-   </tr>
-   <tr>
-    <td class="slavemodule">&#160;
-     <a href="#module_nios_system_inst_sgdma_tx"><b>nios_system_inst_sgdma_tx</b>
-     </a>
-    </td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-   </tr>
-   <tr>
-    <td class="slaveb">csr&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>08202400</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -1367,11 +974,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
@@ -1379,11 +981,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="addr"><span style="color:#989898">0x</span>08200000</td>
-    <td class="addr"><span style="color:#989898">0x</span>08200000</td>
-    <td class="empty"></td>
-    <td class="addr"><span style="color:#989898">0x</span>08200000</td>
-    <td class="addr"><span style="color:#989898">0x</span>08200000</td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -1400,11 +997,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
@@ -1413,11 +1005,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="addr"><span style="color:#989898">0x</span>08201000</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="addr"><span style="color:#989898">0x</span>08201000</td>
     <td class="empty"></td>
     <td class="empty"></td>
    </tr>
@@ -1433,20 +1020,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_dma_control_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>10003090</td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -1466,11 +1043,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_dma_control_slave&#160;</td>
@@ -1480,6 +1052,24 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_nios_system_inst_VideoConferencing_DMA_0"><b>nios_system_inst_VideoConferencing_DMA_0</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">avalon_slave&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>10005000</td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -1502,7 +1092,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">AUTO_GENERATION_ID</td>
-        <td class="parametervalue">1431750460</td>
+        <td class="parametervalue">1432370412</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_UNIQUE_ID</td>
@@ -5032,7 +4622,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_nios_system_inst_CPU">nios_system_inst_CPU</a>
       </td>
       <td class="from">data_master&#160;&#160;</td>
-      <td class="main" rowspan="28">nios_system_inst_SRAM</td>
+      <td class="main" rowspan="31">nios_system_inst_SRAM</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;avalon_sram_slave</td>
@@ -5123,6 +4713,18 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_nios_system_inst_VGA_DMA_Controller">nios_system_inst_VGA_DMA_Controller</a>
       </td>
       <td class="from">avalon_dma_master&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;avalon_sram_slave</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_nios_system_inst_VideoConferencing_DMA_0">nios_system_inst_VideoConferencing_DMA_0</a>
+      </td>
+      <td class="from">avalon_master&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;avalon_sram_slave</td>
@@ -5941,7 +5543,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_nios_system_inst_merged_resets">nios_system_inst_merged_resets</a>
       </td>
       <td class="from">out_reset&#160;&#160;</td>
-      <td class="main" rowspan="169">nios_system_inst_clk_27</td>
+      <td class="main" rowspan="166">nios_system_inst_clk_27</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk_in_reset</td>
@@ -6777,38 +6379,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">clk_reset&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_sgdma_rx">nios_system_inst_sgdma_rx</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">clk_reset&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_sgdma_tx">nios_system_inst_sgdma_tx</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">clk_reset&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
        <a href="#module_nios_system_inst_descriptor_memory">nios_system_inst_descriptor_memory</a>
       </td>
      </tr>
@@ -6832,6 +6402,22 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="to">&#160;&#160;reset1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">clk_reset&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_nios_system_inst_VideoConferencing_DMA_0">nios_system_inst_VideoConferencing_DMA_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;reset_sink</td>
      </tr>
     </table>
    </div>
@@ -7140,7 +6726,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_nios_system_inst_clk">nios_system_inst_clk</a>
       </td>
       <td class="from">clk_reset&#160;&#160;</td>
-      <td class="main" rowspan="293">nios_system_inst_CPU</td>
+      <td class="main" rowspan="282">nios_system_inst_CPU</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;reset_n</td>
@@ -8485,78 +8071,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="from">jtag_debug_module_reset&#160;&#160;</td>
-      <td class="neighbor" rowspan="6">
-       <a href="#module_nios_system_inst_sgdma_tx">nios_system_inst_sgdma_tx</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">data_master&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;csr</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">d_irq&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;csr_irq</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">jtag_debug_module_reset&#160;&#160;</td>
-      <td class="neighbor" rowspan="6">
-       <a href="#module_nios_system_inst_sgdma_rx">nios_system_inst_sgdma_rx</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">data_master&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;csr</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">d_irq&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;csr_irq</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">jtag_debug_module_reset&#160;&#160;</td>
       <td class="neighbor" rowspan="4">
        <a href="#module_nios_system_inst_descriptor_memory">nios_system_inst_descriptor_memory</a>
       </td>
@@ -8653,6 +8167,22 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="to">&#160;&#160;avalon_dma_control_slave</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_nios_system_inst_VideoConferencing_DMA_0">nios_system_inst_VideoConferencing_DMA_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;avalon_slave</td>
      </tr>
     </table>
    </div>
@@ -9105,7 +8635,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">dataSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='SDRAM.s1' start='0x0' end='0x8000000' /&gt;&lt;slave name='SRAM.avalon_sram_slave' start='0x8000000' end='0x8200000' /&gt;&lt;slave name='descriptor_memory.s1' start='0x8200000' end='0x8201000' /&gt;&lt;slave name='packet_memory.s1' start='0x8201000' end='0x8202000' /&gt;&lt;slave name='enet.control_port' start='0x8202000' end='0x8202400' /&gt;&lt;slave name='sgdma_tx.csr' start='0x8202400' end='0x8202440' /&gt;&lt;slave name='sgdma_rx.csr' start='0x8202440' end='0x8202480' /&gt;&lt;slave name='VGA_Char_Buffer.avalon_char_buffer_slave' start='0x9000000' end='0x9002000' /&gt;&lt;slave name='LCD_Char_Buffer.avalon_char_buffer_slave' start='0x9002000' end='0x9002800' /&gt;&lt;slave name='CPU.jtag_debug_module' start='0xA000000' end='0xA000800' /&gt;&lt;slave name='SD_Card.avalon_sdcard_slave' start='0xB000000' end='0xB000400' /&gt;&lt;slave name='Flash.flash_erase_control' start='0xBFF0000' end='0xBFF0004' /&gt;&lt;slave name='Flash.flash_data' start='0xC000000' end='0xC800000' /&gt;&lt;slave name='Red_LEDs.avalon_parallel_port_slave' start='0x10000000' end='0x10000010' /&gt;&lt;slave name='Green_LEDs.avalon_parallel_port_slave' start='0x10000010' end='0x10000020' /&gt;&lt;slave name='HEX3_HEX0.avalon_parallel_port_slave' start='0x10000020' end='0x10000030' /&gt;&lt;slave name='HEX7_HEX4.avalon_parallel_port_slave' start='0x10000030' end='0x10000040' /&gt;&lt;slave name='Slider_Switches.avalon_parallel_port_slave' start='0x10000040' end='0x10000050' /&gt;&lt;slave name='Pushbuttons.avalon_parallel_port_slave' start='0x10000050' end='0x10000060' /&gt;&lt;slave name='Expansion_JP5.avalon_parallel_port_slave' start='0x10000060' end='0x10000070' /&gt;&lt;slave name='PS2_Port.avalon_ps2_slave' start='0x10000100' end='0x10000108' /&gt;&lt;slave name='PS2_Port_Dual.avalon_ps2_slave' start='0x10000108' end='0x10000110' /&gt;&lt;slave name='USB.avalon_usb_slave' start='0x10000110' end='0x10000120' /&gt;&lt;slave name='JTAG_UART.avalon_jtag_slave' start='0x10001000' end='0x10001008' /&gt;&lt;slave name='Serial_Port.avalon_rs232_slave' start='0x10001010' end='0x10001018' /&gt;&lt;slave name='IrDA.avalon_irda_slave' start='0x10001020' end='0x10001028' /&gt;&lt;slave name='Interval_Timer.s1' start='0x10002000' end='0x10002020' /&gt;&lt;slave name='sysid.control_slave' start='0x10002020' end='0x10002028' /&gt;&lt;slave name='OnBoard_AV.avalon_av_config_slave' start='0x10003000' end='0x10003010' /&gt;&lt;slave name='VGA_DMA_Controller.avalon_dma_control_slave' start='0x10003020' end='0x10003030' /&gt;&lt;slave name='VGA_Char_Buffer.avalon_char_control_slave' start='0x10003030' end='0x10003038' /&gt;&lt;slave name='Audio.avalon_audio_slave' start='0x10003040' end='0x10003050' /&gt;&lt;slave name='Char_LCD_16x2.avalon_lcd_slave' start='0x10003050' end='0x10003052' /&gt;&lt;slave name='Video_In_DMA_Controller.avalon_dma_control_slave' start='0x10003060' end='0x10003070' /&gt;&lt;slave name='Camera_Config.avalon_av_config_slave' start='0x10003070' end='0x10003080' /&gt;&lt;slave name='Camera_DMA_Controller.avalon_dma_control_slave' start='0x10003080' end='0x10003090' /&gt;&lt;slave name='LCD_DMA_Controller.avalon_dma_control_slave' start='0x10003090' end='0x100030A0' /&gt;&lt;slave name='LCD_Char_Buffer.avalon_char_control_slave' start='0x100030A0' end='0x100030A8' /&gt;&lt;slave name='Accelerometer.avalon_accelerometer_spi_mode_slave' start='0x10004020' end='0x10004022' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='SDRAM.s1' start='0x0' end='0x8000000' /&gt;&lt;slave name='SRAM.avalon_sram_slave' start='0x8000000' end='0x8200000' /&gt;&lt;slave name='descriptor_memory.s1' start='0x8200000' end='0x8201000' /&gt;&lt;slave name='packet_memory.s1' start='0x8201000' end='0x8202000' /&gt;&lt;slave name='enet.control_port' start='0x8202000' end='0x8202400' /&gt;&lt;slave name='VGA_Char_Buffer.avalon_char_buffer_slave' start='0x9000000' end='0x9002000' /&gt;&lt;slave name='LCD_Char_Buffer.avalon_char_buffer_slave' start='0x9002000' end='0x9002800' /&gt;&lt;slave name='CPU.jtag_debug_module' start='0xA000000' end='0xA000800' /&gt;&lt;slave name='SD_Card.avalon_sdcard_slave' start='0xB000000' end='0xB000400' /&gt;&lt;slave name='Flash.flash_erase_control' start='0xBFF0000' end='0xBFF0004' /&gt;&lt;slave name='Flash.flash_data' start='0xC000000' end='0xC800000' /&gt;&lt;slave name='Red_LEDs.avalon_parallel_port_slave' start='0x10000000' end='0x10000010' /&gt;&lt;slave name='Green_LEDs.avalon_parallel_port_slave' start='0x10000010' end='0x10000020' /&gt;&lt;slave name='HEX3_HEX0.avalon_parallel_port_slave' start='0x10000020' end='0x10000030' /&gt;&lt;slave name='HEX7_HEX4.avalon_parallel_port_slave' start='0x10000030' end='0x10000040' /&gt;&lt;slave name='Slider_Switches.avalon_parallel_port_slave' start='0x10000040' end='0x10000050' /&gt;&lt;slave name='Pushbuttons.avalon_parallel_port_slave' start='0x10000050' end='0x10000060' /&gt;&lt;slave name='Expansion_JP5.avalon_parallel_port_slave' start='0x10000060' end='0x10000070' /&gt;&lt;slave name='PS2_Port.avalon_ps2_slave' start='0x10000100' end='0x10000108' /&gt;&lt;slave name='PS2_Port_Dual.avalon_ps2_slave' start='0x10000108' end='0x10000110' /&gt;&lt;slave name='USB.avalon_usb_slave' start='0x10000110' end='0x10000120' /&gt;&lt;slave name='JTAG_UART.avalon_jtag_slave' start='0x10001000' end='0x10001008' /&gt;&lt;slave name='Serial_Port.avalon_rs232_slave' start='0x10001010' end='0x10001018' /&gt;&lt;slave name='IrDA.avalon_irda_slave' start='0x10001020' end='0x10001028' /&gt;&lt;slave name='Interval_Timer.s1' start='0x10002000' end='0x10002020' /&gt;&lt;slave name='sysid.control_slave' start='0x10002020' end='0x10002028' /&gt;&lt;slave name='OnBoard_AV.avalon_av_config_slave' start='0x10003000' end='0x10003010' /&gt;&lt;slave name='VGA_DMA_Controller.avalon_dma_control_slave' start='0x10003020' end='0x10003030' /&gt;&lt;slave name='VGA_Char_Buffer.avalon_char_control_slave' start='0x10003030' end='0x10003038' /&gt;&lt;slave name='Audio.avalon_audio_slave' start='0x10003040' end='0x10003050' /&gt;&lt;slave name='Char_LCD_16x2.avalon_lcd_slave' start='0x10003050' end='0x10003052' /&gt;&lt;slave name='Video_In_DMA_Controller.avalon_dma_control_slave' start='0x10003060' end='0x10003070' /&gt;&lt;slave name='Camera_Config.avalon_av_config_slave' start='0x10003070' end='0x10003080' /&gt;&lt;slave name='Camera_DMA_Controller.avalon_dma_control_slave' start='0x10003080' end='0x10003090' /&gt;&lt;slave name='LCD_DMA_Controller.avalon_dma_control_slave' start='0x10003090' end='0x100030A0' /&gt;&lt;slave name='LCD_Char_Buffer.avalon_char_control_slave' start='0x100030A0' end='0x100030A8' /&gt;&lt;slave name='Accelerometer.avalon_accelerometer_spi_mode_slave' start='0x10004020' end='0x10004022' /&gt;&lt;slave name='VideoConferencing_DMA_0.avalon_slave' start='0x10005000' end='0x10005400' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">clockFrequency</td>
@@ -9117,7 +8647,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">internalIrqMaskSystemInfo</td>
-        <td class="parametervalue">167935</td>
+        <td class="parametervalue">167911</td>
        </tr>
        <tr>
         <td class="parametername">customInstSlavesSystemInfo</td>
@@ -9351,7 +8881,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">timestamp</td>
-        <td class="parametervalue">1431750460</td>
+        <td class="parametervalue">1432370412</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_CLK_CLOCK_RATE</td>
@@ -9384,7 +8914,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TIMESTAMP</td>
-        <td class="parametervalue">1431750460</td>
+        <td class="parametervalue">1432370412</td>
        </tr>
       </table>
      </td>
@@ -9623,7 +9153,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_nios_system_inst_clk_27">nios_system_inst_clk_27</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="199">nios_system_inst_External_Clocks</td>
+      <td class="main" rowspan="196">nios_system_inst_External_Clocks</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk_in_secondary</td>
@@ -10569,38 +10099,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">sys_clk&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_sgdma_rx">nios_system_inst_sgdma_rx</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;clk</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">sys_clk&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_sgdma_tx">nios_system_inst_sgdma_tx</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;clk</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">sys_clk&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
        <a href="#module_nios_system_inst_descriptor_memory">nios_system_inst_descriptor_memory</a>
       </td>
      </tr>
@@ -10656,6 +10154,22 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="to">&#160;&#160;clock_reset</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">sys_clk&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_nios_system_inst_VideoConferencing_DMA_0">nios_system_inst_VideoConferencing_DMA_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;clock_sink</td>
      </tr>
     </table>
    </div>
@@ -14230,9 +13744,9 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_sgdma_tx">nios_system_inst_sgdma_tx</a>
+       <a href="#module_nios_system_inst_VideoConferencing_DMA_0">nios_system_inst_VideoConferencing_DMA_0</a>
       </td>
-      <td class="from">out&#160;&#160;</td>
+      <td class="from">avalon_streaming_source&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;transmit</td>
@@ -14314,13 +13828,13 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">receive&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_sgdma_rx">nios_system_inst_sgdma_rx</a>
+       <a href="#module_nios_system_inst_VideoConferencing_DMA_0">nios_system_inst_VideoConferencing_DMA_0</a>
       </td>
      </tr>
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;in</td>
+      <td class="to">&#160;&#160;avalon_streaming_sink</td>
      </tr>
     </table>
    </div>
@@ -14597,664 +14111,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_nios_system_inst_sgdma_rx"> </a>
-  <div>
-   <hr/>
-   <h2>nios_system_inst_sgdma_rx</h2>altera_avalon_sgdma v13.0.1.99.2
-   <br/>
-   <div class="greydiv">
-    <table class="connectionboxes">
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_External_Clocks">nios_system_inst_External_Clocks</a>
-      </td>
-      <td class="from">sys_clk&#160;&#160;</td>
-      <td class="main" rowspan="22">nios_system_inst_sgdma_rx</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clk</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_clk_27">nios_system_inst_clk_27</a>
-      </td>
-      <td class="from">clk_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="6">
-       <a href="#module_nios_system_inst_CPU">nios_system_inst_CPU</a>
-      </td>
-      <td class="from">jtag_debug_module_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr>
-      <td class="from">data_master&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;csr</td>
-     </tr>
-     <tr>
-      <td class="from">d_irq&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;csr_irq</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_enet">nios_system_inst_enet</a>
-      </td>
-      <td class="from">receive&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;in</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">m_write&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_packet_memory">nios_system_inst_packet_memory</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">descriptor_read&#160;&#160;</td>
-      <td class="neighbor" rowspan="4">
-       <a href="#module_nios_system_inst_descriptor_memory">nios_system_inst_descriptor_memory</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">descriptor_write&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-    </table>
-   </div>
-   <br/>
-   <br/>
-   <table class="flowbox">
-    <tr>
-     <td class="parametersbox">
-      <h2>Parameters</h2>
-      <table>
-       <tr>
-        <td class="parametername">addressWidth</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">alwaysDoMaxBurst</td>
-        <td class="parametervalue">true</td>
-       </tr>
-       <tr>
-        <td class="parametername">avalonMMByteReorderMode</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">dataTransferFIFODepth</td>
-        <td class="parametervalue">2</td>
-       </tr>
-       <tr>
-        <td class="parametername">enableBurstTransfers</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">enableDescriptorReadMasterBurst</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">enableUnalignedTransfers</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">internalFIFODepth</td>
-        <td class="parametervalue">2</td>
-       </tr>
-       <tr>
-        <td class="parametername">readBlockDataWidth</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">readBurstcountWidth</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">sinkErrorWidth</td>
-        <td class="parametervalue">6</td>
-       </tr>
-       <tr>
-        <td class="parametername">sourceErrorWidth</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">transferMode</td>
-        <td class="parametervalue">STREAM_TO_MEMORY</td>
-       </tr>
-       <tr>
-        <td class="parametername">writeBurstcountWidth</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">deviceFamilyString</td>
-        <td class="parametervalue">CYCLONEIVE</td>
-       </tr>
-       <tr>
-        <td class="parametername">actualDataTransferFIFODepth</td>
-        <td class="parametervalue">64</td>
-       </tr>
-       <tr>
-        <td class="parametername">commandFIFODataWidth</td>
-        <td class="parametervalue">104</td>
-       </tr>
-       <tr>
-        <td class="parametername">symbolsPerBeat</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">byteEnableWidth</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">emptyWidth</td>
-        <td class="parametervalue">2</td>
-       </tr>
-       <tr>
-        <td class="parametername">hasReadBlock</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">hasWriteBlock</td>
-        <td class="parametervalue">true</td>
-       </tr>
-       <tr>
-        <td class="parametername">deviceFamily</td>
-        <td class="parametervalue">UNKNOWN</td>
-       </tr>
-       <tr>
-        <td class="parametername">generateLegacySim</td>
-        <td class="parametervalue">false</td>
-       </tr>
-      </table>
-     </td>
-    </tr>
-   </table>&#160;&#160;
-   <table class="flowbox">
-    <tr>
-     <td class="parametersbox">
-      <h2>Software Assignments</h2>
-      <table>
-       <tr>
-        <td class="parametername">ADDRESS_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">ALWAYS_DO_MAX_BURST</td>
-        <td class="parametervalue">1</td>
-       </tr>
-       <tr>
-        <td class="parametername">ATLANTIC_CHANNEL_DATA_WIDTH</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">AVALON_MM_BYTE_REORDER_MODE</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">BURST_DATA_WIDTH</td>
-        <td class="parametervalue">8</td>
-       </tr>
-       <tr>
-        <td class="parametername">BURST_TRANSFER</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">BYTES_TO_TRANSFER_DATA_WIDTH</td>
-        <td class="parametervalue">16</td>
-       </tr>
-       <tr>
-        <td class="parametername">CHAIN_WRITEBACK_DATA_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">COMMAND_FIFO_DATA_WIDTH</td>
-        <td class="parametervalue">104</td>
-       </tr>
-       <tr>
-        <td class="parametername">CONTROL_DATA_WIDTH</td>
-        <td class="parametervalue">8</td>
-       </tr>
-       <tr>
-        <td class="parametername">CONTROL_SLAVE_ADDRESS_WIDTH</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">CONTROL_SLAVE_DATA_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">DESCRIPTOR_READ_BURST</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">DESC_DATA_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">HAS_READ_BLOCK</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">HAS_WRITE_BLOCK</td>
-        <td class="parametervalue">1</td>
-       </tr>
-       <tr>
-        <td class="parametername">IN_ERROR_WIDTH</td>
-        <td class="parametervalue">6</td>
-       </tr>
-       <tr>
-        <td class="parametername">OUT_ERROR_WIDTH</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">READ_BLOCK_DATA_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">READ_BURSTCOUNT_WIDTH</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">STATUS_TOKEN_DATA_WIDTH</td>
-        <td class="parametervalue">24</td>
-       </tr>
-       <tr>
-        <td class="parametername">STREAM_DATA_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">SYMBOLS_PER_BEAT</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">UNALIGNED_TRANSFER</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">WRITE_BLOCK_DATA_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">WRITE_BURSTCOUNT_WIDTH</td>
-        <td class="parametervalue">4</td>
-       </tr>
-      </table>
-     </td>
-    </tr>
-   </table>
-  </div>
-  <a name="module_nios_system_inst_sgdma_tx"> </a>
-  <div>
-   <hr/>
-   <h2>nios_system_inst_sgdma_tx</h2>altera_avalon_sgdma v13.0.1.99.2
-   <br/>
-   <div class="greydiv">
-    <table class="connectionboxes">
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_External_Clocks">nios_system_inst_External_Clocks</a>
-      </td>
-      <td class="from">sys_clk&#160;&#160;</td>
-      <td class="main" rowspan="22">nios_system_inst_sgdma_tx</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clk</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_clk_27">nios_system_inst_clk_27</a>
-      </td>
-      <td class="from">clk_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="6">
-       <a href="#module_nios_system_inst_CPU">nios_system_inst_CPU</a>
-      </td>
-      <td class="from">jtag_debug_module_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr>
-      <td class="from">data_master&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;csr</td>
-     </tr>
-     <tr>
-      <td class="from">d_irq&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;csr_irq</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">out&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_enet">nios_system_inst_enet</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;transmit</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">m_read&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_packet_memory">nios_system_inst_packet_memory</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">descriptor_read&#160;&#160;</td>
-      <td class="neighbor" rowspan="4">
-       <a href="#module_nios_system_inst_descriptor_memory">nios_system_inst_descriptor_memory</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">descriptor_write&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-    </table>
-   </div>
-   <br/>
-   <br/>
-   <table class="flowbox">
-    <tr>
-     <td class="parametersbox">
-      <h2>Parameters</h2>
-      <table>
-       <tr>
-        <td class="parametername">addressWidth</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">alwaysDoMaxBurst</td>
-        <td class="parametervalue">true</td>
-       </tr>
-       <tr>
-        <td class="parametername">avalonMMByteReorderMode</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">dataTransferFIFODepth</td>
-        <td class="parametervalue">2</td>
-       </tr>
-       <tr>
-        <td class="parametername">enableBurstTransfers</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">enableDescriptorReadMasterBurst</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">enableUnalignedTransfers</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">internalFIFODepth</td>
-        <td class="parametervalue">2</td>
-       </tr>
-       <tr>
-        <td class="parametername">readBlockDataWidth</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">readBurstcountWidth</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">sinkErrorWidth</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">sourceErrorWidth</td>
-        <td class="parametervalue">1</td>
-       </tr>
-       <tr>
-        <td class="parametername">transferMode</td>
-        <td class="parametervalue">MEMORY_TO_STREAM</td>
-       </tr>
-       <tr>
-        <td class="parametername">writeBurstcountWidth</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">deviceFamilyString</td>
-        <td class="parametervalue">CYCLONEIVE</td>
-       </tr>
-       <tr>
-        <td class="parametername">actualDataTransferFIFODepth</td>
-        <td class="parametervalue">64</td>
-       </tr>
-       <tr>
-        <td class="parametername">commandFIFODataWidth</td>
-        <td class="parametervalue">104</td>
-       </tr>
-       <tr>
-        <td class="parametername">symbolsPerBeat</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">byteEnableWidth</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">emptyWidth</td>
-        <td class="parametervalue">2</td>
-       </tr>
-       <tr>
-        <td class="parametername">hasReadBlock</td>
-        <td class="parametervalue">true</td>
-       </tr>
-       <tr>
-        <td class="parametername">hasWriteBlock</td>
-        <td class="parametervalue">false</td>
-       </tr>
-       <tr>
-        <td class="parametername">deviceFamily</td>
-        <td class="parametervalue">UNKNOWN</td>
-       </tr>
-       <tr>
-        <td class="parametername">generateLegacySim</td>
-        <td class="parametervalue">false</td>
-       </tr>
-      </table>
-     </td>
-    </tr>
-   </table>&#160;&#160;
-   <table class="flowbox">
-    <tr>
-     <td class="parametersbox">
-      <h2>Software Assignments</h2>
-      <table>
-       <tr>
-        <td class="parametername">ADDRESS_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">ALWAYS_DO_MAX_BURST</td>
-        <td class="parametervalue">1</td>
-       </tr>
-       <tr>
-        <td class="parametername">ATLANTIC_CHANNEL_DATA_WIDTH</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">AVALON_MM_BYTE_REORDER_MODE</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">BURST_DATA_WIDTH</td>
-        <td class="parametervalue">8</td>
-       </tr>
-       <tr>
-        <td class="parametername">BURST_TRANSFER</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">BYTES_TO_TRANSFER_DATA_WIDTH</td>
-        <td class="parametervalue">16</td>
-       </tr>
-       <tr>
-        <td class="parametername">CHAIN_WRITEBACK_DATA_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">COMMAND_FIFO_DATA_WIDTH</td>
-        <td class="parametervalue">104</td>
-       </tr>
-       <tr>
-        <td class="parametername">CONTROL_DATA_WIDTH</td>
-        <td class="parametervalue">8</td>
-       </tr>
-       <tr>
-        <td class="parametername">CONTROL_SLAVE_ADDRESS_WIDTH</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">CONTROL_SLAVE_DATA_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">DESCRIPTOR_READ_BURST</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">DESC_DATA_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">HAS_READ_BLOCK</td>
-        <td class="parametervalue">1</td>
-       </tr>
-       <tr>
-        <td class="parametername">HAS_WRITE_BLOCK</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">IN_ERROR_WIDTH</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">OUT_ERROR_WIDTH</td>
-        <td class="parametervalue">1</td>
-       </tr>
-       <tr>
-        <td class="parametername">READ_BLOCK_DATA_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">READ_BURSTCOUNT_WIDTH</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">STATUS_TOKEN_DATA_WIDTH</td>
-        <td class="parametervalue">24</td>
-       </tr>
-       <tr>
-        <td class="parametername">STREAM_DATA_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">SYMBOLS_PER_BEAT</td>
-        <td class="parametervalue">4</td>
-       </tr>
-       <tr>
-        <td class="parametername">UNALIGNED_TRANSFER</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">WRITE_BLOCK_DATA_WIDTH</td>
-        <td class="parametervalue">32</td>
-       </tr>
-       <tr>
-        <td class="parametername">WRITE_BURSTCOUNT_WIDTH</td>
-        <td class="parametervalue">4</td>
-       </tr>
-      </table>
-     </td>
-    </tr>
-   </table>
-  </div>
   <a name="module_nios_system_inst_descriptor_memory"> </a>
   <div>
    <hr/>
@@ -15267,7 +14123,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_nios_system_inst_External_Clocks">nios_system_inst_External_Clocks</a>
       </td>
       <td class="from">sys_clk&#160;&#160;</td>
-      <td class="main" rowspan="20">nios_system_inst_descriptor_memory</td>
+      <td class="main" rowspan="10">nios_system_inst_descriptor_memory</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk1</td>
@@ -15298,42 +14154,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="from">data_master&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="4">
-       <a href="#module_nios_system_inst_sgdma_rx">nios_system_inst_sgdma_rx</a>
-      </td>
-      <td class="from">descriptor_read&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr>
-      <td class="from">descriptor_write&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="4">
-       <a href="#module_nios_system_inst_sgdma_tx">nios_system_inst_sgdma_tx</a>
-      </td>
-      <td class="from">descriptor_read&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr>
-      <td class="from">descriptor_write&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
@@ -15533,7 +14353,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_nios_system_inst_External_Clocks">nios_system_inst_External_Clocks</a>
       </td>
       <td class="from">sys_clk&#160;&#160;</td>
-      <td class="main" rowspan="16">nios_system_inst_packet_memory</td>
+      <td class="main" rowspan="10">nios_system_inst_packet_memory</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk1</td>
@@ -15567,30 +14387,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="to">&#160;&#160;reset1</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_sgdma_rx">nios_system_inst_sgdma_rx</a>
-      </td>
-      <td class="from">m_write&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_nios_system_inst_sgdma_tx">nios_system_inst_sgdma_tx</a>
-      </td>
-      <td class="from">m_read&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;s1</td>
      </tr>
     </table>
    </div>
@@ -16031,6 +14827,132 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <tr>
         <td class="parametername">deviceFamily</td>
         <td class="parametervalue">Cyclone IV E</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>(none)</td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_nios_system_inst_VideoConferencing_DMA_0"> </a>
+  <div>
+   <hr/>
+   <h2>nios_system_inst_VideoConferencing_DMA_0</h2>VideoConferencing_DMA v1.0
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_nios_system_inst_CPU">nios_system_inst_CPU</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="19">nios_system_inst_VideoConferencing_DMA_0</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;avalon_slave</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_nios_system_inst_External_Clocks">nios_system_inst_External_Clocks</a>
+      </td>
+      <td class="from">sys_clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clock_sink</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_nios_system_inst_clk_27">nios_system_inst_clk_27</a>
+      </td>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset_sink</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_nios_system_inst_enet">nios_system_inst_enet</a>
+      </td>
+      <td class="from">receive&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;avalon_streaming_sink</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_nios_system_inst_videoconferencing_dma_conduit_bfm">nios_system_inst_videoconferencing_dma_conduit_bfm</a>
+      </td>
+      <td class="from">conduit&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;conduit_end</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">avalon_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_nios_system_inst_SRAM">nios_system_inst_SRAM</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;avalon_sram_slave</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">avalon_streaming_source&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_nios_system_inst_enet">nios_system_inst_enet</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;transmit</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">AUTO_CLOCK_SINK_CLOCK_RATE</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
        </tr>
        <tr>
         <td class="parametername">generateLegacySim</td>
@@ -17748,10 +16670,61 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
+  <a name="module_nios_system_inst_videoconferencing_dma_conduit_bfm"> </a>
+  <div>
+   <hr/>
+   <h2>nios_system_inst_videoconferencing_dma_conduit_bfm</h2>altera_conduit_bfm v13.0
+   <br/>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">CLOCKED_SIGNAL</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">ENABLE_RESET</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">SIGNAL_ROLES</td>
+        <td class="parametervalue">LEDR_conduit,LEDG_conduit,HEX0_conduit,HEX1_conduit,HEX2_conduit,HEX3_conduit,HEX4_conduit,HEX5_conduit,HEX6_conduit,HEX7_conduit,SW_conduit</td>
+       </tr>
+       <tr>
+        <td class="parametername">SIGNAL_WIDTHS</td>
+        <td class="parametervalue">18,8,7,7,7,7,7,7,7,7,18</td>
+       </tr>
+       <tr>
+        <td class="parametername">SIGNAL_DIRECTIONS</td>
+        <td class="parametervalue">input,input,input,input,input,input,input,input,input,input,output</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>(none)</td>
+    </tr>
+   </table>
+  </div>
   <table class="blueBar">
    <tr>
     <td class="l">generation took 0.01 seconds</td>
-    <td class="r">rendering took 1.43 seconds</td>
+    <td class="r">rendering took 14.20 seconds</td>
    </tr>
   </table>
  </body>

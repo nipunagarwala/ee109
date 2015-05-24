@@ -21,10 +21,10 @@ module part1 (CLOCK_50, CLOCK2_50, KEY, I2C_SCLK, I2C_SDAT, AUD_XCK, AUD_DACLRCK
 	// Your code goes here 
 	/////////////////////////////////
 	
-	assign writedata_left = ...;
-	assign writedata_right = ...;
-	assign read = ...;
-	assign write = ...;
+	//assign writedata_left = ...;
+	//assign writedata_right = ...;
+	//assign read = ...;
+	//assign write = ...;
 
 	
 /////////////////////////////////////////////////////////////////////////////////

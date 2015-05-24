@@ -20,9 +20,9 @@
 // Altera IRQ Mapper
 //
 // Parameters
-//   NUM_RCVRS        : 14
+//   NUM_RCVRS        : 12
 //   SENDER_IRW_WIDTH : 32
-//   IRQ_MAP          : 0:8,1:0,2:10,3:1,4:11,5:7,6:6,7:17,8:9,9:15,10:2,11:3,12:4,13:5
+//   IRQ_MAP          : 0:8,1:0,2:10,3:1,4:11,5:7,6:6,7:17,8:9,9:15,10:2,11:5
 //
 // -------------------------------------------------------
 
@@ -51,8 +51,6 @@ module nios_system_irq_mapper
     input                receiver9_irq,
     input                receiver10_irq,
     input                receiver11_irq,
-    input                receiver12_irq,
-    input                receiver13_irq,
 
     // -------------------
     // Command Source (Output)
@@ -75,9 +73,7 @@ module nios_system_irq_mapper
         sender_irq[9] = receiver8_irq;
         sender_irq[15] = receiver9_irq;
         sender_irq[2] = receiver10_irq;
-        sender_irq[3] = receiver11_irq;
-        sender_irq[4] = receiver12_irq;
-        sender_irq[5] = receiver13_irq;
+        sender_irq[5] = receiver11_irq;
     end
 
 endmodule

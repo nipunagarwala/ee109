@@ -347,6 +347,14 @@
  <file
    path="nios_system/testbench/nios_system_tb/simulation/submodules/verbosity_pkg.sv"
    type="SYSTEM_VERILOG"
+   library="nios_system_inst_videoconferencing_dma_conduit_bfm" />
+ <file
+   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0029.sv"
+   type="SYSTEM_VERILOG"
+   library="nios_system_inst_videoconferencing_dma_conduit_bfm" />
+ <file
+   path="nios_system/testbench/nios_system_tb/simulation/submodules/verbosity_pkg.sv"
+   type="SYSTEM_VERILOG"
    library="nios_system_inst_enet_mac_misc_bfm" />
  <file
    path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0028.sv"

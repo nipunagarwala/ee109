@@ -85,8 +85,6 @@ add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ienabl
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ienable_reg_irq0
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ienable_reg_irq1
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ienable_reg_irq2
-add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ienable_reg_irq3
-add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ienable_reg_irq4
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ienable_reg_irq5
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ienable_reg_irq6
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ienable_reg_irq7
@@ -100,8 +98,6 @@ add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ipendi
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ipending_reg_irq0
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ipending_reg_irq1
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ipending_reg_irq2
-add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ipending_reg_irq3
-add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ipending_reg_irq4
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ipending_reg_irq5
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ipending_reg_irq6
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_ipending_reg_irq7

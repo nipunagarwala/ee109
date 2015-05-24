@@ -47,23 +47,23 @@ module nios_system_addr_router_002_default_decode
      parameter DEFAULT_CHANNEL = 0,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 33 
+               DEFAULT_DESTID = 25 
    )
-  (output [100 - 95 : 0] default_destination_id,
-   output [39-1 : 0] default_wr_channel,
-   output [39-1 : 0] default_rd_channel,
-   output [39-1 : 0] default_src_channel
+  (output [82 - 77 : 0] default_destination_id,
+   output [38-1 : 0] default_wr_channel,
+   output [38-1 : 0] default_rd_channel,
+   output [38-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[100 - 95 : 0];
+    DEFAULT_DESTID[82 - 77 : 0];
 
   generate begin : default_decode
     if (DEFAULT_CHANNEL == -1) begin
       assign default_src_channel = '0;
     end
     else begin
-      assign default_src_channel = 39'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 38'b1 << DEFAULT_CHANNEL;
     end
   end
   endgenerate
@@ -74,8 +74,8 @@ module nios_system_addr_router_002_default_decode
       assign default_rd_channel = '0;
     end
     else begin
-      assign default_wr_channel = 39'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 39'b1 << DEFAULT_RD_CHANNEL;
+      assign default_wr_channel = 38'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 38'b1 << DEFAULT_RD_CHANNEL;
     end
   end
   endgenerate
@@ -95,7 +95,7 @@ module nios_system_addr_router_002
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [111-1 : 0]    sink_data,
+    input  [93-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -104,8 +104,8 @@ module nios_system_addr_router_002
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [111-1    : 0] src_data,
-    output reg [39-1 : 0] src_channel,
+    output reg [93-1    : 0] src_data,
+    output reg [38-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -114,18 +114,18 @@ module nios_system_addr_router_002
     // -------------------------------------------------------
     // Local parameters and variables
     // -------------------------------------------------------
-    localparam PKT_ADDR_H = 67;
-    localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 100;
-    localparam PKT_DEST_ID_L = 95;
-    localparam PKT_PROTECTION_H = 104;
-    localparam PKT_PROTECTION_L = 102;
-    localparam ST_DATA_W = 111;
-    localparam ST_CHANNEL_W = 39;
+    localparam PKT_ADDR_H = 49;
+    localparam PKT_ADDR_L = 18;
+    localparam PKT_DEST_ID_H = 82;
+    localparam PKT_DEST_ID_L = 77;
+    localparam PKT_PROTECTION_H = 86;
+    localparam PKT_PROTECTION_L = 84;
+    localparam ST_DATA_W = 93;
+    localparam ST_CHANNEL_W = 38;
     localparam DECODER_TYPE = 0;
 
-    localparam PKT_TRANS_WRITE = 70;
-    localparam PKT_TRANS_READ  = 71;
+    localparam PKT_TRANS_WRITE = 52;
+    localparam PKT_TRANS_READ  = 53;
 
     localparam PKT_ADDR_W = PKT_ADDR_H-PKT_ADDR_L + 1;
     localparam PKT_DEST_ID_W = PKT_DEST_ID_H-PKT_DEST_ID_L + 1;
@@ -136,13 +136,13 @@ module nios_system_addr_router_002
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h8201000 - 64'h8200000); 
+    localparam PAD0 = log2ceil(64'h8200000 - 64'h8000000); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h8201000;
+    localparam ADDR_RANGE = 64'h8200000;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -161,7 +161,7 @@ module nios_system_addr_router_002
     assign src_endofpacket   = sink_endofpacket;
 
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [39-1 : 0] default_src_channel;
+    wire [38-1 : 0] default_src_channel;
 
 
 
@@ -185,9 +185,9 @@ module nios_system_addr_router_002
         // --------------------------------------------------
            
          
-          // ( 8200000 .. 8201000 )
-          src_channel = 39'b1;
-          src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 33;
+          // ( 8000000 .. 8200000 )
+          src_channel = 38'b1;
+          src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 25;
 	     
         
 

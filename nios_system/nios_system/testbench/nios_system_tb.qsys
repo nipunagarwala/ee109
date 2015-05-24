@@ -289,6 +289,14 @@
          type = "int";
       }
    }
+   element nios_system_inst_videoconferencing_dma_conduit_bfm
+   {
+      datum _sortIndex
+      {
+         value = "35";
+         type = "int";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -304,7 +312,7 @@
  <parameter name="projectName" value="" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1431750242690" />
+ <parameter name="timeStamp" value="1432369754688" />
  <parameter name="useTestBenchNamingPattern" value="true" />
  <instanceScript></instanceScript>
  <module kind="nios_system" version="1.0" enabled="1" name="nios_system_inst">
@@ -684,6 +692,17 @@
   <parameter name="SIGNAL_WIDTHS">1,1,1,1,1,1,1,1,1,18,4,1,1,1</parameter>
   <parameter name="SIGNAL_DIRECTIONS">output,output,input,output,output,input,input,input,input,input,input,input,input,input</parameter>
  </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="nios_system_inst_videoconferencing_dma_conduit_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">LEDR_conduit,LEDG_conduit,HEX0_conduit,HEX1_conduit,HEX2_conduit,HEX3_conduit,HEX4_conduit,HEX5_conduit,HEX6_conduit,HEX7_conduit,SW_conduit</parameter>
+  <parameter name="SIGNAL_WIDTHS">18,8,7,7,7,7,7,7,7,7,18</parameter>
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,input,input,input,input,input,output</parameter>
+ </module>
  <connection
    kind="clock"
    version="13.0"
@@ -1027,6 +1046,17 @@
    version="13.0"
    start="nios_system_inst_enet_mac_misc_bfm.conduit"
    end="nios_system_inst.enet_mac_misc">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="nios_system_inst_videoconferencing_dma_conduit_bfm.conduit"
+   end="nios_system_inst.videoconferencing_dma_conduit">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />

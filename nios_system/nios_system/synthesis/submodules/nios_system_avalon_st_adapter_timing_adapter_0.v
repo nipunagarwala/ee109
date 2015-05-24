@@ -14,18 +14,18 @@ module nios_system_avalon_st_adapter_timing_adapter_0 (
       output reg         in_ready,
       input              in_valid,
       input      [31: 0] in_data,
+      input      [ 1: 0] in_channel,
       input      [ 5: 0] in_error,
       input              in_startofpacket,
       input              in_endofpacket,
-      input      [ 1: 0] in_empty,
       // Interface: out
       input              out_ready,
       output reg         out_valid,
       output reg [31: 0] out_data,
+      output reg [ 1: 0] out_channel,
       output reg [ 5: 0] out_error,
       output reg         out_startofpacket,
-      output reg         out_endofpacket,
-      output reg [ 1: 0] out_empty
+      output reg         out_endofpacket
 );
 
 
@@ -47,8 +47,8 @@ module nios_system_avalon_st_adapter_timing_adapter_0 (
    //| Payload Mapping
    // ---------------------------------------------------------------------
    always @* begin
-     in_payload = {in_data,in_error,in_startofpacket,in_endofpacket,in_empty};
-     {out_data,out_error,out_startofpacket,out_endofpacket,out_empty} = out_payload;
+     in_payload = {in_data,in_channel,in_error,in_startofpacket,in_endofpacket};
+     {out_data,out_channel,out_error,out_startofpacket,out_endofpacket} = out_payload;
    end
 
    // ---------------------------------------------------------------------
