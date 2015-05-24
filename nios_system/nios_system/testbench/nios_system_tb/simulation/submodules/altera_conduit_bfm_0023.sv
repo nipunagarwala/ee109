@@ -28,68 +28,64 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm_0023
-// role:width:direction:                              INT1:1:output,DATA:16:bidir,RST_N:1:input,ADDR:2:input,CS_N:1:input,RD_N:1:input,WR_N:1:input,INT0:1:output
+// role:width:direction:                              CLK:1:input,HS:1:input,VS:1:input,BLANK:1:input,SYNC:1:input,R:8:input,G:8:input,B:8:input
 // false
 //-----------------------------------------------------------------------------
 `timescale 1 ns / 1 ns
 
 module altera_conduit_bfm_0023
 (
-   sig_INT1,
-   sig_DATA,
-   sig_RST_N,
-   sig_ADDR,
-   sig_CS_N,
-   sig_RD_N,
-   sig_WR_N,
-   sig_INT0
+   sig_CLK,
+   sig_HS,
+   sig_VS,
+   sig_BLANK,
+   sig_SYNC,
+   sig_R,
+   sig_G,
+   sig_B
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   output sig_INT1;
-   inout wire [15 : 0] sig_DATA;
-   input sig_RST_N;
-   input [1 : 0] sig_ADDR;
-   input sig_CS_N;
-   input sig_RD_N;
-   input sig_WR_N;
-   output sig_INT0;
+   input sig_CLK;
+   input sig_HS;
+   input sig_VS;
+   input sig_BLANK;
+   input sig_SYNC;
+   input [7 : 0] sig_R;
+   input [7 : 0] sig_G;
+   input [7 : 0] sig_B;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic ROLE_INT1_t;
-   typedef logic [15 : 0] ROLE_DATA_t;
-   typedef logic ROLE_RST_N_t;
-   typedef logic [1 : 0] ROLE_ADDR_t;
-   typedef logic ROLE_CS_N_t;
-   typedef logic ROLE_RD_N_t;
-   typedef logic ROLE_WR_N_t;
-   typedef logic ROLE_INT0_t;
+   typedef logic ROLE_CLK_t;
+   typedef logic ROLE_HS_t;
+   typedef logic ROLE_VS_t;
+   typedef logic ROLE_BLANK_t;
+   typedef logic ROLE_SYNC_t;
+   typedef logic [7 : 0] ROLE_R_t;
+   typedef logic [7 : 0] ROLE_G_t;
+   typedef logic [7 : 0] ROLE_B_t;
 
-   reg INT1_temp;
-   reg INT1_out;
-   logic DATA_oe;
-   logic DATA_oe_temp = 0;
-   reg [15 : 0] DATA_temp;
-   reg [15 : 0] DATA_out;
-   logic [15 : 0] DATA_in;
-   logic [15 : 0] DATA_local;
-   logic [0 : 0] RST_N_in;
-   logic [0 : 0] RST_N_local;
-   logic [1 : 0] ADDR_in;
-   logic [1 : 0] ADDR_local;
-   logic [0 : 0] CS_N_in;
-   logic [0 : 0] CS_N_local;
-   logic [0 : 0] RD_N_in;
-   logic [0 : 0] RD_N_local;
-   logic [0 : 0] WR_N_in;
-   logic [0 : 0] WR_N_local;
-   reg INT0_temp;
-   reg INT0_out;
+   logic [0 : 0] CLK_in;
+   logic [0 : 0] CLK_local;
+   logic [0 : 0] HS_in;
+   logic [0 : 0] HS_local;
+   logic [0 : 0] VS_in;
+   logic [0 : 0] VS_local;
+   logic [0 : 0] BLANK_in;
+   logic [0 : 0] BLANK_local;
+   logic [0 : 0] SYNC_in;
+   logic [0 : 0] SYNC_local;
+   logic [7 : 0] R_in;
+   logic [7 : 0] R_local;
+   logic [7 : 0] G_in;
+   logic [7 : 0] G_local;
+   logic [7 : 0] B_in;
+   logic [7 : 0] B_local;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -109,12 +105,14 @@ module altera_conduit_bfm_0023
    // =cut
    //--------------------------------------------------------------------------
    
-   event signal_input_DATA_change;
-   event signal_input_RST_N_change;
-   event signal_input_ADDR_change;
-   event signal_input_CS_N_change;
-   event signal_input_RD_N_change;
-   event signal_input_WR_N_change;
+   event signal_input_CLK_change;
+   event signal_input_HS_change;
+   event signal_input_VS_change;
+   event signal_input_BLANK_change;
+   event signal_input_SYNC_change;
+   event signal_input_R_change;
+   event signal_input_G_change;
+   event signal_input_B_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -123,178 +121,157 @@ module altera_conduit_bfm_0023
    endfunction
 
    // -------------------------------------------------------
-   // INT1
+   // CLK
    // -------------------------------------------------------
-
-   function automatic void set_INT1 (
-      ROLE_INT1_t new_value
-   );
-      // Drive the new value to INT1.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
-      print(VERBOSITY_DEBUG, message);
-      
-      INT1_temp = new_value;
-   endfunction
-
-   // -------------------------------------------------------
-   // DATA
-   // -------------------------------------------------------
-   function automatic ROLE_DATA_t get_DATA();
+   function automatic ROLE_CLK_t get_CLK();
    
-      // Gets the DATA input value.
-      $sformat(message, "%m: called get_DATA");
+      // Gets the CLK input value.
+      $sformat(message, "%m: called get_CLK");
       print(VERBOSITY_DEBUG, message);
-      return DATA_in;
+      return CLK_in;
       
    endfunction
 
-   function automatic void set_DATA (
-      ROLE_DATA_t new_value
-   );
-      // Drive the new value to DATA.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
-      print(VERBOSITY_DEBUG, message);
-      
-      DATA_temp = new_value;
-   endfunction
+   // -------------------------------------------------------
+   // HS
+   // -------------------------------------------------------
+   function automatic ROLE_HS_t get_HS();
    
-   function automatic void set_DATA_oe (
-      bit enable
-   );
-      // bidir port DATA will work as output port when set to 1.
-      // bidir port DATA will work as input port when set to 0.
-      
-      $sformat(message, "%m: method called arg0 %0d", enable); 
+      // Gets the HS input value.
+      $sformat(message, "%m: called get_HS");
       print(VERBOSITY_DEBUG, message);
+      return HS_in;
       
-      DATA_oe_temp = enable;
    endfunction
 
    // -------------------------------------------------------
-   // RST_N
+   // VS
    // -------------------------------------------------------
-   function automatic ROLE_RST_N_t get_RST_N();
+   function automatic ROLE_VS_t get_VS();
    
-      // Gets the RST_N input value.
-      $sformat(message, "%m: called get_RST_N");
+      // Gets the VS input value.
+      $sformat(message, "%m: called get_VS");
       print(VERBOSITY_DEBUG, message);
-      return RST_N_in;
+      return VS_in;
       
    endfunction
 
    // -------------------------------------------------------
-   // ADDR
+   // BLANK
    // -------------------------------------------------------
-   function automatic ROLE_ADDR_t get_ADDR();
+   function automatic ROLE_BLANK_t get_BLANK();
    
-      // Gets the ADDR input value.
-      $sformat(message, "%m: called get_ADDR");
+      // Gets the BLANK input value.
+      $sformat(message, "%m: called get_BLANK");
       print(VERBOSITY_DEBUG, message);
-      return ADDR_in;
+      return BLANK_in;
       
    endfunction
 
    // -------------------------------------------------------
-   // CS_N
+   // SYNC
    // -------------------------------------------------------
-   function automatic ROLE_CS_N_t get_CS_N();
+   function automatic ROLE_SYNC_t get_SYNC();
    
-      // Gets the CS_N input value.
-      $sformat(message, "%m: called get_CS_N");
+      // Gets the SYNC input value.
+      $sformat(message, "%m: called get_SYNC");
       print(VERBOSITY_DEBUG, message);
-      return CS_N_in;
+      return SYNC_in;
       
    endfunction
 
    // -------------------------------------------------------
-   // RD_N
+   // R
    // -------------------------------------------------------
-   function automatic ROLE_RD_N_t get_RD_N();
+   function automatic ROLE_R_t get_R();
    
-      // Gets the RD_N input value.
-      $sformat(message, "%m: called get_RD_N");
+      // Gets the R input value.
+      $sformat(message, "%m: called get_R");
       print(VERBOSITY_DEBUG, message);
-      return RD_N_in;
+      return R_in;
       
    endfunction
 
    // -------------------------------------------------------
-   // WR_N
+   // G
    // -------------------------------------------------------
-   function automatic ROLE_WR_N_t get_WR_N();
+   function automatic ROLE_G_t get_G();
    
-      // Gets the WR_N input value.
-      $sformat(message, "%m: called get_WR_N");
+      // Gets the G input value.
+      $sformat(message, "%m: called get_G");
       print(VERBOSITY_DEBUG, message);
-      return WR_N_in;
+      return G_in;
       
    endfunction
 
    // -------------------------------------------------------
-   // INT0
+   // B
    // -------------------------------------------------------
-
-   function automatic void set_INT0 (
-      ROLE_INT0_t new_value
-   );
-      // Drive the new value to INT0.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
+   function automatic ROLE_B_t get_B();
+   
+      // Gets the B input value.
+      $sformat(message, "%m: called get_B");
       print(VERBOSITY_DEBUG, message);
+      return B_in;
       
-      INT0_temp = new_value;
    endfunction
 
-   assign sig_INT1 = INT1_temp;
-   assign DATA_oe = DATA_oe_temp;
-   assign sig_DATA = (DATA_oe == 1)? DATA_temp:'z;
-   assign DATA_in = (DATA_oe == 0)? sig_DATA:'z;
-   assign RST_N_in = sig_RST_N;
-   assign ADDR_in = sig_ADDR;
-   assign CS_N_in = sig_CS_N;
-   assign RD_N_in = sig_RD_N;
-   assign WR_N_in = sig_WR_N;
-   assign sig_INT0 = INT0_temp;
+   assign CLK_in = sig_CLK;
+   assign HS_in = sig_HS;
+   assign VS_in = sig_VS;
+   assign BLANK_in = sig_BLANK;
+   assign SYNC_in = sig_SYNC;
+   assign R_in = sig_R;
+   assign G_in = sig_G;
+   assign B_in = sig_B;
 
 
-   always @(DATA_in) begin
-      if (DATA_oe == 0) begin
-         if (DATA_local != DATA_in)
-            -> signal_input_DATA_change;
-         DATA_local = DATA_in;
-      end
+   always @(CLK_in) begin
+      if (CLK_local != CLK_in)
+         -> signal_input_CLK_change;
+      CLK_local = CLK_in;
    end
    
-   always @(RST_N_in) begin
-      if (RST_N_local != RST_N_in)
-         -> signal_input_RST_N_change;
-      RST_N_local = RST_N_in;
+   always @(HS_in) begin
+      if (HS_local != HS_in)
+         -> signal_input_HS_change;
+      HS_local = HS_in;
    end
    
-   always @(ADDR_in) begin
-      if (ADDR_local != ADDR_in)
-         -> signal_input_ADDR_change;
-      ADDR_local = ADDR_in;
+   always @(VS_in) begin
+      if (VS_local != VS_in)
+         -> signal_input_VS_change;
+      VS_local = VS_in;
    end
    
-   always @(CS_N_in) begin
-      if (CS_N_local != CS_N_in)
-         -> signal_input_CS_N_change;
-      CS_N_local = CS_N_in;
+   always @(BLANK_in) begin
+      if (BLANK_local != BLANK_in)
+         -> signal_input_BLANK_change;
+      BLANK_local = BLANK_in;
    end
    
-   always @(RD_N_in) begin
-      if (RD_N_local != RD_N_in)
-         -> signal_input_RD_N_change;
-      RD_N_local = RD_N_in;
+   always @(SYNC_in) begin
+      if (SYNC_local != SYNC_in)
+         -> signal_input_SYNC_change;
+      SYNC_local = SYNC_in;
    end
    
-   always @(WR_N_in) begin
-      if (WR_N_local != WR_N_in)
-         -> signal_input_WR_N_change;
-      WR_N_local = WR_N_in;
+   always @(R_in) begin
+      if (R_local != R_in)
+         -> signal_input_R_change;
+      R_local = R_in;
+   end
+   
+   always @(G_in) begin
+      if (G_local != G_in)
+         -> signal_input_G_change;
+      G_local = G_in;
+   end
+   
+   always @(B_in) begin
+      if (B_local != B_in)
+         -> signal_input_B_change;
+      B_local = B_in;
    end
    
 

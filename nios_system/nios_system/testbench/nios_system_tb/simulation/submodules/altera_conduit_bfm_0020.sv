@@ -28,49 +28,59 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm_0020
-// role:width:direction:                              PIXEL_CLK:1:output,LINE_VALID:1:output,FRAME_VALID:1:output,pixel_clk_reset:1:output,PIXEL_DATA:12:output
+// role:width:direction:                              CLK:1:input,HS:1:input,VS:1:input,DATA_EN:1:input,R:8:input,G:8:input,B:8:input
 // false
 //-----------------------------------------------------------------------------
 `timescale 1 ns / 1 ns
 
 module altera_conduit_bfm_0020
 (
-   sig_PIXEL_CLK,
-   sig_LINE_VALID,
-   sig_FRAME_VALID,
-   sig_pixel_clk_reset,
-   sig_PIXEL_DATA
+   sig_CLK,
+   sig_HS,
+   sig_VS,
+   sig_DATA_EN,
+   sig_R,
+   sig_G,
+   sig_B
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   output sig_PIXEL_CLK;
-   output sig_LINE_VALID;
-   output sig_FRAME_VALID;
-   output sig_pixel_clk_reset;
-   output [11 : 0] sig_PIXEL_DATA;
+   input sig_CLK;
+   input sig_HS;
+   input sig_VS;
+   input sig_DATA_EN;
+   input [7 : 0] sig_R;
+   input [7 : 0] sig_G;
+   input [7 : 0] sig_B;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic ROLE_PIXEL_CLK_t;
-   typedef logic ROLE_LINE_VALID_t;
-   typedef logic ROLE_FRAME_VALID_t;
-   typedef logic ROLE_pixel_clk_reset_t;
-   typedef logic [11 : 0] ROLE_PIXEL_DATA_t;
+   typedef logic ROLE_CLK_t;
+   typedef logic ROLE_HS_t;
+   typedef logic ROLE_VS_t;
+   typedef logic ROLE_DATA_EN_t;
+   typedef logic [7 : 0] ROLE_R_t;
+   typedef logic [7 : 0] ROLE_G_t;
+   typedef logic [7 : 0] ROLE_B_t;
 
-   reg PIXEL_CLK_temp;
-   reg PIXEL_CLK_out;
-   reg LINE_VALID_temp;
-   reg LINE_VALID_out;
-   reg FRAME_VALID_temp;
-   reg FRAME_VALID_out;
-   reg pixel_clk_reset_temp;
-   reg pixel_clk_reset_out;
-   reg [11 : 0] PIXEL_DATA_temp;
-   reg [11 : 0] PIXEL_DATA_out;
+   logic [0 : 0] CLK_in;
+   logic [0 : 0] CLK_local;
+   logic [0 : 0] HS_in;
+   logic [0 : 0] HS_local;
+   logic [0 : 0] VS_in;
+   logic [0 : 0] VS_local;
+   logic [0 : 0] DATA_EN_in;
+   logic [0 : 0] DATA_EN_local;
+   logic [7 : 0] R_in;
+   logic [7 : 0] R_local;
+   logic [7 : 0] G_in;
+   logic [7 : 0] G_local;
+   logic [7 : 0] B_in;
+   logic [7 : 0] B_local;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -90,6 +100,13 @@ module altera_conduit_bfm_0020
    // =cut
    //--------------------------------------------------------------------------
    
+   event signal_input_CLK_change;
+   event signal_input_HS_change;
+   event signal_input_VS_change;
+   event signal_input_DATA_EN_change;
+   event signal_input_R_change;
+   event signal_input_G_change;
+   event signal_input_B_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -98,87 +115,140 @@ module altera_conduit_bfm_0020
    endfunction
 
    // -------------------------------------------------------
-   // PIXEL_CLK
+   // CLK
    // -------------------------------------------------------
-
-   function automatic void set_PIXEL_CLK (
-      ROLE_PIXEL_CLK_t new_value
-   );
-      // Drive the new value to PIXEL_CLK.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
+   function automatic ROLE_CLK_t get_CLK();
+   
+      // Gets the CLK input value.
+      $sformat(message, "%m: called get_CLK");
       print(VERBOSITY_DEBUG, message);
+      return CLK_in;
       
-      PIXEL_CLK_temp = new_value;
    endfunction
 
    // -------------------------------------------------------
-   // LINE_VALID
+   // HS
    // -------------------------------------------------------
-
-   function automatic void set_LINE_VALID (
-      ROLE_LINE_VALID_t new_value
-   );
-      // Drive the new value to LINE_VALID.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
+   function automatic ROLE_HS_t get_HS();
+   
+      // Gets the HS input value.
+      $sformat(message, "%m: called get_HS");
       print(VERBOSITY_DEBUG, message);
+      return HS_in;
       
-      LINE_VALID_temp = new_value;
    endfunction
 
    // -------------------------------------------------------
-   // FRAME_VALID
+   // VS
    // -------------------------------------------------------
-
-   function automatic void set_FRAME_VALID (
-      ROLE_FRAME_VALID_t new_value
-   );
-      // Drive the new value to FRAME_VALID.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
+   function automatic ROLE_VS_t get_VS();
+   
+      // Gets the VS input value.
+      $sformat(message, "%m: called get_VS");
       print(VERBOSITY_DEBUG, message);
+      return VS_in;
       
-      FRAME_VALID_temp = new_value;
    endfunction
 
    // -------------------------------------------------------
-   // pixel_clk_reset
+   // DATA_EN
    // -------------------------------------------------------
-
-   function automatic void set_pixel_clk_reset (
-      ROLE_pixel_clk_reset_t new_value
-   );
-      // Drive the new value to pixel_clk_reset.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
+   function automatic ROLE_DATA_EN_t get_DATA_EN();
+   
+      // Gets the DATA_EN input value.
+      $sformat(message, "%m: called get_DATA_EN");
       print(VERBOSITY_DEBUG, message);
+      return DATA_EN_in;
       
-      pixel_clk_reset_temp = new_value;
    endfunction
 
    // -------------------------------------------------------
-   // PIXEL_DATA
+   // R
    // -------------------------------------------------------
-
-   function automatic void set_PIXEL_DATA (
-      ROLE_PIXEL_DATA_t new_value
-   );
-      // Drive the new value to PIXEL_DATA.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
+   function automatic ROLE_R_t get_R();
+   
+      // Gets the R input value.
+      $sformat(message, "%m: called get_R");
       print(VERBOSITY_DEBUG, message);
+      return R_in;
       
-      PIXEL_DATA_temp = new_value;
    endfunction
 
-   assign sig_PIXEL_CLK = PIXEL_CLK_temp;
-   assign sig_LINE_VALID = LINE_VALID_temp;
-   assign sig_FRAME_VALID = FRAME_VALID_temp;
-   assign sig_pixel_clk_reset = pixel_clk_reset_temp;
-   assign sig_PIXEL_DATA = PIXEL_DATA_temp;
+   // -------------------------------------------------------
+   // G
+   // -------------------------------------------------------
+   function automatic ROLE_G_t get_G();
+   
+      // Gets the G input value.
+      $sformat(message, "%m: called get_G");
+      print(VERBOSITY_DEBUG, message);
+      return G_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // B
+   // -------------------------------------------------------
+   function automatic ROLE_B_t get_B();
+   
+      // Gets the B input value.
+      $sformat(message, "%m: called get_B");
+      print(VERBOSITY_DEBUG, message);
+      return B_in;
+      
+   endfunction
+
+   assign CLK_in = sig_CLK;
+   assign HS_in = sig_HS;
+   assign VS_in = sig_VS;
+   assign DATA_EN_in = sig_DATA_EN;
+   assign R_in = sig_R;
+   assign G_in = sig_G;
+   assign B_in = sig_B;
 
 
+   always @(CLK_in) begin
+      if (CLK_local != CLK_in)
+         -> signal_input_CLK_change;
+      CLK_local = CLK_in;
+   end
+   
+   always @(HS_in) begin
+      if (HS_local != HS_in)
+         -> signal_input_HS_change;
+      HS_local = HS_in;
+   end
+   
+   always @(VS_in) begin
+      if (VS_local != VS_in)
+         -> signal_input_VS_change;
+      VS_local = VS_in;
+   end
+   
+   always @(DATA_EN_in) begin
+      if (DATA_EN_local != DATA_EN_in)
+         -> signal_input_DATA_EN_change;
+      DATA_EN_local = DATA_EN_in;
+   end
+   
+   always @(R_in) begin
+      if (R_local != R_in)
+         -> signal_input_R_change;
+      R_local = R_in;
+   end
+   
+   always @(G_in) begin
+      if (G_local != G_in)
+         -> signal_input_G_change;
+      G_local = G_in;
+   end
+   
+   always @(B_in) begin
+      if (B_local != B_in)
+         -> signal_input_B_change;
+      B_local = B_in;
+   end
+   
 
 
 // synthesis translate_on

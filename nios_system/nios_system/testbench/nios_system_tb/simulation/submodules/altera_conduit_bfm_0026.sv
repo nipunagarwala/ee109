@@ -28,44 +28,44 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm_0026
-// role:width:direction:                              rgmii_in:4:output,rgmii_out:4:input,rx_control:1:output,tx_control:1:input
+// role:width:direction:                              mdc:1:input,mdio_in:1:output,mdio_out:1:input,mdio_oen:1:input
 // false
 //-----------------------------------------------------------------------------
 `timescale 1 ns / 1 ns
 
 module altera_conduit_bfm_0026
 (
-   sig_rgmii_in,
-   sig_rgmii_out,
-   sig_rx_control,
-   sig_tx_control
+   sig_mdc,
+   sig_mdio_in,
+   sig_mdio_out,
+   sig_mdio_oen
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   output [3 : 0] sig_rgmii_in;
-   input [3 : 0] sig_rgmii_out;
-   output sig_rx_control;
-   input sig_tx_control;
+   input sig_mdc;
+   output sig_mdio_in;
+   input sig_mdio_out;
+   input sig_mdio_oen;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic [3 : 0] ROLE_rgmii_in_t;
-   typedef logic [3 : 0] ROLE_rgmii_out_t;
-   typedef logic ROLE_rx_control_t;
-   typedef logic ROLE_tx_control_t;
+   typedef logic ROLE_mdc_t;
+   typedef logic ROLE_mdio_in_t;
+   typedef logic ROLE_mdio_out_t;
+   typedef logic ROLE_mdio_oen_t;
 
-   reg [3 : 0] rgmii_in_temp;
-   reg [3 : 0] rgmii_in_out;
-   logic [3 : 0] rgmii_out_in;
-   logic [3 : 0] rgmii_out_local;
-   reg rx_control_temp;
-   reg rx_control_out;
-   logic [0 : 0] tx_control_in;
-   logic [0 : 0] tx_control_local;
+   logic [0 : 0] mdc_in;
+   logic [0 : 0] mdc_local;
+   reg mdio_in_temp;
+   reg mdio_in_out;
+   logic [0 : 0] mdio_out_in;
+   logic [0 : 0] mdio_out_local;
+   logic [0 : 0] mdio_oen_in;
+   logic [0 : 0] mdio_oen_local;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -85,8 +85,9 @@ module altera_conduit_bfm_0026
    // =cut
    //--------------------------------------------------------------------------
    
-   event signal_input_rgmii_out_change;
-   event signal_input_tx_control_change;
+   event signal_input_mdc_change;
+   event signal_input_mdio_out_change;
+   event signal_input_mdio_oen_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -95,75 +96,78 @@ module altera_conduit_bfm_0026
    endfunction
 
    // -------------------------------------------------------
-   // rgmii_in
+   // mdc
+   // -------------------------------------------------------
+   function automatic ROLE_mdc_t get_mdc();
+   
+      // Gets the mdc input value.
+      $sformat(message, "%m: called get_mdc");
+      print(VERBOSITY_DEBUG, message);
+      return mdc_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // mdio_in
    // -------------------------------------------------------
 
-   function automatic void set_rgmii_in (
-      ROLE_rgmii_in_t new_value
+   function automatic void set_mdio_in (
+      ROLE_mdio_in_t new_value
    );
-      // Drive the new value to rgmii_in.
+      // Drive the new value to mdio_in.
       
       $sformat(message, "%m: method called arg0 %0d", new_value); 
       print(VERBOSITY_DEBUG, message);
       
-      rgmii_in_temp = new_value;
+      mdio_in_temp = new_value;
    endfunction
 
    // -------------------------------------------------------
-   // rgmii_out
+   // mdio_out
    // -------------------------------------------------------
-   function automatic ROLE_rgmii_out_t get_rgmii_out();
+   function automatic ROLE_mdio_out_t get_mdio_out();
    
-      // Gets the rgmii_out input value.
-      $sformat(message, "%m: called get_rgmii_out");
+      // Gets the mdio_out input value.
+      $sformat(message, "%m: called get_mdio_out");
       print(VERBOSITY_DEBUG, message);
-      return rgmii_out_in;
+      return mdio_out_in;
       
    endfunction
 
    // -------------------------------------------------------
-   // rx_control
+   // mdio_oen
    // -------------------------------------------------------
-
-   function automatic void set_rx_control (
-      ROLE_rx_control_t new_value
-   );
-      // Drive the new value to rx_control.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
-      print(VERBOSITY_DEBUG, message);
-      
-      rx_control_temp = new_value;
-   endfunction
-
-   // -------------------------------------------------------
-   // tx_control
-   // -------------------------------------------------------
-   function automatic ROLE_tx_control_t get_tx_control();
+   function automatic ROLE_mdio_oen_t get_mdio_oen();
    
-      // Gets the tx_control input value.
-      $sformat(message, "%m: called get_tx_control");
+      // Gets the mdio_oen input value.
+      $sformat(message, "%m: called get_mdio_oen");
       print(VERBOSITY_DEBUG, message);
-      return tx_control_in;
+      return mdio_oen_in;
       
    endfunction
 
-   assign sig_rgmii_in = rgmii_in_temp;
-   assign rgmii_out_in = sig_rgmii_out;
-   assign sig_rx_control = rx_control_temp;
-   assign tx_control_in = sig_tx_control;
+   assign mdc_in = sig_mdc;
+   assign sig_mdio_in = mdio_in_temp;
+   assign mdio_out_in = sig_mdio_out;
+   assign mdio_oen_in = sig_mdio_oen;
 
 
-   always @(rgmii_out_in) begin
-      if (rgmii_out_local != rgmii_out_in)
-         -> signal_input_rgmii_out_change;
-      rgmii_out_local = rgmii_out_in;
+   always @(mdc_in) begin
+      if (mdc_local != mdc_in)
+         -> signal_input_mdc_change;
+      mdc_local = mdc_in;
    end
    
-   always @(tx_control_in) begin
-      if (tx_control_local != tx_control_in)
-         -> signal_input_tx_control_change;
-      tx_control_local = tx_control_in;
+   always @(mdio_out_in) begin
+      if (mdio_out_local != mdio_out_in)
+         -> signal_input_mdio_out_change;
+      mdio_out_local = mdio_out_in;
+   end
+   
+   always @(mdio_oen_in) begin
+      if (mdio_oen_local != mdio_oen_in)
+         -> signal_input_mdio_oen_change;
+      mdio_oen_local = mdio_oen_in;
    end
    
 

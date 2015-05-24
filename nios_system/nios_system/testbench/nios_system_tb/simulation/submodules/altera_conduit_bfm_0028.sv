@@ -28,94 +28,79 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm_0028
-// role:width:direction:                              xon_gen:1:output,xoff_gen:1:output,magic_wakeup:1:input,magic_sleep_n:1:output,ff_tx_crc_fwd:1:output,ff_tx_septy:1:input,tx_ff_uflow:1:input,ff_tx_a_full:1:input,ff_tx_a_empty:1:input,rx_err_stat:18:input,rx_frm_type:4:input,ff_rx_dsav:1:input,ff_rx_a_full:1:input,ff_rx_a_empty:1:input
+// role:width:direction:                              LEDR_conduit:18:input,LEDG_conduit:8:input,HEX0_conduit:7:input,HEX1_conduit:7:input,HEX2_conduit:7:input,HEX3_conduit:7:input,HEX4_conduit:7:input,HEX5_conduit:7:input,HEX6_conduit:7:input,HEX7_conduit:7:input,SW_conduit:18:output
 // false
 //-----------------------------------------------------------------------------
 `timescale 1 ns / 1 ns
 
 module altera_conduit_bfm_0028
 (
-   sig_xon_gen,
-   sig_xoff_gen,
-   sig_magic_wakeup,
-   sig_magic_sleep_n,
-   sig_ff_tx_crc_fwd,
-   sig_ff_tx_septy,
-   sig_tx_ff_uflow,
-   sig_ff_tx_a_full,
-   sig_ff_tx_a_empty,
-   sig_rx_err_stat,
-   sig_rx_frm_type,
-   sig_ff_rx_dsav,
-   sig_ff_rx_a_full,
-   sig_ff_rx_a_empty
+   sig_LEDR_conduit,
+   sig_LEDG_conduit,
+   sig_HEX0_conduit,
+   sig_HEX1_conduit,
+   sig_HEX2_conduit,
+   sig_HEX3_conduit,
+   sig_HEX4_conduit,
+   sig_HEX5_conduit,
+   sig_HEX6_conduit,
+   sig_HEX7_conduit,
+   sig_SW_conduit
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   output sig_xon_gen;
-   output sig_xoff_gen;
-   input sig_magic_wakeup;
-   output sig_magic_sleep_n;
-   output sig_ff_tx_crc_fwd;
-   input sig_ff_tx_septy;
-   input sig_tx_ff_uflow;
-   input sig_ff_tx_a_full;
-   input sig_ff_tx_a_empty;
-   input [17 : 0] sig_rx_err_stat;
-   input [3 : 0] sig_rx_frm_type;
-   input sig_ff_rx_dsav;
-   input sig_ff_rx_a_full;
-   input sig_ff_rx_a_empty;
+   input [17 : 0] sig_LEDR_conduit;
+   input [7 : 0] sig_LEDG_conduit;
+   input [6 : 0] sig_HEX0_conduit;
+   input [6 : 0] sig_HEX1_conduit;
+   input [6 : 0] sig_HEX2_conduit;
+   input [6 : 0] sig_HEX3_conduit;
+   input [6 : 0] sig_HEX4_conduit;
+   input [6 : 0] sig_HEX5_conduit;
+   input [6 : 0] sig_HEX6_conduit;
+   input [6 : 0] sig_HEX7_conduit;
+   output [17 : 0] sig_SW_conduit;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic ROLE_xon_gen_t;
-   typedef logic ROLE_xoff_gen_t;
-   typedef logic ROLE_magic_wakeup_t;
-   typedef logic ROLE_magic_sleep_n_t;
-   typedef logic ROLE_ff_tx_crc_fwd_t;
-   typedef logic ROLE_ff_tx_septy_t;
-   typedef logic ROLE_tx_ff_uflow_t;
-   typedef logic ROLE_ff_tx_a_full_t;
-   typedef logic ROLE_ff_tx_a_empty_t;
-   typedef logic [17 : 0] ROLE_rx_err_stat_t;
-   typedef logic [3 : 0] ROLE_rx_frm_type_t;
-   typedef logic ROLE_ff_rx_dsav_t;
-   typedef logic ROLE_ff_rx_a_full_t;
-   typedef logic ROLE_ff_rx_a_empty_t;
+   typedef logic [17 : 0] ROLE_LEDR_conduit_t;
+   typedef logic [7 : 0] ROLE_LEDG_conduit_t;
+   typedef logic [6 : 0] ROLE_HEX0_conduit_t;
+   typedef logic [6 : 0] ROLE_HEX1_conduit_t;
+   typedef logic [6 : 0] ROLE_HEX2_conduit_t;
+   typedef logic [6 : 0] ROLE_HEX3_conduit_t;
+   typedef logic [6 : 0] ROLE_HEX4_conduit_t;
+   typedef logic [6 : 0] ROLE_HEX5_conduit_t;
+   typedef logic [6 : 0] ROLE_HEX6_conduit_t;
+   typedef logic [6 : 0] ROLE_HEX7_conduit_t;
+   typedef logic [17 : 0] ROLE_SW_conduit_t;
 
-   reg xon_gen_temp;
-   reg xon_gen_out;
-   reg xoff_gen_temp;
-   reg xoff_gen_out;
-   logic [0 : 0] magic_wakeup_in;
-   logic [0 : 0] magic_wakeup_local;
-   reg magic_sleep_n_temp;
-   reg magic_sleep_n_out;
-   reg ff_tx_crc_fwd_temp;
-   reg ff_tx_crc_fwd_out;
-   logic [0 : 0] ff_tx_septy_in;
-   logic [0 : 0] ff_tx_septy_local;
-   logic [0 : 0] tx_ff_uflow_in;
-   logic [0 : 0] tx_ff_uflow_local;
-   logic [0 : 0] ff_tx_a_full_in;
-   logic [0 : 0] ff_tx_a_full_local;
-   logic [0 : 0] ff_tx_a_empty_in;
-   logic [0 : 0] ff_tx_a_empty_local;
-   logic [17 : 0] rx_err_stat_in;
-   logic [17 : 0] rx_err_stat_local;
-   logic [3 : 0] rx_frm_type_in;
-   logic [3 : 0] rx_frm_type_local;
-   logic [0 : 0] ff_rx_dsav_in;
-   logic [0 : 0] ff_rx_dsav_local;
-   logic [0 : 0] ff_rx_a_full_in;
-   logic [0 : 0] ff_rx_a_full_local;
-   logic [0 : 0] ff_rx_a_empty_in;
-   logic [0 : 0] ff_rx_a_empty_local;
+   logic [17 : 0] LEDR_conduit_in;
+   logic [17 : 0] LEDR_conduit_local;
+   logic [7 : 0] LEDG_conduit_in;
+   logic [7 : 0] LEDG_conduit_local;
+   logic [6 : 0] HEX0_conduit_in;
+   logic [6 : 0] HEX0_conduit_local;
+   logic [6 : 0] HEX1_conduit_in;
+   logic [6 : 0] HEX1_conduit_local;
+   logic [6 : 0] HEX2_conduit_in;
+   logic [6 : 0] HEX2_conduit_local;
+   logic [6 : 0] HEX3_conduit_in;
+   logic [6 : 0] HEX3_conduit_local;
+   logic [6 : 0] HEX4_conduit_in;
+   logic [6 : 0] HEX4_conduit_local;
+   logic [6 : 0] HEX5_conduit_in;
+   logic [6 : 0] HEX5_conduit_local;
+   logic [6 : 0] HEX6_conduit_in;
+   logic [6 : 0] HEX6_conduit_local;
+   logic [6 : 0] HEX7_conduit_in;
+   logic [6 : 0] HEX7_conduit_local;
+   reg [17 : 0] SW_conduit_temp;
+   reg [17 : 0] SW_conduit_out;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -135,16 +120,16 @@ module altera_conduit_bfm_0028
    // =cut
    //--------------------------------------------------------------------------
    
-   event signal_input_magic_wakeup_change;
-   event signal_input_ff_tx_septy_change;
-   event signal_input_tx_ff_uflow_change;
-   event signal_input_ff_tx_a_full_change;
-   event signal_input_ff_tx_a_empty_change;
-   event signal_input_rx_err_stat_change;
-   event signal_input_rx_frm_type_change;
-   event signal_input_ff_rx_dsav_change;
-   event signal_input_ff_rx_a_full_change;
-   event signal_input_ff_rx_a_empty_change;
+   event signal_input_LEDR_conduit_change;
+   event signal_input_LEDG_conduit_change;
+   event signal_input_HEX0_conduit_change;
+   event signal_input_HEX1_conduit_change;
+   event signal_input_HEX2_conduit_change;
+   event signal_input_HEX3_conduit_change;
+   event signal_input_HEX4_conduit_change;
+   event signal_input_HEX5_conduit_change;
+   event signal_input_HEX6_conduit_change;
+   event signal_input_HEX7_conduit_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -153,259 +138,211 @@ module altera_conduit_bfm_0028
    endfunction
 
    // -------------------------------------------------------
-   // xon_gen
+   // LEDR_conduit
+   // -------------------------------------------------------
+   function automatic ROLE_LEDR_conduit_t get_LEDR_conduit();
+   
+      // Gets the LEDR_conduit input value.
+      $sformat(message, "%m: called get_LEDR_conduit");
+      print(VERBOSITY_DEBUG, message);
+      return LEDR_conduit_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // LEDG_conduit
+   // -------------------------------------------------------
+   function automatic ROLE_LEDG_conduit_t get_LEDG_conduit();
+   
+      // Gets the LEDG_conduit input value.
+      $sformat(message, "%m: called get_LEDG_conduit");
+      print(VERBOSITY_DEBUG, message);
+      return LEDG_conduit_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // HEX0_conduit
+   // -------------------------------------------------------
+   function automatic ROLE_HEX0_conduit_t get_HEX0_conduit();
+   
+      // Gets the HEX0_conduit input value.
+      $sformat(message, "%m: called get_HEX0_conduit");
+      print(VERBOSITY_DEBUG, message);
+      return HEX0_conduit_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // HEX1_conduit
+   // -------------------------------------------------------
+   function automatic ROLE_HEX1_conduit_t get_HEX1_conduit();
+   
+      // Gets the HEX1_conduit input value.
+      $sformat(message, "%m: called get_HEX1_conduit");
+      print(VERBOSITY_DEBUG, message);
+      return HEX1_conduit_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // HEX2_conduit
+   // -------------------------------------------------------
+   function automatic ROLE_HEX2_conduit_t get_HEX2_conduit();
+   
+      // Gets the HEX2_conduit input value.
+      $sformat(message, "%m: called get_HEX2_conduit");
+      print(VERBOSITY_DEBUG, message);
+      return HEX2_conduit_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // HEX3_conduit
+   // -------------------------------------------------------
+   function automatic ROLE_HEX3_conduit_t get_HEX3_conduit();
+   
+      // Gets the HEX3_conduit input value.
+      $sformat(message, "%m: called get_HEX3_conduit");
+      print(VERBOSITY_DEBUG, message);
+      return HEX3_conduit_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // HEX4_conduit
+   // -------------------------------------------------------
+   function automatic ROLE_HEX4_conduit_t get_HEX4_conduit();
+   
+      // Gets the HEX4_conduit input value.
+      $sformat(message, "%m: called get_HEX4_conduit");
+      print(VERBOSITY_DEBUG, message);
+      return HEX4_conduit_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // HEX5_conduit
+   // -------------------------------------------------------
+   function automatic ROLE_HEX5_conduit_t get_HEX5_conduit();
+   
+      // Gets the HEX5_conduit input value.
+      $sformat(message, "%m: called get_HEX5_conduit");
+      print(VERBOSITY_DEBUG, message);
+      return HEX5_conduit_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // HEX6_conduit
+   // -------------------------------------------------------
+   function automatic ROLE_HEX6_conduit_t get_HEX6_conduit();
+   
+      // Gets the HEX6_conduit input value.
+      $sformat(message, "%m: called get_HEX6_conduit");
+      print(VERBOSITY_DEBUG, message);
+      return HEX6_conduit_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // HEX7_conduit
+   // -------------------------------------------------------
+   function automatic ROLE_HEX7_conduit_t get_HEX7_conduit();
+   
+      // Gets the HEX7_conduit input value.
+      $sformat(message, "%m: called get_HEX7_conduit");
+      print(VERBOSITY_DEBUG, message);
+      return HEX7_conduit_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // SW_conduit
    // -------------------------------------------------------
 
-   function automatic void set_xon_gen (
-      ROLE_xon_gen_t new_value
+   function automatic void set_SW_conduit (
+      ROLE_SW_conduit_t new_value
    );
-      // Drive the new value to xon_gen.
+      // Drive the new value to SW_conduit.
       
       $sformat(message, "%m: method called arg0 %0d", new_value); 
       print(VERBOSITY_DEBUG, message);
       
-      xon_gen_temp = new_value;
+      SW_conduit_temp = new_value;
    endfunction
 
-   // -------------------------------------------------------
-   // xoff_gen
-   // -------------------------------------------------------
-
-   function automatic void set_xoff_gen (
-      ROLE_xoff_gen_t new_value
-   );
-      // Drive the new value to xoff_gen.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
-      print(VERBOSITY_DEBUG, message);
-      
-      xoff_gen_temp = new_value;
-   endfunction
-
-   // -------------------------------------------------------
-   // magic_wakeup
-   // -------------------------------------------------------
-   function automatic ROLE_magic_wakeup_t get_magic_wakeup();
-   
-      // Gets the magic_wakeup input value.
-      $sformat(message, "%m: called get_magic_wakeup");
-      print(VERBOSITY_DEBUG, message);
-      return magic_wakeup_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // magic_sleep_n
-   // -------------------------------------------------------
-
-   function automatic void set_magic_sleep_n (
-      ROLE_magic_sleep_n_t new_value
-   );
-      // Drive the new value to magic_sleep_n.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
-      print(VERBOSITY_DEBUG, message);
-      
-      magic_sleep_n_temp = new_value;
-   endfunction
-
-   // -------------------------------------------------------
-   // ff_tx_crc_fwd
-   // -------------------------------------------------------
-
-   function automatic void set_ff_tx_crc_fwd (
-      ROLE_ff_tx_crc_fwd_t new_value
-   );
-      // Drive the new value to ff_tx_crc_fwd.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
-      print(VERBOSITY_DEBUG, message);
-      
-      ff_tx_crc_fwd_temp = new_value;
-   endfunction
-
-   // -------------------------------------------------------
-   // ff_tx_septy
-   // -------------------------------------------------------
-   function automatic ROLE_ff_tx_septy_t get_ff_tx_septy();
-   
-      // Gets the ff_tx_septy input value.
-      $sformat(message, "%m: called get_ff_tx_septy");
-      print(VERBOSITY_DEBUG, message);
-      return ff_tx_septy_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // tx_ff_uflow
-   // -------------------------------------------------------
-   function automatic ROLE_tx_ff_uflow_t get_tx_ff_uflow();
-   
-      // Gets the tx_ff_uflow input value.
-      $sformat(message, "%m: called get_tx_ff_uflow");
-      print(VERBOSITY_DEBUG, message);
-      return tx_ff_uflow_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // ff_tx_a_full
-   // -------------------------------------------------------
-   function automatic ROLE_ff_tx_a_full_t get_ff_tx_a_full();
-   
-      // Gets the ff_tx_a_full input value.
-      $sformat(message, "%m: called get_ff_tx_a_full");
-      print(VERBOSITY_DEBUG, message);
-      return ff_tx_a_full_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // ff_tx_a_empty
-   // -------------------------------------------------------
-   function automatic ROLE_ff_tx_a_empty_t get_ff_tx_a_empty();
-   
-      // Gets the ff_tx_a_empty input value.
-      $sformat(message, "%m: called get_ff_tx_a_empty");
-      print(VERBOSITY_DEBUG, message);
-      return ff_tx_a_empty_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // rx_err_stat
-   // -------------------------------------------------------
-   function automatic ROLE_rx_err_stat_t get_rx_err_stat();
-   
-      // Gets the rx_err_stat input value.
-      $sformat(message, "%m: called get_rx_err_stat");
-      print(VERBOSITY_DEBUG, message);
-      return rx_err_stat_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // rx_frm_type
-   // -------------------------------------------------------
-   function automatic ROLE_rx_frm_type_t get_rx_frm_type();
-   
-      // Gets the rx_frm_type input value.
-      $sformat(message, "%m: called get_rx_frm_type");
-      print(VERBOSITY_DEBUG, message);
-      return rx_frm_type_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // ff_rx_dsav
-   // -------------------------------------------------------
-   function automatic ROLE_ff_rx_dsav_t get_ff_rx_dsav();
-   
-      // Gets the ff_rx_dsav input value.
-      $sformat(message, "%m: called get_ff_rx_dsav");
-      print(VERBOSITY_DEBUG, message);
-      return ff_rx_dsav_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // ff_rx_a_full
-   // -------------------------------------------------------
-   function automatic ROLE_ff_rx_a_full_t get_ff_rx_a_full();
-   
-      // Gets the ff_rx_a_full input value.
-      $sformat(message, "%m: called get_ff_rx_a_full");
-      print(VERBOSITY_DEBUG, message);
-      return ff_rx_a_full_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // ff_rx_a_empty
-   // -------------------------------------------------------
-   function automatic ROLE_ff_rx_a_empty_t get_ff_rx_a_empty();
-   
-      // Gets the ff_rx_a_empty input value.
-      $sformat(message, "%m: called get_ff_rx_a_empty");
-      print(VERBOSITY_DEBUG, message);
-      return ff_rx_a_empty_in;
-      
-   endfunction
-
-   assign sig_xon_gen = xon_gen_temp;
-   assign sig_xoff_gen = xoff_gen_temp;
-   assign magic_wakeup_in = sig_magic_wakeup;
-   assign sig_magic_sleep_n = magic_sleep_n_temp;
-   assign sig_ff_tx_crc_fwd = ff_tx_crc_fwd_temp;
-   assign ff_tx_septy_in = sig_ff_tx_septy;
-   assign tx_ff_uflow_in = sig_tx_ff_uflow;
-   assign ff_tx_a_full_in = sig_ff_tx_a_full;
-   assign ff_tx_a_empty_in = sig_ff_tx_a_empty;
-   assign rx_err_stat_in = sig_rx_err_stat;
-   assign rx_frm_type_in = sig_rx_frm_type;
-   assign ff_rx_dsav_in = sig_ff_rx_dsav;
-   assign ff_rx_a_full_in = sig_ff_rx_a_full;
-   assign ff_rx_a_empty_in = sig_ff_rx_a_empty;
+   assign LEDR_conduit_in = sig_LEDR_conduit;
+   assign LEDG_conduit_in = sig_LEDG_conduit;
+   assign HEX0_conduit_in = sig_HEX0_conduit;
+   assign HEX1_conduit_in = sig_HEX1_conduit;
+   assign HEX2_conduit_in = sig_HEX2_conduit;
+   assign HEX3_conduit_in = sig_HEX3_conduit;
+   assign HEX4_conduit_in = sig_HEX4_conduit;
+   assign HEX5_conduit_in = sig_HEX5_conduit;
+   assign HEX6_conduit_in = sig_HEX6_conduit;
+   assign HEX7_conduit_in = sig_HEX7_conduit;
+   assign sig_SW_conduit = SW_conduit_temp;
 
 
-   always @(magic_wakeup_in) begin
-      if (magic_wakeup_local != magic_wakeup_in)
-         -> signal_input_magic_wakeup_change;
-      magic_wakeup_local = magic_wakeup_in;
+   always @(LEDR_conduit_in) begin
+      if (LEDR_conduit_local != LEDR_conduit_in)
+         -> signal_input_LEDR_conduit_change;
+      LEDR_conduit_local = LEDR_conduit_in;
    end
    
-   always @(ff_tx_septy_in) begin
-      if (ff_tx_septy_local != ff_tx_septy_in)
-         -> signal_input_ff_tx_septy_change;
-      ff_tx_septy_local = ff_tx_septy_in;
+   always @(LEDG_conduit_in) begin
+      if (LEDG_conduit_local != LEDG_conduit_in)
+         -> signal_input_LEDG_conduit_change;
+      LEDG_conduit_local = LEDG_conduit_in;
    end
    
-   always @(tx_ff_uflow_in) begin
-      if (tx_ff_uflow_local != tx_ff_uflow_in)
-         -> signal_input_tx_ff_uflow_change;
-      tx_ff_uflow_local = tx_ff_uflow_in;
+   always @(HEX0_conduit_in) begin
+      if (HEX0_conduit_local != HEX0_conduit_in)
+         -> signal_input_HEX0_conduit_change;
+      HEX0_conduit_local = HEX0_conduit_in;
    end
    
-   always @(ff_tx_a_full_in) begin
-      if (ff_tx_a_full_local != ff_tx_a_full_in)
-         -> signal_input_ff_tx_a_full_change;
-      ff_tx_a_full_local = ff_tx_a_full_in;
+   always @(HEX1_conduit_in) begin
+      if (HEX1_conduit_local != HEX1_conduit_in)
+         -> signal_input_HEX1_conduit_change;
+      HEX1_conduit_local = HEX1_conduit_in;
    end
    
-   always @(ff_tx_a_empty_in) begin
-      if (ff_tx_a_empty_local != ff_tx_a_empty_in)
-         -> signal_input_ff_tx_a_empty_change;
-      ff_tx_a_empty_local = ff_tx_a_empty_in;
+   always @(HEX2_conduit_in) begin
+      if (HEX2_conduit_local != HEX2_conduit_in)
+         -> signal_input_HEX2_conduit_change;
+      HEX2_conduit_local = HEX2_conduit_in;
    end
    
-   always @(rx_err_stat_in) begin
-      if (rx_err_stat_local != rx_err_stat_in)
-         -> signal_input_rx_err_stat_change;
-      rx_err_stat_local = rx_err_stat_in;
+   always @(HEX3_conduit_in) begin
+      if (HEX3_conduit_local != HEX3_conduit_in)
+         -> signal_input_HEX3_conduit_change;
+      HEX3_conduit_local = HEX3_conduit_in;
    end
    
-   always @(rx_frm_type_in) begin
-      if (rx_frm_type_local != rx_frm_type_in)
-         -> signal_input_rx_frm_type_change;
-      rx_frm_type_local = rx_frm_type_in;
+   always @(HEX4_conduit_in) begin
+      if (HEX4_conduit_local != HEX4_conduit_in)
+         -> signal_input_HEX4_conduit_change;
+      HEX4_conduit_local = HEX4_conduit_in;
    end
    
-   always @(ff_rx_dsav_in) begin
-      if (ff_rx_dsav_local != ff_rx_dsav_in)
-         -> signal_input_ff_rx_dsav_change;
-      ff_rx_dsav_local = ff_rx_dsav_in;
+   always @(HEX5_conduit_in) begin
+      if (HEX5_conduit_local != HEX5_conduit_in)
+         -> signal_input_HEX5_conduit_change;
+      HEX5_conduit_local = HEX5_conduit_in;
    end
    
-   always @(ff_rx_a_full_in) begin
-      if (ff_rx_a_full_local != ff_rx_a_full_in)
-         -> signal_input_ff_rx_a_full_change;
-      ff_rx_a_full_local = ff_rx_a_full_in;
+   always @(HEX6_conduit_in) begin
+      if (HEX6_conduit_local != HEX6_conduit_in)
+         -> signal_input_HEX6_conduit_change;
+      HEX6_conduit_local = HEX6_conduit_in;
    end
    
-   always @(ff_rx_a_empty_in) begin
-      if (ff_rx_a_empty_local != ff_rx_a_empty_in)
-         -> signal_input_ff_rx_a_empty_change;
-      ff_rx_a_empty_local = ff_rx_a_empty_in;
+   always @(HEX7_conduit_in) begin
+      if (HEX7_conduit_local != HEX7_conduit_in)
+         -> signal_input_HEX7_conduit_change;
+      HEX7_conduit_local = HEX7_conduit_in;
    end
    
 

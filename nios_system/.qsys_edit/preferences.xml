@@ -3,7 +3,7 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="783" />
+   <connections preferredWidth="831" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
@@ -15,11 +15,11 @@
   </columns>
  </clocktable>
  <library expandedCategories="Project,Library" />
- <window width="1100" height="984" x="0" y="0" />
+ <window width="1100" height="984" x="131" y="10" />
  <generation
    simulation="VERILOG"
-   testbench_system="STANDARD"
-   testbench_simulation="VERILOG"
+   testbench_system="NONE"
+   testbench_simulation="NONE"
    block_symbol_file="0" />
  <hdlexample language="VERILOG" />
 </preferences>

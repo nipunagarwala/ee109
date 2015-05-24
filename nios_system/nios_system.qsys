@@ -16,7 +16,7 @@
    {
       datum _sortIndex
       {
-         value = "56";
+         value = "54";
          type = "int";
       }
       datum sopceditor_expanded
@@ -29,7 +29,7 @@
    {
       datum _sortIndex
       {
-         value = "33";
+         value = "31";
          type = "int";
       }
       datum sopceditor_expanded
@@ -55,7 +55,7 @@
    {
       datum _sortIndex
       {
-         value = "58";
+         value = "56";
          type = "int";
       }
       datum megawizard_uipreferences
@@ -73,7 +73,7 @@
    {
       datum _sortIndex
       {
-         value = "44";
+         value = "42";
          type = "int";
       }
       datum sopceditor_expanded
@@ -86,7 +86,7 @@
    {
       datum _sortIndex
       {
-         value = "46";
+         value = "44";
          type = "int";
       }
       datum sopceditor_expanded
@@ -99,7 +99,7 @@
    {
       datum _sortIndex
       {
-         value = "42";
+         value = "40";
          type = "int";
       }
       datum sopceditor_expanded
@@ -112,7 +112,7 @@
    {
       datum _sortIndex
       {
-         value = "48";
+         value = "46";
          type = "int";
       }
       datum sopceditor_expanded
@@ -125,7 +125,7 @@
    {
       datum _sortIndex
       {
-         value = "43";
+         value = "41";
          type = "int";
       }
       datum sopceditor_expanded
@@ -138,7 +138,7 @@
    {
       datum _sortIndex
       {
-         value = "47";
+         value = "45";
          type = "int";
       }
       datum sopceditor_expanded
@@ -151,7 +151,7 @@
    {
       datum _sortIndex
       {
-         value = "45";
+         value = "43";
          type = "int";
       }
       datum sopceditor_expanded
@@ -164,7 +164,7 @@
    {
       datum _sortIndex
       {
-         value = "34";
+         value = "32";
          type = "int";
       }
       datum sopceditor_expanded
@@ -177,7 +177,7 @@
    {
       datum _sortIndex
       {
-         value = "15";
+         value = "13";
          type = "int";
       }
       datum sopceditor_expanded
@@ -190,20 +190,7 @@
    {
       datum _sortIndex
       {
-         value = "24";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "1";
-         type = "boolean";
-      }
-   }
-   element Flash
-   {
-      datum _sortIndex
-      {
-         value = "8";
+         value = "22";
          type = "int";
       }
       datum sopceditor_expanded
@@ -216,7 +203,7 @@
    {
       datum _sortIndex
       {
-         value = "10";
+         value = "8";
          type = "int";
       }
       datum sopceditor_expanded
@@ -229,7 +216,7 @@
    {
       datum _sortIndex
       {
-         value = "11";
+         value = "9";
          type = "int";
       }
       datum sopceditor_expanded
@@ -242,7 +229,7 @@
    {
       datum _sortIndex
       {
-         value = "12";
+         value = "10";
          type = "int";
       }
       datum sopceditor_expanded
@@ -255,7 +242,7 @@
    {
       datum _sortIndex
       {
-         value = "22";
+         value = "20";
          type = "int";
       }
       datum sopceditor_expanded
@@ -268,7 +255,7 @@
    {
       datum _sortIndex
       {
-         value = "21";
+         value = "19";
          type = "int";
       }
       datum sopceditor_expanded
@@ -281,7 +268,7 @@
    {
       datum _sortIndex
       {
-         value = "19";
+         value = "17";
          type = "int";
       }
       datum sopceditor_expanded
@@ -294,7 +281,7 @@
    {
       datum _sortIndex
       {
-         value = "53";
+         value = "51";
          type = "int";
       }
       datum sopceditor_expanded
@@ -307,7 +294,7 @@
    {
       datum _sortIndex
       {
-         value = "52";
+         value = "50";
          type = "int";
       }
       datum sopceditor_expanded
@@ -320,7 +307,7 @@
    {
       datum _sortIndex
       {
-         value = "55";
+         value = "53";
          type = "int";
       }
       datum sopceditor_expanded
@@ -333,7 +320,7 @@
    {
       datum _sortIndex
       {
-         value = "49";
+         value = "47";
          type = "int";
       }
       datum sopceditor_expanded
@@ -346,7 +333,7 @@
    {
       datum _sortIndex
       {
-         value = "54";
+         value = "52";
          type = "int";
       }
       datum sopceditor_expanded
@@ -359,7 +346,7 @@
    {
       datum _sortIndex
       {
-         value = "50";
+         value = "48";
          type = "int";
       }
       datum sopceditor_expanded
@@ -372,7 +359,7 @@
    {
       datum _sortIndex
       {
-         value = "51";
+         value = "49";
          type = "int";
       }
       datum sopceditor_expanded
@@ -385,7 +372,7 @@
    {
       datum _sortIndex
       {
-         value = "25";
+         value = "23";
          type = "int";
       }
       datum sopceditor_expanded
@@ -398,7 +385,7 @@
    {
       datum _sortIndex
       {
-         value = "16";
+         value = "14";
          type = "int";
       }
       datum sopceditor_expanded
@@ -411,7 +398,7 @@
    {
       datum _sortIndex
       {
-         value = "17";
+         value = "15";
          type = "int";
       }
       datum sopceditor_expanded
@@ -424,7 +411,7 @@
    {
       datum _sortIndex
       {
-         value = "14";
+         value = "12";
          type = "int";
       }
       datum sopceditor_expanded
@@ -437,7 +424,7 @@
    {
       datum _sortIndex
       {
-         value = "9";
+         value = "7";
          type = "int";
       }
       datum sopceditor_expanded
@@ -464,19 +451,6 @@
          type = "boolean";
       }
    }
-   element SD_Card
-   {
-      datum _sortIndex
-      {
-         value = "7";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "1";
-         type = "boolean";
-      }
-   }
    element SRAM
    {
       datum _sortIndex
@@ -494,7 +468,7 @@
    {
       datum _sortIndex
       {
-         value = "20";
+         value = "18";
          type = "int";
       }
       datum sopceditor_expanded
@@ -507,7 +481,7 @@
    {
       datum _sortIndex
       {
-         value = "13";
+         value = "11";
          type = "int";
       }
       datum sopceditor_expanded
@@ -520,7 +494,7 @@
    {
       datum _sortIndex
       {
-         value = "18";
+         value = "16";
          type = "int";
       }
       datum sopceditor_expanded
@@ -533,7 +507,7 @@
    {
       datum _sortIndex
       {
-         value = "30";
+         value = "28";
          type = "int";
       }
       datum sopceditor_expanded
@@ -546,7 +520,7 @@
    {
       datum _sortIndex
       {
-         value = "29";
+         value = "27";
          type = "int";
       }
       datum sopceditor_expanded
@@ -559,7 +533,7 @@
    {
       datum _sortIndex
       {
-         value = "32";
+         value = "30";
          type = "int";
       }
       datum sopceditor_expanded
@@ -572,7 +546,7 @@
    {
       datum _sortIndex
       {
-         value = "26";
+         value = "24";
          type = "int";
       }
       datum sopceditor_expanded
@@ -585,7 +559,7 @@
    {
       datum _sortIndex
       {
-         value = "31";
+         value = "29";
          type = "int";
       }
       datum sopceditor_expanded
@@ -598,7 +572,7 @@
    {
       datum _sortIndex
       {
-         value = "27";
+         value = "25";
          type = "int";
       }
       datum sopceditor_expanded
@@ -611,7 +585,7 @@
    {
       datum _sortIndex
       {
-         value = "28";
+         value = "26";
          type = "int";
       }
       datum sopceditor_expanded
@@ -624,7 +598,7 @@
    {
       datum _sortIndex
       {
-         value = "62";
+         value = "60";
          type = "int";
       }
    }
@@ -632,7 +606,7 @@
    {
       datum _sortIndex
       {
-         value = "35";
+         value = "33";
          type = "int";
       }
       datum sopceditor_expanded
@@ -645,7 +619,7 @@
    {
       datum _sortIndex
       {
-         value = "37";
+         value = "35";
          type = "int";
       }
       datum sopceditor_expanded
@@ -658,7 +632,7 @@
    {
       datum _sortIndex
       {
-         value = "36";
+         value = "34";
          type = "int";
       }
       datum sopceditor_expanded
@@ -671,7 +645,7 @@
    {
       datum _sortIndex
       {
-         value = "39";
+         value = "37";
          type = "int";
       }
       datum sopceditor_expanded
@@ -684,7 +658,7 @@
    {
       datum _sortIndex
       {
-         value = "41";
+         value = "39";
          type = "int";
       }
       datum sopceditor_expanded
@@ -697,7 +671,7 @@
    {
       datum _sortIndex
       {
-         value = "38";
+         value = "36";
          type = "int";
       }
       datum sopceditor_expanded
@@ -710,7 +684,7 @@
    {
       datum _sortIndex
       {
-         value = "40";
+         value = "38";
          type = "int";
       }
       datum sopceditor_expanded
@@ -779,6 +753,14 @@
          type = "long";
       }
    }
+   element VGA_Char_Buffer.avalon_char_buffer_slave
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
    element LCD_Char_Buffer.avalon_char_buffer_slave
    {
       datum _lockedAddress
@@ -790,14 +772,6 @@
       {
          value = "151003136";
          type = "String";
-      }
-   }
-   element VGA_Char_Buffer.avalon_char_buffer_slave
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
       }
    }
    element LCD_Char_Buffer.avalon_char_control_slave
@@ -826,11 +800,16 @@
          type = "long";
       }
    }
-   element VGA_DMA_Controller.avalon_dma_control_slave
+   element Camera_DMA_Controller.avalon_dma_control_slave
    {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
       datum baseAddress
       {
-         value = "268447776";
+         value = "268447872";
          type = "String";
       }
    }
@@ -839,6 +818,14 @@
       datum baseAddress
       {
          value = "268447888";
+         type = "String";
+      }
+   }
+   element VGA_DMA_Controller.avalon_dma_control_slave
+   {
+      datum baseAddress
+      {
+         value = "268447776";
          type = "String";
       }
    }
@@ -852,19 +839,6 @@
       datum baseAddress
       {
          value = "268447840";
-         type = "String";
-      }
-   }
-   element Camera_DMA_Controller.avalon_dma_control_slave
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268447872";
          type = "String";
       }
    }
@@ -907,19 +881,6 @@
          type = "long";
       }
    }
-   element Slider_Switches.avalon_parallel_port_slave
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435520";
-         type = "long";
-      }
-   }
    element HEX3_HEX0.avalon_parallel_port_slave
    {
       datum _lockedAddress
@@ -933,7 +894,7 @@
          type = "long";
       }
    }
-   element Pushbuttons.avalon_parallel_port_slave
+   element Green_LEDs.avalon_parallel_port_slave
    {
       datum _lockedAddress
       {
@@ -942,33 +903,7 @@
       }
       datum baseAddress
       {
-         value = "268435536";
-         type = "long";
-      }
-   }
-   element HEX7_HEX4.avalon_parallel_port_slave
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435504";
-         type = "long";
-      }
-   }
-   element Expansion_JP5.avalon_parallel_port_slave
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435552";
+         value = "268435472";
          type = "long";
       }
    }
@@ -985,7 +920,7 @@
          type = "long";
       }
    }
-   element Green_LEDs.avalon_parallel_port_slave
+   element Expansion_JP5.avalon_parallel_port_slave
    {
       datum _lockedAddress
       {
@@ -994,7 +929,46 @@
       }
       datum baseAddress
       {
-         value = "268435472";
+         value = "268435552";
+         type = "long";
+      }
+   }
+   element Slider_Switches.avalon_parallel_port_slave
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435520";
+         type = "long";
+      }
+   }
+   element HEX7_HEX4.avalon_parallel_port_slave
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435504";
+         type = "long";
+      }
+   }
+   element Pushbuttons.avalon_parallel_port_slave
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435536";
          type = "long";
       }
    }
@@ -1037,19 +1011,6 @@
          type = "long";
       }
    }
-   element SD_Card.avalon_sdcard_slave
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "184549376";
-         type = "String";
-      }
-   }
    element VideoConferencing_DMA_0.avalon_slave
    {
       datum baseAddress
@@ -1083,7 +1044,7 @@
    {
       datum _sortIndex
       {
-         value = "23";
+         value = "21";
          type = "int";
       }
       datum sopceditor_expanded
@@ -1104,7 +1065,7 @@
    {
       datum _sortIndex
       {
-         value = "57";
+         value = "55";
          type = "int";
       }
       datum sopceditor_expanded
@@ -1138,7 +1099,7 @@
    {
       datum _sortIndex
       {
-         value = "60";
+         value = "58";
          type = "int";
       }
       datum sopceditor_expanded
@@ -1151,39 +1112,13 @@
    {
       datum _sortIndex
       {
-         value = "59";
+         value = "57";
          type = "int";
       }
       datum sopceditor_expanded
       {
          value = "1";
          type = "boolean";
-      }
-   }
-   element Flash.flash_data
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "201326592";
-         type = "String";
-      }
-   }
-   element Flash.flash_erase_control
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "201261056";
-         type = "String";
       }
    }
    element CPU.jtag_debug_module
@@ -1216,29 +1151,13 @@
    {
       datum _sortIndex
       {
-         value = "61";
+         value = "59";
          type = "int";
       }
       datum sopceditor_expanded
       {
          value = "1";
          type = "boolean";
-      }
-   }
-   element packet_memory.s1
-   {
-      datum baseAddress
-      {
-         value = "136318976";
-         type = "String";
-      }
-   }
-   element descriptor_memory.s1
-   {
-      datum baseAddress
-      {
-         value = "136314880";
-         type = "String";
       }
    }
    element SDRAM.s1
@@ -1254,6 +1173,14 @@
          type = "long";
       }
    }
+   element packet_memory.s1
+   {
+      datum baseAddress
+      {
+         value = "136318976";
+         type = "String";
+      }
+   }
    element Interval_Timer.s1
    {
       datum _lockedAddress
@@ -1267,11 +1194,27 @@
          type = "long";
       }
    }
+   element descriptor_memory.s1
+   {
+      datum baseAddress
+      {
+         value = "136314880";
+         type = "String";
+      }
+   }
    element External_Clocks.sdram_clk
    {
       datum _clockDomain
       {
          value = "sdram_clk";
+         type = "String";
+      }
+   }
+   element External_Clocks.sys_clk
+   {
+      datum _clockDomain
+      {
+         value = "sys_clk";
          type = "String";
       }
    }
@@ -1288,19 +1231,24 @@
          type = "boolean";
       }
    }
-   element External_Clocks.sys_clk
-   {
-      datum _clockDomain
-      {
-         value = "sys_clk";
-         type = "String";
-      }
-   }
    element sysid
    {
       datum _sortIndex
       {
          value = "1";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element vga_clk
+   {
+      datum _sortIndex
+      {
+         value = "4";
          type = "int";
       }
       datum sopceditor_expanded
@@ -1315,19 +1263,6 @@
       {
          value = "vga_clk";
          type = "String";
-      }
-   }
-   element vga_clk
-   {
-      datum _sortIndex
-      {
-         value = "4";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "1";
-         type = "boolean";
       }
    }
 }
@@ -1345,7 +1280,7 @@
  <parameter name="projectName" value="" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1432358127278" />
+ <parameter name="timeStamp" value="1432440578834" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
@@ -1506,17 +1441,10 @@
    type="clock"
    dir="start" />
  <interface
-   name="sdram"
-   internal="External_Clocks.sdram_clk"
-   type="clock"
-   dir="start" />
- <interface
    name="irda"
    internal="IrDA.external_interface"
    type="conduit"
    dir="end" />
- <interface name="sdcard" internal="SD_Card.conduit_end" type="conduit" dir="end" />
- <interface name="flash" internal="Flash.conduit_end" type="conduit" dir="end" />
  <interface
    name="video_in"
    internal="Video_In.external_interface"
@@ -1583,6 +1511,11 @@
    internal="enet.mac_misc_connection"
    type="conduit"
    dir="end" />
+ <interface
+   name="sdram"
+   internal="External_Clocks.sdram_clk"
+   type="clock"
+   dir="start" />
  <interface
    name="videoconferencing_dma_conduit"
    internal="VideoConferencing_DMA_0.conduit_end"
@@ -2058,8 +1991,8 @@
   <parameter name="tightlyCoupledInstructionMaster1AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
-  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='SDRAM.s1' start='0x0' end='0x8000000' /><slave name='CPU.jtag_debug_module' start='0xA000000' end='0xA000800' /><slave name='Flash.flash_data' start='0xC000000' end='0xC800000' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='SDRAM.s1' start='0x0' end='0x8000000' /><slave name='SRAM.avalon_sram_slave' start='0x8000000' end='0x8200000' /><slave name='descriptor_memory.s1' start='0x8200000' end='0x8201000' /><slave name='packet_memory.s1' start='0x8201000' end='0x8202000' /><slave name='enet.control_port' start='0x8202000' end='0x8202400' /><slave name='VGA_Char_Buffer.avalon_char_buffer_slave' start='0x9000000' end='0x9002000' /><slave name='LCD_Char_Buffer.avalon_char_buffer_slave' start='0x9002000' end='0x9002800' /><slave name='CPU.jtag_debug_module' start='0xA000000' end='0xA000800' /><slave name='SD_Card.avalon_sdcard_slave' start='0xB000000' end='0xB000400' /><slave name='Flash.flash_erase_control' start='0xBFF0000' end='0xBFF0004' /><slave name='Flash.flash_data' start='0xC000000' end='0xC800000' /><slave name='Red_LEDs.avalon_parallel_port_slave' start='0x10000000' end='0x10000010' /><slave name='Green_LEDs.avalon_parallel_port_slave' start='0x10000010' end='0x10000020' /><slave name='HEX3_HEX0.avalon_parallel_port_slave' start='0x10000020' end='0x10000030' /><slave name='HEX7_HEX4.avalon_parallel_port_slave' start='0x10000030' end='0x10000040' /><slave name='Slider_Switches.avalon_parallel_port_slave' start='0x10000040' end='0x10000050' /><slave name='Pushbuttons.avalon_parallel_port_slave' start='0x10000050' end='0x10000060' /><slave name='Expansion_JP5.avalon_parallel_port_slave' start='0x10000060' end='0x10000070' /><slave name='PS2_Port.avalon_ps2_slave' start='0x10000100' end='0x10000108' /><slave name='PS2_Port_Dual.avalon_ps2_slave' start='0x10000108' end='0x10000110' /><slave name='USB.avalon_usb_slave' start='0x10000110' end='0x10000120' /><slave name='JTAG_UART.avalon_jtag_slave' start='0x10001000' end='0x10001008' /><slave name='Serial_Port.avalon_rs232_slave' start='0x10001010' end='0x10001018' /><slave name='IrDA.avalon_irda_slave' start='0x10001020' end='0x10001028' /><slave name='Interval_Timer.s1' start='0x10002000' end='0x10002020' /><slave name='sysid.control_slave' start='0x10002020' end='0x10002028' /><slave name='OnBoard_AV.avalon_av_config_slave' start='0x10003000' end='0x10003010' /><slave name='VGA_DMA_Controller.avalon_dma_control_slave' start='0x10003020' end='0x10003030' /><slave name='VGA_Char_Buffer.avalon_char_control_slave' start='0x10003030' end='0x10003038' /><slave name='Audio.avalon_audio_slave' start='0x10003040' end='0x10003050' /><slave name='Char_LCD_16x2.avalon_lcd_slave' start='0x10003050' end='0x10003052' /><slave name='Video_In_DMA_Controller.avalon_dma_control_slave' start='0x10003060' end='0x10003070' /><slave name='Camera_Config.avalon_av_config_slave' start='0x10003070' end='0x10003080' /><slave name='Camera_DMA_Controller.avalon_dma_control_slave' start='0x10003080' end='0x10003090' /><slave name='LCD_DMA_Controller.avalon_dma_control_slave' start='0x10003090' end='0x100030A0' /><slave name='LCD_Char_Buffer.avalon_char_control_slave' start='0x100030A0' end='0x100030A8' /><slave name='Accelerometer.avalon_accelerometer_spi_mode_slave' start='0x10004020' end='0x10004022' /><slave name='VideoConferencing_DMA_0.avalon_slave' start='0x10005000' end='0x10005400' /></address-map>]]></parameter>
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='SDRAM.s1' start='0x0' end='0x8000000' /><slave name='CPU.jtag_debug_module' start='0xA000000' end='0xA000800' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='SDRAM.s1' start='0x0' end='0x8000000' /><slave name='SRAM.avalon_sram_slave' start='0x8000000' end='0x8200000' /><slave name='descriptor_memory.s1' start='0x8200000' end='0x8201000' /><slave name='packet_memory.s1' start='0x8201000' end='0x8202000' /><slave name='enet.control_port' start='0x8202000' end='0x8202400' /><slave name='VGA_Char_Buffer.avalon_char_buffer_slave' start='0x9000000' end='0x9002000' /><slave name='LCD_Char_Buffer.avalon_char_buffer_slave' start='0x9002000' end='0x9002800' /><slave name='CPU.jtag_debug_module' start='0xA000000' end='0xA000800' /><slave name='Red_LEDs.avalon_parallel_port_slave' start='0x10000000' end='0x10000010' /><slave name='Green_LEDs.avalon_parallel_port_slave' start='0x10000010' end='0x10000020' /><slave name='HEX3_HEX0.avalon_parallel_port_slave' start='0x10000020' end='0x10000030' /><slave name='HEX7_HEX4.avalon_parallel_port_slave' start='0x10000030' end='0x10000040' /><slave name='Slider_Switches.avalon_parallel_port_slave' start='0x10000040' end='0x10000050' /><slave name='Pushbuttons.avalon_parallel_port_slave' start='0x10000050' end='0x10000060' /><slave name='Expansion_JP5.avalon_parallel_port_slave' start='0x10000060' end='0x10000070' /><slave name='PS2_Port.avalon_ps2_slave' start='0x10000100' end='0x10000108' /><slave name='PS2_Port_Dual.avalon_ps2_slave' start='0x10000108' end='0x10000110' /><slave name='USB.avalon_usb_slave' start='0x10000110' end='0x10000120' /><slave name='JTAG_UART.avalon_jtag_slave' start='0x10001000' end='0x10001008' /><slave name='Serial_Port.avalon_rs232_slave' start='0x10001010' end='0x10001018' /><slave name='IrDA.avalon_irda_slave' start='0x10001020' end='0x10001028' /><slave name='Interval_Timer.s1' start='0x10002000' end='0x10002020' /><slave name='sysid.control_slave' start='0x10002020' end='0x10002028' /><slave name='OnBoard_AV.avalon_av_config_slave' start='0x10003000' end='0x10003010' /><slave name='VGA_DMA_Controller.avalon_dma_control_slave' start='0x10003020' end='0x10003030' /><slave name='VGA_Char_Buffer.avalon_char_control_slave' start='0x10003030' end='0x10003038' /><slave name='Audio.avalon_audio_slave' start='0x10003040' end='0x10003050' /><slave name='Char_LCD_16x2.avalon_lcd_slave' start='0x10003050' end='0x10003052' /><slave name='Video_In_DMA_Controller.avalon_dma_control_slave' start='0x10003060' end='0x10003070' /><slave name='Camera_Config.avalon_av_config_slave' start='0x10003070' end='0x10003080' /><slave name='Camera_DMA_Controller.avalon_dma_control_slave' start='0x10003080' end='0x10003090' /><slave name='LCD_DMA_Controller.avalon_dma_control_slave' start='0x10003090' end='0x100030A0' /><slave name='LCD_Char_Buffer.avalon_char_control_slave' start='0x100030A0' end='0x100030A8' /><slave name='Accelerometer.avalon_accelerometer_spi_mode_slave' start='0x10004020' end='0x10004022' /><slave name='VideoConferencing_DMA_0.avalon_slave' start='0x10005000' end='0x10005400' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="deviceFamilyName" value="Cyclone IV E" />
   <parameter name="internalIrqMaskSystemInfo" value="167911" />
@@ -2116,23 +2049,6 @@
   <parameter name="audio_clk" value="true" />
   <parameter name="audio_clk_freq" value="12.288" />
   <parameter name="AUTO_CLK_IN_PRIMARY_CLOCK_RATE" value="50000000" />
-  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
- </module>
- <module
-   kind="Altera_UP_Flash_Memory_IP_Core_Avalon_Interface"
-   version="13.0"
-   enabled="1"
-   name="Flash">
-  <parameter name="FLASH_MEMORY_ADDRESS_WIDTH" value="23" />
-  <parameter name="AUTO_CLOCK_SINK_CLOCK_RATE" value="50000000" />
-  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
- </module>
- <module
-   kind="Altera_UP_SD_Card_Avalon_Interface"
-   version="13.0"
-   enabled="1"
-   name="SD_Card">
-  <parameter name="AUTO_CLOCK_SINK_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
  </module>
  <module kind="altera_up_avalon_irda" version="13.0" enabled="1" name="IrDA">
@@ -3398,72 +3314,6 @@
    start="clk.clk_reset"
    end="SRAM.clock_reset_reset" />
  <connection
-   kind="clock"
-   version="13.0"
-   start="External_Clocks.sys_clk"
-   end="SD_Card.clock_sink" />
- <connection
-   kind="clock"
-   version="13.0"
-   start="External_Clocks.sys_clk"
-   end="Flash.clock_sink" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk.clk_reset"
-   end="Flash.clock_sink_reset" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk.clk_reset"
-   end="SD_Card.clock_sink_reset" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="CPU.jtag_debug_module_reset"
-   end="SD_Card.clock_sink_reset" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="CPU.jtag_debug_module_reset"
-   end="Flash.clock_sink_reset" />
- <connection
-   kind="avalon"
-   version="13.0"
-   start="CPU.data_master"
-   end="Flash.flash_data">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0c000000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="CPU.instruction_master"
-   end="Flash.flash_data">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0c000000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="CPU.data_master"
-   end="Flash.flash_erase_control">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0bff0000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="CPU.data_master"
-   end="SD_Card.avalon_sdcard_slave">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0b000000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
    kind="avalon"
    version="13.0"
    start="CPU.data_master"
@@ -4286,15 +4136,6 @@
   <parameter name="irqNumber" value="5" />
  </connection>
  <connection
-   kind="avalon"
-   version="13.0"
-   start="CPU.data_master"
-   end="VideoConferencing_DMA_0.avalon_slave">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10005000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
    kind="clock"
    version="13.0"
    start="External_Clocks.sys_clk"
@@ -4307,22 +4148,49 @@
  <connection
    kind="avalon"
    version="13.0"
+   start="CPU.data_master"
+   end="VideoConferencing_DMA_0.avalon_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10005000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="13.0"
    start="VideoConferencing_DMA_0.avalon_master"
+   end="SDRAM.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="VideoConferencing_DMA_0.avalon_master_2"
    end="SRAM.avalon_sram_slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x08000000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
-   kind="avalon_streaming"
+   kind="avalon"
    version="13.0"
-   start="enet.receive"
-   end="VideoConferencing_DMA_0.avalon_streaming_sink" />
+   start="VideoConferencing_DMA_0.avalon_master_1"
+   end="Audio.avalon_audio_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10003040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
  <connection
    kind="avalon_streaming"
    version="13.0"
    start="VideoConferencing_DMA_0.avalon_streaming_source"
    end="enet.transmit" />
+ <connection
+   kind="avalon_streaming"
+   version="13.0"
+   start="enet.receive"
+   end="VideoConferencing_DMA_0.avalon_streaming_sink" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="0" />
 </system>

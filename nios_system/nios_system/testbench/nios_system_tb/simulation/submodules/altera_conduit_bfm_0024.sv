@@ -28,64 +28,44 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm_0024
-// role:width:direction:                              CLK:1:input,HS:1:input,VS:1:input,BLANK:1:input,SYNC:1:input,R:8:input,G:8:input,B:8:input
+// role:width:direction:                              set_10:1:output,set_1000:1:output,eth_mode:1:input,ena_10:1:input
 // false
 //-----------------------------------------------------------------------------
 `timescale 1 ns / 1 ns
 
 module altera_conduit_bfm_0024
 (
-   sig_CLK,
-   sig_HS,
-   sig_VS,
-   sig_BLANK,
-   sig_SYNC,
-   sig_R,
-   sig_G,
-   sig_B
+   sig_set_10,
+   sig_set_1000,
+   sig_eth_mode,
+   sig_ena_10
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   input sig_CLK;
-   input sig_HS;
-   input sig_VS;
-   input sig_BLANK;
-   input sig_SYNC;
-   input [7 : 0] sig_R;
-   input [7 : 0] sig_G;
-   input [7 : 0] sig_B;
+   output sig_set_10;
+   output sig_set_1000;
+   input sig_eth_mode;
+   input sig_ena_10;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic ROLE_CLK_t;
-   typedef logic ROLE_HS_t;
-   typedef logic ROLE_VS_t;
-   typedef logic ROLE_BLANK_t;
-   typedef logic ROLE_SYNC_t;
-   typedef logic [7 : 0] ROLE_R_t;
-   typedef logic [7 : 0] ROLE_G_t;
-   typedef logic [7 : 0] ROLE_B_t;
+   typedef logic ROLE_set_10_t;
+   typedef logic ROLE_set_1000_t;
+   typedef logic ROLE_eth_mode_t;
+   typedef logic ROLE_ena_10_t;
 
-   logic [0 : 0] CLK_in;
-   logic [0 : 0] CLK_local;
-   logic [0 : 0] HS_in;
-   logic [0 : 0] HS_local;
-   logic [0 : 0] VS_in;
-   logic [0 : 0] VS_local;
-   logic [0 : 0] BLANK_in;
-   logic [0 : 0] BLANK_local;
-   logic [0 : 0] SYNC_in;
-   logic [0 : 0] SYNC_local;
-   logic [7 : 0] R_in;
-   logic [7 : 0] R_local;
-   logic [7 : 0] G_in;
-   logic [7 : 0] G_local;
-   logic [7 : 0] B_in;
-   logic [7 : 0] B_local;
+   reg set_10_temp;
+   reg set_10_out;
+   reg set_1000_temp;
+   reg set_1000_out;
+   logic [0 : 0] eth_mode_in;
+   logic [0 : 0] eth_mode_local;
+   logic [0 : 0] ena_10_in;
+   logic [0 : 0] ena_10_local;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -105,14 +85,8 @@ module altera_conduit_bfm_0024
    // =cut
    //--------------------------------------------------------------------------
    
-   event signal_input_CLK_change;
-   event signal_input_HS_change;
-   event signal_input_VS_change;
-   event signal_input_BLANK_change;
-   event signal_input_SYNC_change;
-   event signal_input_R_change;
-   event signal_input_G_change;
-   event signal_input_B_change;
+   event signal_input_eth_mode_change;
+   event signal_input_ena_10_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -121,157 +95,75 @@ module altera_conduit_bfm_0024
    endfunction
 
    // -------------------------------------------------------
-   // CLK
+   // set_10
    // -------------------------------------------------------
-   function automatic ROLE_CLK_t get_CLK();
-   
-      // Gets the CLK input value.
-      $sformat(message, "%m: called get_CLK");
+
+   function automatic void set_set_10 (
+      ROLE_set_10_t new_value
+   );
+      // Drive the new value to set_10.
+      
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
       print(VERBOSITY_DEBUG, message);
-      return CLK_in;
+      
+      set_10_temp = new_value;
+   endfunction
+
+   // -------------------------------------------------------
+   // set_1000
+   // -------------------------------------------------------
+
+   function automatic void set_set_1000 (
+      ROLE_set_1000_t new_value
+   );
+      // Drive the new value to set_1000.
+      
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      set_1000_temp = new_value;
+   endfunction
+
+   // -------------------------------------------------------
+   // eth_mode
+   // -------------------------------------------------------
+   function automatic ROLE_eth_mode_t get_eth_mode();
+   
+      // Gets the eth_mode input value.
+      $sformat(message, "%m: called get_eth_mode");
+      print(VERBOSITY_DEBUG, message);
+      return eth_mode_in;
       
    endfunction
 
    // -------------------------------------------------------
-   // HS
+   // ena_10
    // -------------------------------------------------------
-   function automatic ROLE_HS_t get_HS();
+   function automatic ROLE_ena_10_t get_ena_10();
    
-      // Gets the HS input value.
-      $sformat(message, "%m: called get_HS");
+      // Gets the ena_10 input value.
+      $sformat(message, "%m: called get_ena_10");
       print(VERBOSITY_DEBUG, message);
-      return HS_in;
+      return ena_10_in;
       
    endfunction
 
-   // -------------------------------------------------------
-   // VS
-   // -------------------------------------------------------
-   function automatic ROLE_VS_t get_VS();
-   
-      // Gets the VS input value.
-      $sformat(message, "%m: called get_VS");
-      print(VERBOSITY_DEBUG, message);
-      return VS_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // BLANK
-   // -------------------------------------------------------
-   function automatic ROLE_BLANK_t get_BLANK();
-   
-      // Gets the BLANK input value.
-      $sformat(message, "%m: called get_BLANK");
-      print(VERBOSITY_DEBUG, message);
-      return BLANK_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // SYNC
-   // -------------------------------------------------------
-   function automatic ROLE_SYNC_t get_SYNC();
-   
-      // Gets the SYNC input value.
-      $sformat(message, "%m: called get_SYNC");
-      print(VERBOSITY_DEBUG, message);
-      return SYNC_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // R
-   // -------------------------------------------------------
-   function automatic ROLE_R_t get_R();
-   
-      // Gets the R input value.
-      $sformat(message, "%m: called get_R");
-      print(VERBOSITY_DEBUG, message);
-      return R_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // G
-   // -------------------------------------------------------
-   function automatic ROLE_G_t get_G();
-   
-      // Gets the G input value.
-      $sformat(message, "%m: called get_G");
-      print(VERBOSITY_DEBUG, message);
-      return G_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // B
-   // -------------------------------------------------------
-   function automatic ROLE_B_t get_B();
-   
-      // Gets the B input value.
-      $sformat(message, "%m: called get_B");
-      print(VERBOSITY_DEBUG, message);
-      return B_in;
-      
-   endfunction
-
-   assign CLK_in = sig_CLK;
-   assign HS_in = sig_HS;
-   assign VS_in = sig_VS;
-   assign BLANK_in = sig_BLANK;
-   assign SYNC_in = sig_SYNC;
-   assign R_in = sig_R;
-   assign G_in = sig_G;
-   assign B_in = sig_B;
+   assign sig_set_10 = set_10_temp;
+   assign sig_set_1000 = set_1000_temp;
+   assign eth_mode_in = sig_eth_mode;
+   assign ena_10_in = sig_ena_10;
 
 
-   always @(CLK_in) begin
-      if (CLK_local != CLK_in)
-         -> signal_input_CLK_change;
-      CLK_local = CLK_in;
+   always @(eth_mode_in) begin
+      if (eth_mode_local != eth_mode_in)
+         -> signal_input_eth_mode_change;
+      eth_mode_local = eth_mode_in;
    end
    
-   always @(HS_in) begin
-      if (HS_local != HS_in)
-         -> signal_input_HS_change;
-      HS_local = HS_in;
-   end
-   
-   always @(VS_in) begin
-      if (VS_local != VS_in)
-         -> signal_input_VS_change;
-      VS_local = VS_in;
-   end
-   
-   always @(BLANK_in) begin
-      if (BLANK_local != BLANK_in)
-         -> signal_input_BLANK_change;
-      BLANK_local = BLANK_in;
-   end
-   
-   always @(SYNC_in) begin
-      if (SYNC_local != SYNC_in)
-         -> signal_input_SYNC_change;
-      SYNC_local = SYNC_in;
-   end
-   
-   always @(R_in) begin
-      if (R_local != R_in)
-         -> signal_input_R_change;
-      R_local = R_in;
-   end
-   
-   always @(G_in) begin
-      if (G_local != G_in)
-         -> signal_input_G_change;
-      G_local = G_in;
-   end
-   
-   always @(B_in) begin
-      if (B_local != B_in)
-         -> signal_input_B_change;
-      B_local = B_in;
+   always @(ena_10_in) begin
+      if (ena_10_local != ena_10_in)
+         -> signal_input_ena_10_change;
+      ena_10_local = ena_10_in;
    end
    
 

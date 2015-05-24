@@ -53,19 +53,8 @@
 			HEX3_from_the_HEX3_HEX0                    : out   std_logic_vector(6 downto 0);                     -- HEX3
 			clk_27                                     : in    std_logic                     := 'X';             -- clk
 			audio_clk                                  : out   std_logic;                                        -- clk
-			sdram_clk                                  : out   std_logic;                                        -- clk
 			irda_TXD                                   : out   std_logic;                                        -- TXD
 			irda_RXD                                   : in    std_logic                     := 'X';             -- RXD
-			sdcard_b_SD_cmd                            : inout std_logic                     := 'X';             -- b_SD_cmd
-			sdcard_b_SD_dat                            : inout std_logic                     := 'X';             -- b_SD_dat
-			sdcard_b_SD_dat3                           : inout std_logic                     := 'X';             -- b_SD_dat3
-			sdcard_o_SD_clock                          : out   std_logic;                                        -- o_SD_clock
-			flash_ADDR                                 : out   std_logic_vector(22 downto 0);                    -- ADDR
-			flash_CE_N                                 : out   std_logic;                                        -- CE_N
-			flash_OE_N                                 : out   std_logic;                                        -- OE_N
-			flash_WE_N                                 : out   std_logic;                                        -- WE_N
-			flash_RST_N                                : out   std_logic;                                        -- RST_N
-			flash_DQ                                   : inout std_logic_vector(7 downto 0)  := (others => 'X'); -- DQ
 			video_in_TD_CLK27                          : in    std_logic                     := 'X';             -- TD_CLK27
 			video_in_TD_DATA                           : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- TD_DATA
 			video_in_TD_HS                             : in    std_logic                     := 'X';             -- TD_HS
@@ -137,6 +126,7 @@
 			enet_mac_misc_ff_rx_dsav                   : out   std_logic;                                        -- ff_rx_dsav
 			enet_mac_misc_ff_rx_a_full                 : out   std_logic;                                        -- ff_rx_a_full
 			enet_mac_misc_ff_rx_a_empty                : out   std_logic;                                        -- ff_rx_a_empty
+			sdram_clk                                  : out   std_logic;                                        -- clk
 			videoconferencing_dma_conduit_LEDR_conduit : out   std_logic_vector(17 downto 0);                    -- LEDR_conduit
 			videoconferencing_dma_conduit_LEDG_conduit : out   std_logic_vector(7 downto 0);                     -- LEDG_conduit
 			videoconferencing_dma_conduit_HEX0_conduit : out   std_logic_vector(6 downto 0);                     -- HEX0_conduit

@@ -28,44 +28,44 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm_0025
-// role:width:direction:                              set_10:1:output,set_1000:1:output,eth_mode:1:input,ena_10:1:input
+// role:width:direction:                              rgmii_in:4:output,rgmii_out:4:input,rx_control:1:output,tx_control:1:input
 // false
 //-----------------------------------------------------------------------------
 `timescale 1 ns / 1 ns
 
 module altera_conduit_bfm_0025
 (
-   sig_set_10,
-   sig_set_1000,
-   sig_eth_mode,
-   sig_ena_10
+   sig_rgmii_in,
+   sig_rgmii_out,
+   sig_rx_control,
+   sig_tx_control
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   output sig_set_10;
-   output sig_set_1000;
-   input sig_eth_mode;
-   input sig_ena_10;
+   output [3 : 0] sig_rgmii_in;
+   input [3 : 0] sig_rgmii_out;
+   output sig_rx_control;
+   input sig_tx_control;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic ROLE_set_10_t;
-   typedef logic ROLE_set_1000_t;
-   typedef logic ROLE_eth_mode_t;
-   typedef logic ROLE_ena_10_t;
+   typedef logic [3 : 0] ROLE_rgmii_in_t;
+   typedef logic [3 : 0] ROLE_rgmii_out_t;
+   typedef logic ROLE_rx_control_t;
+   typedef logic ROLE_tx_control_t;
 
-   reg set_10_temp;
-   reg set_10_out;
-   reg set_1000_temp;
-   reg set_1000_out;
-   logic [0 : 0] eth_mode_in;
-   logic [0 : 0] eth_mode_local;
-   logic [0 : 0] ena_10_in;
-   logic [0 : 0] ena_10_local;
+   reg [3 : 0] rgmii_in_temp;
+   reg [3 : 0] rgmii_in_out;
+   logic [3 : 0] rgmii_out_in;
+   logic [3 : 0] rgmii_out_local;
+   reg rx_control_temp;
+   reg rx_control_out;
+   logic [0 : 0] tx_control_in;
+   logic [0 : 0] tx_control_local;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -85,8 +85,8 @@ module altera_conduit_bfm_0025
    // =cut
    //--------------------------------------------------------------------------
    
-   event signal_input_eth_mode_change;
-   event signal_input_ena_10_change;
+   event signal_input_rgmii_out_change;
+   event signal_input_tx_control_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -95,75 +95,75 @@ module altera_conduit_bfm_0025
    endfunction
 
    // -------------------------------------------------------
-   // set_10
+   // rgmii_in
    // -------------------------------------------------------
 
-   function automatic void set_set_10 (
-      ROLE_set_10_t new_value
+   function automatic void set_rgmii_in (
+      ROLE_rgmii_in_t new_value
    );
-      // Drive the new value to set_10.
+      // Drive the new value to rgmii_in.
       
       $sformat(message, "%m: method called arg0 %0d", new_value); 
       print(VERBOSITY_DEBUG, message);
       
-      set_10_temp = new_value;
+      rgmii_in_temp = new_value;
    endfunction
 
    // -------------------------------------------------------
-   // set_1000
+   // rgmii_out
+   // -------------------------------------------------------
+   function automatic ROLE_rgmii_out_t get_rgmii_out();
+   
+      // Gets the rgmii_out input value.
+      $sformat(message, "%m: called get_rgmii_out");
+      print(VERBOSITY_DEBUG, message);
+      return rgmii_out_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // rx_control
    // -------------------------------------------------------
 
-   function automatic void set_set_1000 (
-      ROLE_set_1000_t new_value
+   function automatic void set_rx_control (
+      ROLE_rx_control_t new_value
    );
-      // Drive the new value to set_1000.
+      // Drive the new value to rx_control.
       
       $sformat(message, "%m: method called arg0 %0d", new_value); 
       print(VERBOSITY_DEBUG, message);
       
-      set_1000_temp = new_value;
+      rx_control_temp = new_value;
    endfunction
 
    // -------------------------------------------------------
-   // eth_mode
+   // tx_control
    // -------------------------------------------------------
-   function automatic ROLE_eth_mode_t get_eth_mode();
+   function automatic ROLE_tx_control_t get_tx_control();
    
-      // Gets the eth_mode input value.
-      $sformat(message, "%m: called get_eth_mode");
+      // Gets the tx_control input value.
+      $sformat(message, "%m: called get_tx_control");
       print(VERBOSITY_DEBUG, message);
-      return eth_mode_in;
+      return tx_control_in;
       
    endfunction
 
-   // -------------------------------------------------------
-   // ena_10
-   // -------------------------------------------------------
-   function automatic ROLE_ena_10_t get_ena_10();
-   
-      // Gets the ena_10 input value.
-      $sformat(message, "%m: called get_ena_10");
-      print(VERBOSITY_DEBUG, message);
-      return ena_10_in;
-      
-   endfunction
-
-   assign sig_set_10 = set_10_temp;
-   assign sig_set_1000 = set_1000_temp;
-   assign eth_mode_in = sig_eth_mode;
-   assign ena_10_in = sig_ena_10;
+   assign sig_rgmii_in = rgmii_in_temp;
+   assign rgmii_out_in = sig_rgmii_out;
+   assign sig_rx_control = rx_control_temp;
+   assign tx_control_in = sig_tx_control;
 
 
-   always @(eth_mode_in) begin
-      if (eth_mode_local != eth_mode_in)
-         -> signal_input_eth_mode_change;
-      eth_mode_local = eth_mode_in;
+   always @(rgmii_out_in) begin
+      if (rgmii_out_local != rgmii_out_in)
+         -> signal_input_rgmii_out_change;
+      rgmii_out_local = rgmii_out_in;
    end
    
-   always @(ena_10_in) begin
-      if (ena_10_local != ena_10_in)
-         -> signal_input_ena_10_change;
-      ena_10_local = ena_10_in;
+   always @(tx_control_in) begin
+      if (tx_control_local != tx_control_in)
+         -> signal_input_tx_control_change;
+      tx_control_local = tx_control_in;
    end
    
 

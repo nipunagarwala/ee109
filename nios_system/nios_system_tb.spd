@@ -349,7 +349,7 @@
    type="SYSTEM_VERILOG"
    library="nios_system_inst_videoconferencing_dma_conduit_bfm" />
  <file
-   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0029.sv"
+   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0028.sv"
    type="SYSTEM_VERILOG"
    library="nios_system_inst_videoconferencing_dma_conduit_bfm" />
  <file
@@ -357,7 +357,7 @@
    type="SYSTEM_VERILOG"
    library="nios_system_inst_enet_mac_misc_bfm" />
  <file
-   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0028.sv"
+   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0027.sv"
    type="SYSTEM_VERILOG"
    library="nios_system_inst_enet_mac_misc_bfm" />
  <file
@@ -365,7 +365,7 @@
    type="SYSTEM_VERILOG"
    library="nios_system_inst_enet_mac_mdio_bfm" />
  <file
-   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0027.sv"
+   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0026.sv"
    type="SYSTEM_VERILOG"
    library="nios_system_inst_enet_mac_mdio_bfm" />
  <file
@@ -373,7 +373,7 @@
    type="SYSTEM_VERILOG"
    library="nios_system_inst_enet_mac_rgmii_bfm" />
  <file
-   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0026.sv"
+   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0025.sv"
    type="SYSTEM_VERILOG"
    library="nios_system_inst_enet_mac_rgmii_bfm" />
  <file
@@ -381,7 +381,7 @@
    type="SYSTEM_VERILOG"
    library="nios_system_inst_enet_mac_status_bfm" />
  <file
-   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0025.sv"
+   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0024.sv"
    type="SYSTEM_VERILOG"
    library="nios_system_inst_enet_mac_status_bfm" />
  <file
@@ -389,7 +389,7 @@
    type="SYSTEM_VERILOG"
    library="nios_system_inst_vga_controller_external_interface_bfm" />
  <file
-   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0024.sv"
+   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0023.sv"
    type="SYSTEM_VERILOG"
    library="nios_system_inst_vga_controller_external_interface_bfm" />
  <file
@@ -397,7 +397,7 @@
    type="SYSTEM_VERILOG"
    library="nios_system_inst_usb_bfm" />
  <file
-   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0023.sv"
+   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0022.sv"
    type="SYSTEM_VERILOG"
    library="nios_system_inst_usb_bfm" />
  <file
@@ -405,7 +405,7 @@
    type="SYSTEM_VERILOG"
    library="nios_system_inst_accelerometer_bfm" />
  <file
-   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0022.sv"
+   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0021.sv"
    type="SYSTEM_VERILOG"
    library="nios_system_inst_accelerometer_bfm" />
  <file
@@ -413,7 +413,7 @@
    type="SYSTEM_VERILOG"
    library="nios_system_inst_lcd_controller_external_interface_bfm" />
  <file
-   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0021.sv"
+   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0020.sv"
    type="SYSTEM_VERILOG"
    library="nios_system_inst_lcd_controller_external_interface_bfm" />
  <file
@@ -421,7 +421,7 @@
    type="SYSTEM_VERILOG"
    library="nios_system_inst_camera_in_bfm" />
  <file
-   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0020.sv"
+   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0019.sv"
    type="SYSTEM_VERILOG"
    library="nios_system_inst_camera_in_bfm" />
  <file
@@ -429,7 +429,7 @@
    type="SYSTEM_VERILOG"
    library="nios_system_inst_camera_config_bfm" />
  <file
-   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0019.sv"
+   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0018.sv"
    type="SYSTEM_VERILOG"
    library="nios_system_inst_camera_config_bfm" />
  <file
@@ -437,17 +437,9 @@
    type="SYSTEM_VERILOG"
    library="nios_system_inst_video_in_bfm" />
  <file
-   path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0018.sv"
-   type="SYSTEM_VERILOG"
-   library="nios_system_inst_video_in_bfm" />
- <file
-   path="nios_system/testbench/nios_system_tb/simulation/submodules/verbosity_pkg.sv"
-   type="SYSTEM_VERILOG"
-   library="nios_system_inst_flash_bfm" />
- <file
    path="nios_system/testbench/nios_system_tb/simulation/submodules/altera_conduit_bfm_0017.sv"
    type="SYSTEM_VERILOG"
-   library="nios_system_inst_flash_bfm" />
+   library="nios_system_inst_video_in_bfm" />
  <file
    path="nios_system/testbench/nios_system_tb/simulation/submodules/verbosity_pkg.sv"
    type="SYSTEM_VERILOG"

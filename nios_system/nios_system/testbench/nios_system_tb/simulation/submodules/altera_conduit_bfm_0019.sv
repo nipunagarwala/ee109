@@ -28,43 +28,49 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm_0019
-// role:width:direction:                              I2C_SDAT:1:bidir,I2C_SCLK:1:input,exposure:16:output
+// role:width:direction:                              PIXEL_CLK:1:output,LINE_VALID:1:output,FRAME_VALID:1:output,pixel_clk_reset:1:output,PIXEL_DATA:12:output
 // false
 //-----------------------------------------------------------------------------
 `timescale 1 ns / 1 ns
 
 module altera_conduit_bfm_0019
 (
-   sig_I2C_SDAT,
-   sig_I2C_SCLK,
-   sig_exposure
+   sig_PIXEL_CLK,
+   sig_LINE_VALID,
+   sig_FRAME_VALID,
+   sig_pixel_clk_reset,
+   sig_PIXEL_DATA
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   inout wire sig_I2C_SDAT;
-   input sig_I2C_SCLK;
-   output [15 : 0] sig_exposure;
+   output sig_PIXEL_CLK;
+   output sig_LINE_VALID;
+   output sig_FRAME_VALID;
+   output sig_pixel_clk_reset;
+   output [11 : 0] sig_PIXEL_DATA;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic ROLE_I2C_SDAT_t;
-   typedef logic ROLE_I2C_SCLK_t;
-   typedef logic [15 : 0] ROLE_exposure_t;
+   typedef logic ROLE_PIXEL_CLK_t;
+   typedef logic ROLE_LINE_VALID_t;
+   typedef logic ROLE_FRAME_VALID_t;
+   typedef logic ROLE_pixel_clk_reset_t;
+   typedef logic [11 : 0] ROLE_PIXEL_DATA_t;
 
-   logic I2C_SDAT_oe;
-   logic I2C_SDAT_oe_temp = 0;
-   reg I2C_SDAT_temp;
-   reg I2C_SDAT_out;
-   logic [0 : 0] I2C_SDAT_in;
-   logic [0 : 0] I2C_SDAT_local;
-   logic [0 : 0] I2C_SCLK_in;
-   logic [0 : 0] I2C_SCLK_local;
-   reg [15 : 0] exposure_temp;
-   reg [15 : 0] exposure_out;
+   reg PIXEL_CLK_temp;
+   reg PIXEL_CLK_out;
+   reg LINE_VALID_temp;
+   reg LINE_VALID_out;
+   reg FRAME_VALID_temp;
+   reg FRAME_VALID_out;
+   reg pixel_clk_reset_temp;
+   reg pixel_clk_reset_out;
+   reg [11 : 0] PIXEL_DATA_temp;
+   reg [11 : 0] PIXEL_DATA_out;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -84,8 +90,6 @@ module altera_conduit_bfm_0019
    // =cut
    //--------------------------------------------------------------------------
    
-   event signal_input_I2C_SDAT_change;
-   event signal_input_I2C_SCLK_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -94,88 +98,87 @@ module altera_conduit_bfm_0019
    endfunction
 
    // -------------------------------------------------------
-   // I2C_SDAT
+   // PIXEL_CLK
    // -------------------------------------------------------
-   function automatic ROLE_I2C_SDAT_t get_I2C_SDAT();
-   
-      // Gets the I2C_SDAT input value.
-      $sformat(message, "%m: called get_I2C_SDAT");
-      print(VERBOSITY_DEBUG, message);
-      return I2C_SDAT_in;
-      
-   endfunction
 
-   function automatic void set_I2C_SDAT (
-      ROLE_I2C_SDAT_t new_value
+   function automatic void set_PIXEL_CLK (
+      ROLE_PIXEL_CLK_t new_value
    );
-      // Drive the new value to I2C_SDAT.
+      // Drive the new value to PIXEL_CLK.
       
       $sformat(message, "%m: method called arg0 %0d", new_value); 
       print(VERBOSITY_DEBUG, message);
       
-      I2C_SDAT_temp = new_value;
+      PIXEL_CLK_temp = new_value;
    endfunction
-   
-   function automatic void set_I2C_SDAT_oe (
-      bit enable
+
+   // -------------------------------------------------------
+   // LINE_VALID
+   // -------------------------------------------------------
+
+   function automatic void set_LINE_VALID (
+      ROLE_LINE_VALID_t new_value
    );
-      // bidir port I2C_SDAT will work as output port when set to 1.
-      // bidir port I2C_SDAT will work as input port when set to 0.
-      
-      $sformat(message, "%m: method called arg0 %0d", enable); 
-      print(VERBOSITY_DEBUG, message);
-      
-      I2C_SDAT_oe_temp = enable;
-   endfunction
-
-   // -------------------------------------------------------
-   // I2C_SCLK
-   // -------------------------------------------------------
-   function automatic ROLE_I2C_SCLK_t get_I2C_SCLK();
-   
-      // Gets the I2C_SCLK input value.
-      $sformat(message, "%m: called get_I2C_SCLK");
-      print(VERBOSITY_DEBUG, message);
-      return I2C_SCLK_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // exposure
-   // -------------------------------------------------------
-
-   function automatic void set_exposure (
-      ROLE_exposure_t new_value
-   );
-      // Drive the new value to exposure.
+      // Drive the new value to LINE_VALID.
       
       $sformat(message, "%m: method called arg0 %0d", new_value); 
       print(VERBOSITY_DEBUG, message);
       
-      exposure_temp = new_value;
+      LINE_VALID_temp = new_value;
    endfunction
 
-   assign I2C_SDAT_oe = I2C_SDAT_oe_temp;
-   assign sig_I2C_SDAT = (I2C_SDAT_oe == 1)? I2C_SDAT_temp:'z;
-   assign I2C_SDAT_in = (I2C_SDAT_oe == 0)? sig_I2C_SDAT:'z;
-   assign I2C_SCLK_in = sig_I2C_SCLK;
-   assign sig_exposure = exposure_temp;
+   // -------------------------------------------------------
+   // FRAME_VALID
+   // -------------------------------------------------------
+
+   function automatic void set_FRAME_VALID (
+      ROLE_FRAME_VALID_t new_value
+   );
+      // Drive the new value to FRAME_VALID.
+      
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      FRAME_VALID_temp = new_value;
+   endfunction
+
+   // -------------------------------------------------------
+   // pixel_clk_reset
+   // -------------------------------------------------------
+
+   function automatic void set_pixel_clk_reset (
+      ROLE_pixel_clk_reset_t new_value
+   );
+      // Drive the new value to pixel_clk_reset.
+      
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      pixel_clk_reset_temp = new_value;
+   endfunction
+
+   // -------------------------------------------------------
+   // PIXEL_DATA
+   // -------------------------------------------------------
+
+   function automatic void set_PIXEL_DATA (
+      ROLE_PIXEL_DATA_t new_value
+   );
+      // Drive the new value to PIXEL_DATA.
+      
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      PIXEL_DATA_temp = new_value;
+   endfunction
+
+   assign sig_PIXEL_CLK = PIXEL_CLK_temp;
+   assign sig_LINE_VALID = LINE_VALID_temp;
+   assign sig_FRAME_VALID = FRAME_VALID_temp;
+   assign sig_pixel_clk_reset = pixel_clk_reset_temp;
+   assign sig_PIXEL_DATA = PIXEL_DATA_temp;
 
 
-   always @(I2C_SDAT_in) begin
-      if (I2C_SDAT_oe == 0) begin
-         if (I2C_SDAT_local != I2C_SDAT_in)
-            -> signal_input_I2C_SDAT_change;
-         I2C_SDAT_local = I2C_SDAT_in;
-      end
-   end
-   
-   always @(I2C_SCLK_in) begin
-      if (I2C_SCLK_local != I2C_SCLK_in)
-         -> signal_input_I2C_SCLK_change;
-      I2C_SCLK_local = I2C_SCLK_in;
-   end
-   
 
 
 // synthesis translate_on

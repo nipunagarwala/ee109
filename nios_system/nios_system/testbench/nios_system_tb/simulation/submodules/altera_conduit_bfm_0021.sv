@@ -28,59 +28,48 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm_0021
-// role:width:direction:                              CLK:1:input,HS:1:input,VS:1:input,DATA_EN:1:input,R:8:input,G:8:input,B:8:input
+// role:width:direction:                              I2C_SDAT:1:bidir,I2C_SCLK:1:input,G_SENSOR_CS_N:1:input,G_SENSOR_INT:1:output
 // false
 //-----------------------------------------------------------------------------
 `timescale 1 ns / 1 ns
 
 module altera_conduit_bfm_0021
 (
-   sig_CLK,
-   sig_HS,
-   sig_VS,
-   sig_DATA_EN,
-   sig_R,
-   sig_G,
-   sig_B
+   sig_I2C_SDAT,
+   sig_I2C_SCLK,
+   sig_G_SENSOR_CS_N,
+   sig_G_SENSOR_INT
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   input sig_CLK;
-   input sig_HS;
-   input sig_VS;
-   input sig_DATA_EN;
-   input [7 : 0] sig_R;
-   input [7 : 0] sig_G;
-   input [7 : 0] sig_B;
+   inout wire sig_I2C_SDAT;
+   input sig_I2C_SCLK;
+   input sig_G_SENSOR_CS_N;
+   output sig_G_SENSOR_INT;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic ROLE_CLK_t;
-   typedef logic ROLE_HS_t;
-   typedef logic ROLE_VS_t;
-   typedef logic ROLE_DATA_EN_t;
-   typedef logic [7 : 0] ROLE_R_t;
-   typedef logic [7 : 0] ROLE_G_t;
-   typedef logic [7 : 0] ROLE_B_t;
+   typedef logic ROLE_I2C_SDAT_t;
+   typedef logic ROLE_I2C_SCLK_t;
+   typedef logic ROLE_G_SENSOR_CS_N_t;
+   typedef logic ROLE_G_SENSOR_INT_t;
 
-   logic [0 : 0] CLK_in;
-   logic [0 : 0] CLK_local;
-   logic [0 : 0] HS_in;
-   logic [0 : 0] HS_local;
-   logic [0 : 0] VS_in;
-   logic [0 : 0] VS_local;
-   logic [0 : 0] DATA_EN_in;
-   logic [0 : 0] DATA_EN_local;
-   logic [7 : 0] R_in;
-   logic [7 : 0] R_local;
-   logic [7 : 0] G_in;
-   logic [7 : 0] G_local;
-   logic [7 : 0] B_in;
-   logic [7 : 0] B_local;
+   logic I2C_SDAT_oe;
+   logic I2C_SDAT_oe_temp = 0;
+   reg I2C_SDAT_temp;
+   reg I2C_SDAT_out;
+   logic [0 : 0] I2C_SDAT_in;
+   logic [0 : 0] I2C_SDAT_local;
+   logic [0 : 0] I2C_SCLK_in;
+   logic [0 : 0] I2C_SCLK_local;
+   logic [0 : 0] G_SENSOR_CS_N_in;
+   logic [0 : 0] G_SENSOR_CS_N_local;
+   reg G_SENSOR_INT_temp;
+   reg G_SENSOR_INT_out;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -100,13 +89,9 @@ module altera_conduit_bfm_0021
    // =cut
    //--------------------------------------------------------------------------
    
-   event signal_input_CLK_change;
-   event signal_input_HS_change;
-   event signal_input_VS_change;
-   event signal_input_DATA_EN_change;
-   event signal_input_R_change;
-   event signal_input_G_change;
-   event signal_input_B_change;
+   event signal_input_I2C_SDAT_change;
+   event signal_input_I2C_SCLK_change;
+   event signal_input_G_SENSOR_CS_N_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -115,138 +100,105 @@ module altera_conduit_bfm_0021
    endfunction
 
    // -------------------------------------------------------
-   // CLK
+   // I2C_SDAT
    // -------------------------------------------------------
-   function automatic ROLE_CLK_t get_CLK();
+   function automatic ROLE_I2C_SDAT_t get_I2C_SDAT();
    
-      // Gets the CLK input value.
-      $sformat(message, "%m: called get_CLK");
+      // Gets the I2C_SDAT input value.
+      $sformat(message, "%m: called get_I2C_SDAT");
       print(VERBOSITY_DEBUG, message);
-      return CLK_in;
+      return I2C_SDAT_in;
+      
+   endfunction
+
+   function automatic void set_I2C_SDAT (
+      ROLE_I2C_SDAT_t new_value
+   );
+      // Drive the new value to I2C_SDAT.
+      
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      I2C_SDAT_temp = new_value;
+   endfunction
+   
+   function automatic void set_I2C_SDAT_oe (
+      bit enable
+   );
+      // bidir port I2C_SDAT will work as output port when set to 1.
+      // bidir port I2C_SDAT will work as input port when set to 0.
+      
+      $sformat(message, "%m: method called arg0 %0d", enable); 
+      print(VERBOSITY_DEBUG, message);
+      
+      I2C_SDAT_oe_temp = enable;
+   endfunction
+
+   // -------------------------------------------------------
+   // I2C_SCLK
+   // -------------------------------------------------------
+   function automatic ROLE_I2C_SCLK_t get_I2C_SCLK();
+   
+      // Gets the I2C_SCLK input value.
+      $sformat(message, "%m: called get_I2C_SCLK");
+      print(VERBOSITY_DEBUG, message);
+      return I2C_SCLK_in;
       
    endfunction
 
    // -------------------------------------------------------
-   // HS
+   // G_SENSOR_CS_N
    // -------------------------------------------------------
-   function automatic ROLE_HS_t get_HS();
+   function automatic ROLE_G_SENSOR_CS_N_t get_G_SENSOR_CS_N();
    
-      // Gets the HS input value.
-      $sformat(message, "%m: called get_HS");
+      // Gets the G_SENSOR_CS_N input value.
+      $sformat(message, "%m: called get_G_SENSOR_CS_N");
       print(VERBOSITY_DEBUG, message);
-      return HS_in;
+      return G_SENSOR_CS_N_in;
       
    endfunction
 
    // -------------------------------------------------------
-   // VS
+   // G_SENSOR_INT
    // -------------------------------------------------------
-   function automatic ROLE_VS_t get_VS();
-   
-      // Gets the VS input value.
-      $sformat(message, "%m: called get_VS");
-      print(VERBOSITY_DEBUG, message);
-      return VS_in;
+
+   function automatic void set_G_SENSOR_INT (
+      ROLE_G_SENSOR_INT_t new_value
+   );
+      // Drive the new value to G_SENSOR_INT.
       
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      G_SENSOR_INT_temp = new_value;
    endfunction
 
-   // -------------------------------------------------------
-   // DATA_EN
-   // -------------------------------------------------------
-   function automatic ROLE_DATA_EN_t get_DATA_EN();
-   
-      // Gets the DATA_EN input value.
-      $sformat(message, "%m: called get_DATA_EN");
-      print(VERBOSITY_DEBUG, message);
-      return DATA_EN_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // R
-   // -------------------------------------------------------
-   function automatic ROLE_R_t get_R();
-   
-      // Gets the R input value.
-      $sformat(message, "%m: called get_R");
-      print(VERBOSITY_DEBUG, message);
-      return R_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // G
-   // -------------------------------------------------------
-   function automatic ROLE_G_t get_G();
-   
-      // Gets the G input value.
-      $sformat(message, "%m: called get_G");
-      print(VERBOSITY_DEBUG, message);
-      return G_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // B
-   // -------------------------------------------------------
-   function automatic ROLE_B_t get_B();
-   
-      // Gets the B input value.
-      $sformat(message, "%m: called get_B");
-      print(VERBOSITY_DEBUG, message);
-      return B_in;
-      
-   endfunction
-
-   assign CLK_in = sig_CLK;
-   assign HS_in = sig_HS;
-   assign VS_in = sig_VS;
-   assign DATA_EN_in = sig_DATA_EN;
-   assign R_in = sig_R;
-   assign G_in = sig_G;
-   assign B_in = sig_B;
+   assign I2C_SDAT_oe = I2C_SDAT_oe_temp;
+   assign sig_I2C_SDAT = (I2C_SDAT_oe == 1)? I2C_SDAT_temp:'z;
+   assign I2C_SDAT_in = (I2C_SDAT_oe == 0)? sig_I2C_SDAT:'z;
+   assign I2C_SCLK_in = sig_I2C_SCLK;
+   assign G_SENSOR_CS_N_in = sig_G_SENSOR_CS_N;
+   assign sig_G_SENSOR_INT = G_SENSOR_INT_temp;
 
 
-   always @(CLK_in) begin
-      if (CLK_local != CLK_in)
-         -> signal_input_CLK_change;
-      CLK_local = CLK_in;
+   always @(I2C_SDAT_in) begin
+      if (I2C_SDAT_oe == 0) begin
+         if (I2C_SDAT_local != I2C_SDAT_in)
+            -> signal_input_I2C_SDAT_change;
+         I2C_SDAT_local = I2C_SDAT_in;
+      end
    end
    
-   always @(HS_in) begin
-      if (HS_local != HS_in)
-         -> signal_input_HS_change;
-      HS_local = HS_in;
+   always @(I2C_SCLK_in) begin
+      if (I2C_SCLK_local != I2C_SCLK_in)
+         -> signal_input_I2C_SCLK_change;
+      I2C_SCLK_local = I2C_SCLK_in;
    end
    
-   always @(VS_in) begin
-      if (VS_local != VS_in)
-         -> signal_input_VS_change;
-      VS_local = VS_in;
-   end
-   
-   always @(DATA_EN_in) begin
-      if (DATA_EN_local != DATA_EN_in)
-         -> signal_input_DATA_EN_change;
-      DATA_EN_local = DATA_EN_in;
-   end
-   
-   always @(R_in) begin
-      if (R_local != R_in)
-         -> signal_input_R_change;
-      R_local = R_in;
-   end
-   
-   always @(G_in) begin
-      if (G_local != G_in)
-         -> signal_input_G_change;
-      G_local = G_in;
-   end
-   
-   always @(B_in) begin
-      if (B_local != B_in)
-         -> signal_input_B_change;
-      B_local = B_in;
+   always @(G_SENSOR_CS_N_in) begin
+      if (G_SENSOR_CS_N_local != G_SENSOR_CS_N_in)
+         -> signal_input_G_SENSOR_CS_N_change;
+      G_SENSOR_CS_N_local = G_SENSOR_CS_N_in;
    end
    
 

@@ -28,58 +28,59 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm_0017
-// role:width:direction:                              ADDR:23:input,CE_N:1:input,OE_N:1:input,WE_N:1:input,RST_N:1:input,DQ:8:bidir
+// role:width:direction:                              TD_CLK27:1:output,TD_DATA:8:output,TD_HS:1:output,TD_VS:1:output,clk27_reset:1:output,TD_RESET:1:input,overflow_flag:1:input
 // false
 //-----------------------------------------------------------------------------
 `timescale 1 ns / 1 ns
 
 module altera_conduit_bfm_0017
 (
-   sig_ADDR,
-   sig_CE_N,
-   sig_OE_N,
-   sig_WE_N,
-   sig_RST_N,
-   sig_DQ
+   sig_TD_CLK27,
+   sig_TD_DATA,
+   sig_TD_HS,
+   sig_TD_VS,
+   sig_clk27_reset,
+   sig_TD_RESET,
+   sig_overflow_flag
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   input [22 : 0] sig_ADDR;
-   input sig_CE_N;
-   input sig_OE_N;
-   input sig_WE_N;
-   input sig_RST_N;
-   inout wire [7 : 0] sig_DQ;
+   output sig_TD_CLK27;
+   output [7 : 0] sig_TD_DATA;
+   output sig_TD_HS;
+   output sig_TD_VS;
+   output sig_clk27_reset;
+   input sig_TD_RESET;
+   input sig_overflow_flag;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic [22 : 0] ROLE_ADDR_t;
-   typedef logic ROLE_CE_N_t;
-   typedef logic ROLE_OE_N_t;
-   typedef logic ROLE_WE_N_t;
-   typedef logic ROLE_RST_N_t;
-   typedef logic [7 : 0] ROLE_DQ_t;
+   typedef logic ROLE_TD_CLK27_t;
+   typedef logic [7 : 0] ROLE_TD_DATA_t;
+   typedef logic ROLE_TD_HS_t;
+   typedef logic ROLE_TD_VS_t;
+   typedef logic ROLE_clk27_reset_t;
+   typedef logic ROLE_TD_RESET_t;
+   typedef logic ROLE_overflow_flag_t;
 
-   logic [22 : 0] ADDR_in;
-   logic [22 : 0] ADDR_local;
-   logic [0 : 0] CE_N_in;
-   logic [0 : 0] CE_N_local;
-   logic [0 : 0] OE_N_in;
-   logic [0 : 0] OE_N_local;
-   logic [0 : 0] WE_N_in;
-   logic [0 : 0] WE_N_local;
-   logic [0 : 0] RST_N_in;
-   logic [0 : 0] RST_N_local;
-   logic DQ_oe;
-   logic DQ_oe_temp = 0;
-   reg [7 : 0] DQ_temp;
-   reg [7 : 0] DQ_out;
-   logic [7 : 0] DQ_in;
-   logic [7 : 0] DQ_local;
+   reg TD_CLK27_temp;
+   reg TD_CLK27_out;
+   reg [7 : 0] TD_DATA_temp;
+   reg [7 : 0] TD_DATA_out;
+   reg TD_HS_temp;
+   reg TD_HS_out;
+   reg TD_VS_temp;
+   reg TD_VS_out;
+   reg clk27_reset_temp;
+   reg clk27_reset_out;
+   logic [0 : 0] TD_RESET_in;
+   logic [0 : 0] TD_RESET_local;
+   logic [0 : 0] overflow_flag_in;
+   logic [0 : 0] overflow_flag_local;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -99,12 +100,8 @@ module altera_conduit_bfm_0017
    // =cut
    //--------------------------------------------------------------------------
    
-   event signal_input_ADDR_change;
-   event signal_input_CE_N_change;
-   event signal_input_OE_N_change;
-   event signal_input_WE_N_change;
-   event signal_input_RST_N_change;
-   event signal_input_DQ_change;
+   event signal_input_TD_RESET_change;
+   event signal_input_overflow_flag_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -113,146 +110,123 @@ module altera_conduit_bfm_0017
    endfunction
 
    // -------------------------------------------------------
-   // ADDR
+   // TD_CLK27
    // -------------------------------------------------------
-   function automatic ROLE_ADDR_t get_ADDR();
-   
-      // Gets the ADDR input value.
-      $sformat(message, "%m: called get_ADDR");
-      print(VERBOSITY_DEBUG, message);
-      return ADDR_in;
-      
-   endfunction
 
-   // -------------------------------------------------------
-   // CE_N
-   // -------------------------------------------------------
-   function automatic ROLE_CE_N_t get_CE_N();
-   
-      // Gets the CE_N input value.
-      $sformat(message, "%m: called get_CE_N");
-      print(VERBOSITY_DEBUG, message);
-      return CE_N_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // OE_N
-   // -------------------------------------------------------
-   function automatic ROLE_OE_N_t get_OE_N();
-   
-      // Gets the OE_N input value.
-      $sformat(message, "%m: called get_OE_N");
-      print(VERBOSITY_DEBUG, message);
-      return OE_N_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // WE_N
-   // -------------------------------------------------------
-   function automatic ROLE_WE_N_t get_WE_N();
-   
-      // Gets the WE_N input value.
-      $sformat(message, "%m: called get_WE_N");
-      print(VERBOSITY_DEBUG, message);
-      return WE_N_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // RST_N
-   // -------------------------------------------------------
-   function automatic ROLE_RST_N_t get_RST_N();
-   
-      // Gets the RST_N input value.
-      $sformat(message, "%m: called get_RST_N");
-      print(VERBOSITY_DEBUG, message);
-      return RST_N_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // DQ
-   // -------------------------------------------------------
-   function automatic ROLE_DQ_t get_DQ();
-   
-      // Gets the DQ input value.
-      $sformat(message, "%m: called get_DQ");
-      print(VERBOSITY_DEBUG, message);
-      return DQ_in;
-      
-   endfunction
-
-   function automatic void set_DQ (
-      ROLE_DQ_t new_value
+   function automatic void set_TD_CLK27 (
+      ROLE_TD_CLK27_t new_value
    );
-      // Drive the new value to DQ.
+      // Drive the new value to TD_CLK27.
       
       $sformat(message, "%m: method called arg0 %0d", new_value); 
       print(VERBOSITY_DEBUG, message);
       
-      DQ_temp = new_value;
+      TD_CLK27_temp = new_value;
    endfunction
-   
-   function automatic void set_DQ_oe (
-      bit enable
+
+   // -------------------------------------------------------
+   // TD_DATA
+   // -------------------------------------------------------
+
+   function automatic void set_TD_DATA (
+      ROLE_TD_DATA_t new_value
    );
-      // bidir port DQ will work as output port when set to 1.
-      // bidir port DQ will work as input port when set to 0.
+      // Drive the new value to TD_DATA.
       
-      $sformat(message, "%m: method called arg0 %0d", enable); 
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
       print(VERBOSITY_DEBUG, message);
       
-      DQ_oe_temp = enable;
+      TD_DATA_temp = new_value;
    endfunction
 
-   assign ADDR_in = sig_ADDR;
-   assign CE_N_in = sig_CE_N;
-   assign OE_N_in = sig_OE_N;
-   assign WE_N_in = sig_WE_N;
-   assign RST_N_in = sig_RST_N;
-   assign DQ_oe = DQ_oe_temp;
-   assign sig_DQ = (DQ_oe == 1)? DQ_temp:'z;
-   assign DQ_in = (DQ_oe == 0)? sig_DQ:'z;
+   // -------------------------------------------------------
+   // TD_HS
+   // -------------------------------------------------------
+
+   function automatic void set_TD_HS (
+      ROLE_TD_HS_t new_value
+   );
+      // Drive the new value to TD_HS.
+      
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      TD_HS_temp = new_value;
+   endfunction
+
+   // -------------------------------------------------------
+   // TD_VS
+   // -------------------------------------------------------
+
+   function automatic void set_TD_VS (
+      ROLE_TD_VS_t new_value
+   );
+      // Drive the new value to TD_VS.
+      
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      TD_VS_temp = new_value;
+   endfunction
+
+   // -------------------------------------------------------
+   // clk27_reset
+   // -------------------------------------------------------
+
+   function automatic void set_clk27_reset (
+      ROLE_clk27_reset_t new_value
+   );
+      // Drive the new value to clk27_reset.
+      
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      clk27_reset_temp = new_value;
+   endfunction
+
+   // -------------------------------------------------------
+   // TD_RESET
+   // -------------------------------------------------------
+   function automatic ROLE_TD_RESET_t get_TD_RESET();
+   
+      // Gets the TD_RESET input value.
+      $sformat(message, "%m: called get_TD_RESET");
+      print(VERBOSITY_DEBUG, message);
+      return TD_RESET_in;
+      
+   endfunction
+
+   // -------------------------------------------------------
+   // overflow_flag
+   // -------------------------------------------------------
+   function automatic ROLE_overflow_flag_t get_overflow_flag();
+   
+      // Gets the overflow_flag input value.
+      $sformat(message, "%m: called get_overflow_flag");
+      print(VERBOSITY_DEBUG, message);
+      return overflow_flag_in;
+      
+   endfunction
+
+   assign sig_TD_CLK27 = TD_CLK27_temp;
+   assign sig_TD_DATA = TD_DATA_temp;
+   assign sig_TD_HS = TD_HS_temp;
+   assign sig_TD_VS = TD_VS_temp;
+   assign sig_clk27_reset = clk27_reset_temp;
+   assign TD_RESET_in = sig_TD_RESET;
+   assign overflow_flag_in = sig_overflow_flag;
 
 
-   always @(ADDR_in) begin
-      if (ADDR_local != ADDR_in)
-         -> signal_input_ADDR_change;
-      ADDR_local = ADDR_in;
+   always @(TD_RESET_in) begin
+      if (TD_RESET_local != TD_RESET_in)
+         -> signal_input_TD_RESET_change;
+      TD_RESET_local = TD_RESET_in;
    end
    
-   always @(CE_N_in) begin
-      if (CE_N_local != CE_N_in)
-         -> signal_input_CE_N_change;
-      CE_N_local = CE_N_in;
-   end
-   
-   always @(OE_N_in) begin
-      if (OE_N_local != OE_N_in)
-         -> signal_input_OE_N_change;
-      OE_N_local = OE_N_in;
-   end
-   
-   always @(WE_N_in) begin
-      if (WE_N_local != WE_N_in)
-         -> signal_input_WE_N_change;
-      WE_N_local = WE_N_in;
-   end
-   
-   always @(RST_N_in) begin
-      if (RST_N_local != RST_N_in)
-         -> signal_input_RST_N_change;
-      RST_N_local = RST_N_in;
-   end
-   
-   always @(DQ_in) begin
-      if (DQ_oe == 0) begin
-         if (DQ_local != DQ_in)
-            -> signal_input_DQ_change;
-         DQ_local = DQ_in;
-      end
+   always @(overflow_flag_in) begin
+      if (overflow_flag_local != overflow_flag_in)
+         -> signal_input_overflow_flag_change;
+      overflow_flag_local = overflow_flag_in;
    end
    
 

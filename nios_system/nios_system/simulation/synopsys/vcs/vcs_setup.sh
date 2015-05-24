@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0sp1 232 win32 2015.05.23.01:27:30
+# ACDS 13.0sp1 232 win32 2015.05.23.22:49:27
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -43,6 +43,10 @@ done
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
+  cp -f $QSYS_SIMDIR/submodules/nios_system_packet_memory.hex ./
+  cp -f $QSYS_SIMDIR/submodules/nios_system_descriptor_memory.hex ./
+  cp -f $QSYS_SIMDIR/submodules/altera_up_video_char_mode_rom_128.mif ./
+  cp -f $QSYS_SIMDIR/submodules/altera_up_video_fb_color_rom.mif ./
   cp -f $QSYS_SIMDIR/submodules/nios_system_CPU_ic_tag_ram.dat ./
   cp -f $QSYS_SIMDIR/submodules/nios_system_CPU_ic_tag_ram.hex ./
   cp -f $QSYS_SIMDIR/submodules/nios_system_CPU_ic_tag_ram.mif ./
@@ -66,6 +70,126 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $USER_DEF
   -v $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_mf.v \
   $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_lnsim.sv \
   -v $QUARTUS_INSTALL_DIR/eda/sim_lib/cycloneive_atoms.v \
+  $QSYS_SIMDIR/submodules/nios_system_avalon_st_adapter_001_timing_adapter_0.v \
+  $QSYS_SIMDIR/submodules/nios_system_avalon_st_adapter_001_timing_adapter_0_fifo.v \
+  $QSYS_SIMDIR/submodules/nios_system_avalon_st_adapter_001_channel_adapter_0.v \
+  $QSYS_SIMDIR/submodules/nios_system_avalon_st_adapter_001_data_format_adapter_0.v \
+  $QSYS_SIMDIR/submodules/nios_system_avalon_st_adapter_error_adapter_0.v \
+  $QSYS_SIMDIR/submodules/nios_system_avalon_st_adapter_channel_adapter_0.v \
+  $QSYS_SIMDIR/submodules/nios_system_avalon_st_adapter_data_format_adapter_0.v \
+  $QSYS_SIMDIR/submodules/nios_system_avalon_st_adapter_001.v \
+  $QSYS_SIMDIR/submodules/nios_system_avalon_st_adapter.v \
+  $QSYS_SIMDIR/submodules/nios_system_irq_mapper.sv \
+  $QSYS_SIMDIR/submodules/altera_merlin_width_adapter.sv \
+  $QSYS_SIMDIR/submodules/altera_merlin_address_alignment.sv \
+  $QSYS_SIMDIR/submodules/altera_merlin_burst_uncompressor.sv \
+  $QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv \
+  $QSYS_SIMDIR/submodules/nios_system_rsp_xbar_mux_001.sv \
+  $QSYS_SIMDIR/submodules/nios_system_rsp_xbar_mux.sv \
+  $QSYS_SIMDIR/submodules/nios_system_rsp_xbar_demux_015.sv \
+  $QSYS_SIMDIR/submodules/nios_system_rsp_xbar_demux_013.sv \
+  $QSYS_SIMDIR/submodules/nios_system_rsp_xbar_demux_001.sv \
+  $QSYS_SIMDIR/submodules/nios_system_rsp_xbar_demux.sv \
+  $QSYS_SIMDIR/submodules/nios_system_cmd_xbar_mux_015.sv \
+  $QSYS_SIMDIR/submodules/nios_system_cmd_xbar_mux_001.sv \
+  $QSYS_SIMDIR/submodules/nios_system_cmd_xbar_mux.sv \
+  $QSYS_SIMDIR/submodules/nios_system_cmd_xbar_demux_003.sv \
+  $QSYS_SIMDIR/submodules/nios_system_cmd_xbar_demux_002.sv \
+  $QSYS_SIMDIR/submodules/nios_system_cmd_xbar_demux_001.sv \
+  $QSYS_SIMDIR/submodules/nios_system_cmd_xbar_demux.sv \
+  $QSYS_SIMDIR/submodules/altera_reset_controller.v \
+  $QSYS_SIMDIR/submodules/altera_reset_synchronizer.v \
+  $QSYS_SIMDIR/submodules/altera_merlin_burst_adapter.sv \
+  $QSYS_SIMDIR/submodules/altera_merlin_traffic_limiter.sv \
+  $QSYS_SIMDIR/submodules/altera_avalon_st_pipeline_base.v \
+  $QSYS_SIMDIR/submodules/nios_system_id_router_020.sv \
+  $QSYS_SIMDIR/submodules/nios_system_id_router_015.sv \
+  $QSYS_SIMDIR/submodules/nios_system_id_router_013.sv \
+  $QSYS_SIMDIR/submodules/nios_system_id_router_002.sv \
+  $QSYS_SIMDIR/submodules/nios_system_id_router_001.sv \
+  $QSYS_SIMDIR/submodules/nios_system_id_router.sv \
+  $QSYS_SIMDIR/submodules/nios_system_addr_router_008.sv \
+  $QSYS_SIMDIR/submodules/nios_system_addr_router_003.sv \
+  $QSYS_SIMDIR/submodules/nios_system_addr_router_002.sv \
+  $QSYS_SIMDIR/submodules/nios_system_addr_router_001.sv \
+  $QSYS_SIMDIR/submodules/nios_system_addr_router.sv \
+  $QSYS_SIMDIR/submodules/altera_avalon_sc_fifo.v \
+  $QSYS_SIMDIR/submodules/altera_merlin_slave_agent.sv \
+  $QSYS_SIMDIR/submodules/altera_merlin_master_agent.sv \
+  $QSYS_SIMDIR/submodules/altera_merlin_slave_translator.sv \
+  $QSYS_SIMDIR/submodules/altera_merlin_master_translator.sv \
+  $QSYS_SIMDIR/submodules/altera_customins_slave_translator.sv \
+  $QSYS_SIMDIR/submodules/nios_system_CPU_custom_instruction_master_multi_xconnect.sv \
+  $QSYS_SIMDIR/submodules/altera_customins_master_translator.v \
+  $QSYS_SIMDIR/submodules/Audio_CustomDMA.v \
+  $QSYS_SIMDIR/submodules/Ethernet_DMA.v \
+  $QSYS_SIMDIR/submodules/Video_CustomDMA.v \
+  $QSYS_SIMDIR/submodules/VideoConferencing_DMA.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_dma_control_slave.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_dma_to_memory.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_dma_to_stream.v \
+  $QSYS_SIMDIR/submodules/nios_system_VGA_DMA_Controller.v \
+  $QSYS_SIMDIR/submodules/nios_system_LCD_DMA_Controller.v \
+  $QSYS_SIMDIR/submodules/nios_system_packet_memory.v \
+  $QSYS_SIMDIR/submodules/nios_system_descriptor_memory.v \
+  $QSYS_SIMDIR/submodules/nios_system_enet.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_128_character_rom.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_fb_color_rom.v \
+  $QSYS_SIMDIR/submodules/nios_system_LCD_Char_Buffer.v \
+  $QSYS_SIMDIR/submodules/nios_system_USB.v \
+  $QSYS_SIMDIR/submodules/altera_up_accelerometer_spi_serial_bus_controller.v \
+  $QSYS_SIMDIR/submodules/altera_up_accelerometer_spi_slow_clock_generator.v \
+  $QSYS_SIMDIR/submodules/altera_up_accelerometer_spi_auto_init.v \
+  $QSYS_SIMDIR/submodules/altera_up_accelerometer_spi_auto_init_ctrl.v \
+  $QSYS_SIMDIR/submodules/nios_system_Accelerometer.v \
+  $QSYS_SIMDIR/submodules/nios_system_Camera_DMA_Controller.v \
+  $QSYS_SIMDIR/submodules/nios_system_Video_In_DMA_Controller.v \
+  $QSYS_SIMDIR/submodules/nios_system_LCD_Dual_Clock_FIFO.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_scaler_shrink.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_scaler_multiply_width.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_scaler_multiply_height.v \
+  $QSYS_SIMDIR/submodules/nios_system_LCD_Scalar.v \
+  $QSYS_SIMDIR/submodules/nios_system_LCD_RGB_Resampler.v \
+  $QSYS_SIMDIR/submodules/altera_up_avalon_video_vga_timing.v \
+  $QSYS_SIMDIR/submodules/nios_system_LCD_Controller.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_clipper_add.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_clipper_drop.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_clipper_counters.v \
+  $QSYS_SIMDIR/submodules/nios_system_Camera_Clipper.v \
+  $QSYS_SIMDIR/submodules/nios_system_Camera_Scaler.v \
+  $QSYS_SIMDIR/submodules/nios_system_Camera_Bayer_Resampler.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_itu_656_decoder.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_decoder_add_endofpacket.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_camera_decoder.v \
+  $QSYS_SIMDIR/submodules/altera_up_video_dual_clock_fifo.v \
+  $QSYS_SIMDIR/submodules/nios_system_Camera_In.v \
+  $QSYS_SIMDIR/submodules/altera_up_av_config_serial_bus_controller.v \
+  $QSYS_SIMDIR/submodules/altera_up_slow_clock_generator.v \
+  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init.v \
+  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_dc2.v \
+  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_d5m.v \
+  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_lcm.v \
+  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ltm.v \
+  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ob_de2_35.v \
+  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ob_adv7181.v \
+  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ob_de2_70.v \
+  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ob_de2_115.v \
+  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ob_audio.v \
+  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ob_adv7180.v \
+  $QSYS_SIMDIR/submodules/nios_system_Camera_Config.v \
+  $QSYS_SIMDIR/submodules/nios_system_Video_In_Scaler.v \
+  $QSYS_SIMDIR/submodules/nios_system_Video_In_Clipper.v \
+  $QSYS_SIMDIR/submodules/nios_system_Video_In_RGB_Resampler.v \
+  $QSYS_SIMDIR/submodules/altera_up_YCrCb_to_RGB_converter.v \
+  $QSYS_SIMDIR/submodules/altera_up_RGB_to_YCrCb_converter.v \
+  $QSYS_SIMDIR/submodules/nios_system_Video_In_CSC.v \
+  $QSYS_SIMDIR/submodules/nios_system_Video_In_Chroma_Resampler.v \
+  $QSYS_SIMDIR/submodules/nios_system_Video_In.v \
+  $QSYS_SIMDIR/submodules/altera_up_irda_counters.v \
+  $QSYS_SIMDIR/submodules/altera_up_irda_in_deserializer.v \
+  $QSYS_SIMDIR/submodules/altera_up_irda_out_serializer.v \
+  $QSYS_SIMDIR/submodules/altera_up_sync_fifo.v \
+  $QSYS_SIMDIR/submodules/nios_system_IrDA.v \
   $QSYS_SIMDIR/submodules/nios_system_External_Clocks.v \
   $QSYS_SIMDIR/submodules/nios_system_sysid.vo \
   $QSYS_SIMDIR/submodules/nios_system_CPU.vo \
@@ -82,15 +206,9 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $USER_DEF
   $QSYS_SIMDIR/submodules/fpoint_qsys.v \
   $QSYS_SIMDIR/submodules/fpoint_hw_qsys.v \
   $QSYS_SIMDIR/submodules/nios_system_VGA_Dual_Clock_FIFO.v \
-  $QSYS_SIMDIR/submodules/altera_up_video_scaler_shrink.v \
-  $QSYS_SIMDIR/submodules/altera_up_video_scaler_multiply_width.v \
-  $QSYS_SIMDIR/submodules/altera_up_video_scaler_multiply_height.v \
   $QSYS_SIMDIR/submodules/nios_system_VGA_Pixel_Scaler.v \
   $QSYS_SIMDIR/submodules/nios_system_VGA_Pixel_RGB_Resampler.v \
-  $QSYS_SIMDIR/submodules/altera_up_avalon_video_vga_timing.v \
   $QSYS_SIMDIR/submodules/nios_system_VGA_Controller.v \
-  $QSYS_SIMDIR/submodules/altera_up_video_128_character_rom.v \
-  $QSYS_SIMDIR/submodules/altera_up_video_fb_color_rom.v \
   $QSYS_SIMDIR/submodules/nios_system_VGA_Char_Buffer.v \
   $QSYS_SIMDIR/submodules/nios_system_SRAM.v \
   $QSYS_SIMDIR/submodules/altera_up_ps2.v \
@@ -104,21 +222,7 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $USER_DEF
   $QSYS_SIMDIR/submodules/altera_up_audio_in_deserializer.v \
   $QSYS_SIMDIR/submodules/altera_up_audio_out_serializer.v \
   $QSYS_SIMDIR/submodules/altera_up_clock_edge.v \
-  $QSYS_SIMDIR/submodules/altera_up_sync_fifo.v \
   $QSYS_SIMDIR/submodules/nios_system_Audio.v \
-  $QSYS_SIMDIR/submodules/altera_up_av_config_serial_bus_controller.v \
-  $QSYS_SIMDIR/submodules/altera_up_slow_clock_generator.v \
-  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init.v \
-  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_dc2.v \
-  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_d5m.v \
-  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_lcm.v \
-  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ltm.v \
-  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ob_de2_35.v \
-  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ob_adv7181.v \
-  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ob_de2_70.v \
-  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ob_de2_115.v \
-  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ob_audio.v \
-  $QSYS_SIMDIR/submodules/altera_up_av_config_auto_init_ob_adv7180.v \
   $QSYS_SIMDIR/submodules/nios_system_OnBoard_AV.v \
   $QSYS_SIMDIR/submodules/altera_up_rs232_counters.v \
   $QSYS_SIMDIR/submodules/altera_up_rs232_in_deserializer.v \

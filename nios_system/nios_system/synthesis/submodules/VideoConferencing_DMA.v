@@ -49,7 +49,21 @@ module VideoConferencing_DMA #(
 		output wire        eth_tx_wren,        //                        .valid
 		output wire        eth_tx_sop,         //                        .startofpacket
 		output wire        eth_tx_eop,         //                        .endofpacket
-		input  wire        resetn              //              reset_sink.reset_n
+		input  wire        resetn,             //              reset_sink.reset_n
+		output wire        audio_read,         //         avalon_master_1.read
+		output wire        audio_write,        //                        .write
+		output wire [31:0] audio_address,      //                        .address
+		output wire        audio_chipselect,   //                        .chipselect
+		output wire [31:0] audio_writedata,    //                        .writedata
+		input  wire        audio_irq,          //                        .readdatavalid
+		input  wire [31:0] audio_readdata,     //                        .readdata
+		input  wire        audio_DACDAT,       //                        .waitrequest
+		output wire [31:0] sram_address,       //         avalon_master_2.address
+		output wire [1:0]  sram_byteenable,    //                        .byteenable
+		output wire        sram_read,          //                        .read
+		input  wire [15:0] sram_readdata,      //                        .readdata
+		input  wire        sram_readdatavalid, //                        .readdatavalid
+		input  wire        sram_waitrequest    //                        .waitrequest
 	);
 
 	// TODO: Auto-generated HDL template
@@ -97,5 +111,21 @@ module VideoConferencing_DMA #(
 	assign eth_tx_data = 32'b00000000000000000000000000000000;
 
 	assign eth_tx_mod = 2'b00;
+
+	assign audio_writedata = 32'b00000000000000000000000000000000;
+
+	assign audio_address = 32'b00000000000000000000000000000000;
+
+	assign audio_chipselect = 1'b0;
+
+	assign audio_write = 1'b0;
+
+	assign audio_read = 1'b0;
+
+	assign sram_address = 32'b00000000000000000000000000000000;
+
+	assign sram_read = 1'b0;
+
+	assign sram_byteenable = 2'b00;
 
 endmodule

@@ -28,59 +28,43 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm_0018
-// role:width:direction:                              TD_CLK27:1:output,TD_DATA:8:output,TD_HS:1:output,TD_VS:1:output,clk27_reset:1:output,TD_RESET:1:input,overflow_flag:1:input
+// role:width:direction:                              I2C_SDAT:1:bidir,I2C_SCLK:1:input,exposure:16:output
 // false
 //-----------------------------------------------------------------------------
 `timescale 1 ns / 1 ns
 
 module altera_conduit_bfm_0018
 (
-   sig_TD_CLK27,
-   sig_TD_DATA,
-   sig_TD_HS,
-   sig_TD_VS,
-   sig_clk27_reset,
-   sig_TD_RESET,
-   sig_overflow_flag
+   sig_I2C_SDAT,
+   sig_I2C_SCLK,
+   sig_exposure
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   output sig_TD_CLK27;
-   output [7 : 0] sig_TD_DATA;
-   output sig_TD_HS;
-   output sig_TD_VS;
-   output sig_clk27_reset;
-   input sig_TD_RESET;
-   input sig_overflow_flag;
+   inout wire sig_I2C_SDAT;
+   input sig_I2C_SCLK;
+   output [15 : 0] sig_exposure;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic ROLE_TD_CLK27_t;
-   typedef logic [7 : 0] ROLE_TD_DATA_t;
-   typedef logic ROLE_TD_HS_t;
-   typedef logic ROLE_TD_VS_t;
-   typedef logic ROLE_clk27_reset_t;
-   typedef logic ROLE_TD_RESET_t;
-   typedef logic ROLE_overflow_flag_t;
+   typedef logic ROLE_I2C_SDAT_t;
+   typedef logic ROLE_I2C_SCLK_t;
+   typedef logic [15 : 0] ROLE_exposure_t;
 
-   reg TD_CLK27_temp;
-   reg TD_CLK27_out;
-   reg [7 : 0] TD_DATA_temp;
-   reg [7 : 0] TD_DATA_out;
-   reg TD_HS_temp;
-   reg TD_HS_out;
-   reg TD_VS_temp;
-   reg TD_VS_out;
-   reg clk27_reset_temp;
-   reg clk27_reset_out;
-   logic [0 : 0] TD_RESET_in;
-   logic [0 : 0] TD_RESET_local;
-   logic [0 : 0] overflow_flag_in;
-   logic [0 : 0] overflow_flag_local;
+   logic I2C_SDAT_oe;
+   logic I2C_SDAT_oe_temp = 0;
+   reg I2C_SDAT_temp;
+   reg I2C_SDAT_out;
+   logic [0 : 0] I2C_SDAT_in;
+   logic [0 : 0] I2C_SDAT_local;
+   logic [0 : 0] I2C_SCLK_in;
+   logic [0 : 0] I2C_SCLK_local;
+   reg [15 : 0] exposure_temp;
+   reg [15 : 0] exposure_out;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -100,8 +84,8 @@ module altera_conduit_bfm_0018
    // =cut
    //--------------------------------------------------------------------------
    
-   event signal_input_TD_RESET_change;
-   event signal_input_overflow_flag_change;
+   event signal_input_I2C_SDAT_change;
+   event signal_input_I2C_SCLK_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -110,123 +94,86 @@ module altera_conduit_bfm_0018
    endfunction
 
    // -------------------------------------------------------
-   // TD_CLK27
+   // I2C_SDAT
    // -------------------------------------------------------
-
-   function automatic void set_TD_CLK27 (
-      ROLE_TD_CLK27_t new_value
-   );
-      // Drive the new value to TD_CLK27.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
-      print(VERBOSITY_DEBUG, message);
-      
-      TD_CLK27_temp = new_value;
-   endfunction
-
-   // -------------------------------------------------------
-   // TD_DATA
-   // -------------------------------------------------------
-
-   function automatic void set_TD_DATA (
-      ROLE_TD_DATA_t new_value
-   );
-      // Drive the new value to TD_DATA.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
-      print(VERBOSITY_DEBUG, message);
-      
-      TD_DATA_temp = new_value;
-   endfunction
-
-   // -------------------------------------------------------
-   // TD_HS
-   // -------------------------------------------------------
-
-   function automatic void set_TD_HS (
-      ROLE_TD_HS_t new_value
-   );
-      // Drive the new value to TD_HS.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
-      print(VERBOSITY_DEBUG, message);
-      
-      TD_HS_temp = new_value;
-   endfunction
-
-   // -------------------------------------------------------
-   // TD_VS
-   // -------------------------------------------------------
-
-   function automatic void set_TD_VS (
-      ROLE_TD_VS_t new_value
-   );
-      // Drive the new value to TD_VS.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
-      print(VERBOSITY_DEBUG, message);
-      
-      TD_VS_temp = new_value;
-   endfunction
-
-   // -------------------------------------------------------
-   // clk27_reset
-   // -------------------------------------------------------
-
-   function automatic void set_clk27_reset (
-      ROLE_clk27_reset_t new_value
-   );
-      // Drive the new value to clk27_reset.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
-      print(VERBOSITY_DEBUG, message);
-      
-      clk27_reset_temp = new_value;
-   endfunction
-
-   // -------------------------------------------------------
-   // TD_RESET
-   // -------------------------------------------------------
-   function automatic ROLE_TD_RESET_t get_TD_RESET();
+   function automatic ROLE_I2C_SDAT_t get_I2C_SDAT();
    
-      // Gets the TD_RESET input value.
-      $sformat(message, "%m: called get_TD_RESET");
+      // Gets the I2C_SDAT input value.
+      $sformat(message, "%m: called get_I2C_SDAT");
       print(VERBOSITY_DEBUG, message);
-      return TD_RESET_in;
+      return I2C_SDAT_in;
       
    endfunction
 
-   // -------------------------------------------------------
-   // overflow_flag
-   // -------------------------------------------------------
-   function automatic ROLE_overflow_flag_t get_overflow_flag();
+   function automatic void set_I2C_SDAT (
+      ROLE_I2C_SDAT_t new_value
+   );
+      // Drive the new value to I2C_SDAT.
+      
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      I2C_SDAT_temp = new_value;
+   endfunction
    
-      // Gets the overflow_flag input value.
-      $sformat(message, "%m: called get_overflow_flag");
+   function automatic void set_I2C_SDAT_oe (
+      bit enable
+   );
+      // bidir port I2C_SDAT will work as output port when set to 1.
+      // bidir port I2C_SDAT will work as input port when set to 0.
+      
+      $sformat(message, "%m: method called arg0 %0d", enable); 
       print(VERBOSITY_DEBUG, message);
-      return overflow_flag_in;
+      
+      I2C_SDAT_oe_temp = enable;
+   endfunction
+
+   // -------------------------------------------------------
+   // I2C_SCLK
+   // -------------------------------------------------------
+   function automatic ROLE_I2C_SCLK_t get_I2C_SCLK();
+   
+      // Gets the I2C_SCLK input value.
+      $sformat(message, "%m: called get_I2C_SCLK");
+      print(VERBOSITY_DEBUG, message);
+      return I2C_SCLK_in;
       
    endfunction
 
-   assign sig_TD_CLK27 = TD_CLK27_temp;
-   assign sig_TD_DATA = TD_DATA_temp;
-   assign sig_TD_HS = TD_HS_temp;
-   assign sig_TD_VS = TD_VS_temp;
-   assign sig_clk27_reset = clk27_reset_temp;
-   assign TD_RESET_in = sig_TD_RESET;
-   assign overflow_flag_in = sig_overflow_flag;
+   // -------------------------------------------------------
+   // exposure
+   // -------------------------------------------------------
+
+   function automatic void set_exposure (
+      ROLE_exposure_t new_value
+   );
+      // Drive the new value to exposure.
+      
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      exposure_temp = new_value;
+   endfunction
+
+   assign I2C_SDAT_oe = I2C_SDAT_oe_temp;
+   assign sig_I2C_SDAT = (I2C_SDAT_oe == 1)? I2C_SDAT_temp:'z;
+   assign I2C_SDAT_in = (I2C_SDAT_oe == 0)? sig_I2C_SDAT:'z;
+   assign I2C_SCLK_in = sig_I2C_SCLK;
+   assign sig_exposure = exposure_temp;
 
 
-   always @(TD_RESET_in) begin
-      if (TD_RESET_local != TD_RESET_in)
-         -> signal_input_TD_RESET_change;
-      TD_RESET_local = TD_RESET_in;
+   always @(I2C_SDAT_in) begin
+      if (I2C_SDAT_oe == 0) begin
+         if (I2C_SDAT_local != I2C_SDAT_in)
+            -> signal_input_I2C_SDAT_change;
+         I2C_SDAT_local = I2C_SDAT_in;
+      end
    end
    
-   always @(overflow_flag_in) begin
-      if (overflow_flag_local != overflow_flag_in)
-         -> signal_input_overflow_flag_change;
-      overflow_flag_local = overflow_flag_in;
+   always @(I2C_SCLK_in) begin
+      if (I2C_SCLK_local != I2C_SCLK_in)
+         -> signal_input_I2C_SCLK_change;
+      I2C_SCLK_local = I2C_SCLK_in;
    end
    
 
