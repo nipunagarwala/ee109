@@ -15,7 +15,7 @@
   </columns>
  </clocktable>
  <library expandedCategories="Library,Project" />
- <window width="1280" height="846" x="17" y="21" />
+ <window width="1100" height="800" x="0" y="0" />
  <generation
    simulation="VERILOG"
    testbench_system="STANDARD"
