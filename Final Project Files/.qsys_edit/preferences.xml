@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="831" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="383" />
+   <clocksource preferredWidth="381" />
+   <frequency preferredWidth="364" />
+  </columns>
+ </clocktable>
+ <library expandedCategories="Project,Library" />
+ <window width="1100" height="984" x="131" y="10" />
+ <generation
+   simulation="VERILOG"
+   testbench_system="NONE"
+   testbench_simulation="NONE"
+   block_symbol_file="0" />
+ <hdlexample language="VERILOG" />
+</preferences>

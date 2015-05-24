@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <preferences>
  <debug showDebugMenu="0" />
- <systemtable filter="Default">
+ <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="95" />
+   <connections preferredWidth="831" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
@@ -14,11 +14,17 @@
    <frequency preferredWidth="364" />
   </columns>
  </clocktable>
+<<<<<<< HEAD
  <library expandedCategories="Library,Project" />
  <window width="1100" height="800" x="0" y="0" />
+=======
+ <library expandedCategories="Project,Library" />
+ <window width="1100" height="984" x="131" y="10" />
+>>>>>>> dd7869438db0bba5035acc9f2e30b93466feaea2
  <generation
    simulation="VERILOG"
-   testbench_system="STANDARD"
-   testbench_simulation="VERILOG" />
+   testbench_system="NONE"
+   testbench_simulation="NONE"
+   block_symbol_file="0" />
  <hdlexample language="VERILOG" />
 </preferences>
