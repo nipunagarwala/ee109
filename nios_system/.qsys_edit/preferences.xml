@@ -14,8 +14,13 @@
    <frequency preferredWidth="364" />
   </columns>
  </clocktable>
+<<<<<<< HEAD
+ <library expandedCategories="Library,Project" />
+ <window width="1100" height="800" x="0" y="0" />
+=======
  <library expandedCategories="Project,Library" />
  <window width="1100" height="984" x="131" y="10" />
+>>>>>>> dd7869438db0bba5035acc9f2e30b93466feaea2
  <generation
    simulation="VERILOG"
    testbench_system="NONE"
